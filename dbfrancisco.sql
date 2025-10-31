@@ -136,19 +136,59 @@ INSERT INTO tbVoluntarios(codVol,nome,telCel,cpf,cep,rua,numero,complemento,bair
 INSERT INTO tbUsuarios(codUsu,email,senha,tipo,salt,codVol)VALUES(1,'senac@senac.com','123456789','Admin','134848646','1');
 
 
+-- Consulta para atualizar os dados do gráfico de produtos referente aos últimos itens adicionados e sua quantidade
+-- SELECT p.nome AS nomeProduto, SUM(p.quantidade) AS totalQuantidadeProdutos FROM tbProdutos as p GROUP BY p.nome ORDER BY totalQuantidadeProdutos DESC LIMIT 8;
 
--- SELECT nome AS nomeProduto, SUM(quantidade) AS totalQuantidadeProdutos, FROM tbProdutos GROUP BY nome ORDER BY totalQuantidadeProdutos DESC, totalQuantidadeEstoque DESC LIMIT 8;
+-- Consulta  últimos itens adicionados ao banco, incluindo quem cadastrou, quando e o que
+-- SELECT DATE_FORMAT(prod.dataDeEntrada, '%d/%m/%Y'), DATE_FORMAT(prod.dataDeValidade, '%d/%m/%Y'), prod.nome, prod.quantidade, prod.unidade, prod.peso, usr.email FROM tbprodutos as prod INNER JOIN tbusuarios AS usr ON prod.codUsu = usr.codUsu ORDER BY dataDeEntrada DESC LIMIT 8;
+
+-- Consulta de dados mensais (quantidade de produtos doados por mês durante o ano)
+-- SELECT YEAR(dataDeEntrada) AS ano, MONTH(dataDeEntrada) AS mes, SUM(quantidade) AS totalMensal FROM tbProdutos GROUP BY YEAR(dataDeEntrada), MONTH(dataDeEntrada) ORDER BY ano, mes;
+
+-- Consulta para referência de qual é o mês atual
+-- SELECT COUNT(*) as total_mes_atual FROM tbProdutos WHERE MONTH(dataDeEntrada) = MONTH(CURDATE()) AND YEAR(dataDeEntrada) = YEAR(CURDATE());
+
+-- Consultas para atualizar os dados de total referêntes ao mê vigente
+-- SELECT SUM(quantidade) as total_itens FROM tbProdutos; -- atualiza a quantidade de itens totais
+-- SELECT SUM(quantidade * peso) as total_peso FROM tbProdutos WHERE unidade = 'KG'; -- atualiza o total arrecadado em peso
 
 -- SELECT nome, SUM(quantidade) FROM tbProdutos WHERE codProd = 1;
 
 -- SELECT nome AS nomeProduto, SUM(quantidade) FROM tbProdutos GROUP BY nome;
 
--- SELECT nome AS nomeProduto, SUM(quantidade) AS totalQuantidadeProdutos FROM tbProdutos GROUP BY nome ORDER BY totalQuantidadeProdutos DESC LIMIT 8;
 
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(1,'Arroz Branco',10,5,'KG','1234561234561','2025-09-16','2026-09-10','2026-07-30',1);
 
--- SELECT p.nome AS nomeProduto, SUM(p.quantidade) AS totalQuantidadeProdutos FROM tbProdutos as p GROUP BY p.nome ORDER BY totalQuantidadeProdutos DESC LIMIT 8;
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(2,'Feijão Carioca',5,1,'KG','1234561444888','2025-09-10','2026-09-05','2026-02-15',1);
 
-INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)VALUES(1,'Arroz Branco',10,5,'KG','1234561234561','2025-09-16','2026-09-10','2026-07-30',1);
-INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)VALUES(2,'Feijão Carioca',5,1,'KG','1234561444888','2025-09-10','2026-09-05','2026-02-15',1);
-INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)VALUES(3,'Macarrão',20,500,'G','1234561555333','2025-06-10','2025-12-25','2026-03-05',1);
-INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)VALUES(4,'Farinha de trigo',7,1,'KG','5468761566644','2025-09-11','2025-11-30','2026-12-28',1);
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(3,'Macarrão',20,500,'G','1234561555333','2025-06-10','2025-12-25','2026-03-05',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(4,'Farinha de trigo',7,1,'KG','5468761566644','2025-09-11','2025-11-30','2026-12-28',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(5,'Açúcar Refinado',12,1,'KG','7891234567001','2025-01-15','2026-01-10','2026-02-01',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(6,'Óleo de Soja',30,900,'ML','7891234567002','2025-02-20','2026-02-15','2026-03-10',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(7,'Café Torrado e Moído',15,500,'G','7891234567003','2025-03-18','2026-03-12','2026-04-01',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(8,'Leite Integral',25,1,'L','7891234567004','2025-04-25','2025-11-20','2025-12-05',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(9,'Sal Refinado',40,1,'KG','7891234567005','2025-05-10','2027-05-05','2027-01-20',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(10,'Molho de Tomate',18,340,'G','7891234567006','2025-07-08','2026-01-25','2026-02-10',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(11,'Biscoito Recheado',22,140,'G','7891234567007','2025-08-19','2026-02-18','2026-03-01',1);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(12,'Sabão em Pó',10,2,'KG','7891234567008','2025-10-12','2026-10-10','2026-09-30',1);
