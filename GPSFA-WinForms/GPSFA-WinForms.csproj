@@ -136,7 +136,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\DataBaseConnection.cs" />
+    <Compile Include="data.dbfransisco\DataBaseConnection.cs" />
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
