@@ -107,6 +107,7 @@ codBar VARCHAR(13) NOT NULL,
 dataDeEntrada DATETIME NOT NULL,
 dataDeValidade DATETIME NOT NULL,
 dataLimiteDeSaida DATETIME,
+dataDeSaida DATETIME,
 codUsu INT NOT NULL,
 PRIMARY KEY(codProd, codBar),
 FOREIGN KEY(codUsu) REFERENCES tbUsuarios(codUsu)
@@ -155,6 +156,11 @@ INSERT INTO tbUsuarios(codUsu,email,senha,tipo,salt,codVol)VALUES(1,'senac@senac
 -- SELECT nome, SUM(quantidade) FROM tbProdutos WHERE codProd = 1;
 
 -- SELECT nome AS nomeProduto, SUM(quantidade) FROM tbProdutos GROUP BY nome;
+
+
+-- realiza consulta de itens com base num período específico da data de entrada
+-- SELECT prod.nome, prod.quantidade, prod.peso, prod.unidade, prod.dataDeEntrada, prod.dataDeValidade, usr.email FROM tbprodutos as prod INNER JOIN tbusuarios AS usr ON prod.codUsu = usr.codUsu WHERE prod.dataDeEntrada BETWEEN '2025-09-10' AND '2025-09-16' ORDER BY prod.dataDeEntrada DESC;
+
 
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
