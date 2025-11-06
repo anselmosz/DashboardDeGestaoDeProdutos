@@ -123,3 +123,5 @@ C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.pdb
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmMenuPrincipal.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmVoluntarios.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmRelatorios.resources

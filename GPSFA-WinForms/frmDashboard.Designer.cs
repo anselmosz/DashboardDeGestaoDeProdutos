@@ -28,17 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tbctrlDashboard = new System.Windows.Forms.TabControl();
             this.tbpgDashboardAlimentos = new System.Windows.Forms.TabPage();
             this.chartProdutos = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbpgDashboadMensal = new System.Windows.Forms.TabPage();
             this.chartDoacaoMensal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,34 +66,20 @@
             this.lbTotalDeItensDataReceiver = new System.Windows.Forms.Label();
             this.lblTotalEmQuilos = new System.Windows.Forms.Label();
             this.lblTotalDeItens = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tbctrlDashboard.SuspendLayout();
             this.tbpgDashboardAlimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProdutos)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tbpgDashboadMensal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoacaoMensal)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.pnlDadosProdutos.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbctrlDashboard
             // 
             this.tbctrlDashboard.Controls.Add(this.tbpgDashboardAlimentos);
-            this.tbctrlDashboard.Controls.Add(this.tabPage2);
+            this.tbctrlDashboard.Controls.Add(this.tbpgDashboadMensal);
             this.tbctrlDashboard.Controls.Add(this.tabPage3);
             this.tbctrlDashboard.Location = new System.Drawing.Point(12, 128);
             this.tbctrlDashboard.Name = "tbctrlDashboard";
@@ -95,7 +95,7 @@
             this.tbpgDashboardAlimentos.Padding = new System.Windows.Forms.Padding(3);
             this.tbpgDashboardAlimentos.Size = new System.Drawing.Size(747, 508);
             this.tbpgDashboardAlimentos.TabIndex = 0;
-            this.tbpgDashboardAlimentos.Text = "tabPage1";
+            this.tbpgDashboardAlimentos.Text = "Alimentos recebidos";
             this.tbpgDashboardAlimentos.UseVisualStyleBackColor = true;
             // 
             // chartProdutos
@@ -103,53 +103,187 @@
             this.chartProdutos.BackColor = System.Drawing.Color.Lavender;
             this.chartProdutos.BorderlineColor = System.Drawing.Color.Teal;
             this.chartProdutos.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea7.Name = "ChartArea1";
-            this.chartProdutos.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartProdutos.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chartProdutos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartProdutos.Legends.Add(legend1);
             this.chartProdutos.Location = new System.Drawing.Point(7, 7);
             this.chartProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.chartProdutos.Name = "chartProdutos";
             this.chartProdutos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartProdutos.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartProdutos.Series.Add(series1);
             this.chartProdutos.Size = new System.Drawing.Size(733, 494);
             this.chartProdutos.TabIndex = 0;
             this.chartProdutos.Text = "Produtos";
             // 
-            // tabPage2
+            // tbpgDashboadMensal
             // 
-            this.tabPage2.Controls.Add(this.chartDoacaoMensal);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 508);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbpgDashboadMensal.Controls.Add(this.chartDoacaoMensal);
+            this.tbpgDashboadMensal.Location = new System.Drawing.Point(4, 29);
+            this.tbpgDashboadMensal.Name = "tbpgDashboadMensal";
+            this.tbpgDashboadMensal.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpgDashboadMensal.Size = new System.Drawing.Size(747, 508);
+            this.tbpgDashboadMensal.TabIndex = 1;
+            this.tbpgDashboadMensal.Text = "Alimentos mensais";
+            this.tbpgDashboadMensal.UseVisualStyleBackColor = true;
             // 
             // chartDoacaoMensal
             // 
             this.chartDoacaoMensal.BackColor = System.Drawing.Color.Lavender;
             this.chartDoacaoMensal.BorderlineColor = System.Drawing.Color.Teal;
             this.chartDoacaoMensal.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea8.Name = "ChartArea1";
-            this.chartDoacaoMensal.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartDoacaoMensal.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chartDoacaoMensal.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDoacaoMensal.Legends.Add(legend2);
             this.chartDoacaoMensal.Location = new System.Drawing.Point(7, 7);
             this.chartDoacaoMensal.Margin = new System.Windows.Forms.Padding(4);
             this.chartDoacaoMensal.Name = "chartDoacaoMensal";
             this.chartDoacaoMensal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartDoacaoMensal.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDoacaoMensal.Series.Add(series2);
             this.chartDoacaoMensal.Size = new System.Drawing.Size(733, 494);
             this.chartDoacaoMensal.TabIndex = 1;
             this.chartDoacaoMensal.Text = "Mensal";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.dateTimePicker2);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(747, 508);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(111, 235);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(186, 28);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(107, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Unidade de medida";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(170, 144);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Validade";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(174, 167);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(123, 26);
+            this.dateTimePicker2.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Cadastro";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 167);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(123, 26);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(14, 235);
+            this.textBox3.MaxLength = 100;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(76, 26);
+            this.textBox3.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Peso";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(14, 101);
+            this.textBox2.MaxLength = 100;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(283, 26);
+            this.textBox2.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Código de barras";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(14, 40);
+            this.textBox1.MaxLength = 100;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(283, 26);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nome do produto";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 35);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dgvProdutos
             // 
@@ -271,140 +405,6 @@
             this.lblTotalDeItens.TabIndex = 0;
             this.lblTotalDeItens.Text = "Total de Itens:";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.comboBox1);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.dateTimePicker2);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 508);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 467);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome do produto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(14, 40);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 26);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(14, 101);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 26);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Código de barras";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(14, 235);
-            this.textBox3.MaxLength = 100;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 26);
-            this.textBox3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 212);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Peso";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 167);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 26);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cadastro";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 144);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Validade";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(174, 167);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(123, 26);
-            this.dateTimePicker2.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 212);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Unidade de medida";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 235);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 28);
-            this.comboBox1.TabIndex = 13;
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -424,13 +424,13 @@
             this.tbctrlDashboard.ResumeLayout(false);
             this.tbpgDashboardAlimentos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartProdutos)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tbpgDashboadMensal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartDoacaoMensal)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.pnlDadosProdutos.ResumeLayout(false);
             this.pnlDadosProdutos.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -439,7 +439,7 @@
 
         private System.Windows.Forms.TabControl tbctrlDashboard;
         private System.Windows.Forms.TabPage tbpgDashboardAlimentos;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbpgDashboadMensal;
         private System.Windows.Forms.Panel pnlDadosProdutos;
         private System.Windows.Forms.Label lblTotalDeItens;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProdutos;
