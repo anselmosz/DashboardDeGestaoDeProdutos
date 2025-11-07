@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\matheus.sanselmo1\\documents\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,27 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmRelatorios.cs",
+              "Title": "frmRelatorios.cs [Design]",
               "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
-              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs*",
-              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs*",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAowKUAAABUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs [Design]",
+              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T11:53:16.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T11:51:11.095Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmRelatorios.cs [Design]",
+              "Title": "frmRelatorios.cs",
               "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
-              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs [Design]*",
-              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs [Design]*",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
+              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAQwKoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T11:51:11.095Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-06T11:53:16.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -73,7 +73,7 @@
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmDashboard.cs",
               "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmDashboard.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmDashboard.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAG4AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwG4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T13:29:40.316Z",
               "EditorCaption": ""
