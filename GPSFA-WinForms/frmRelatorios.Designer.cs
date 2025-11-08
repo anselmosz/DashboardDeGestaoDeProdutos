@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRelatorios = new System.Windows.Forms.Label();
             this.dgvRelatorio = new System.Windows.Forms.DataGridView();
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
@@ -58,13 +58,13 @@
             // 
             // dgvRelatorio
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRelatorio.Location = new System.Drawing.Point(12, 273);
             this.dgvRelatorio.Name = "dgvRelatorio";
@@ -102,6 +102,7 @@
             this.chkbListaUsuarios.TabIndex = 15;
             this.chkbListaUsuarios.Text = "Selecionar usuário";
             this.chkbListaUsuarios.UseVisualStyleBackColor = true;
+            this.chkbListaUsuarios.CheckedChanged += new System.EventHandler(this.chkbListaUsuarios_CheckedChanged);
             // 
             // chkbDataEntrada
             // 
@@ -113,6 +114,7 @@
             this.chkbDataEntrada.TabIndex = 14;
             this.chkbDataEntrada.Text = "Período de entrada";
             this.chkbDataEntrada.UseVisualStyleBackColor = true;
+            this.chkbDataEntrada.CheckedChanged += new System.EventHandler(this.chkbDataEntrada_CheckedChanged);
             // 
             // cbbUsuarios
             // 
@@ -157,7 +159,7 @@
             // lblE
             // 
             this.lblE.AutoSize = true;
-            this.lblE.Location = new System.Drawing.Point(31, 99);
+            this.lblE.Location = new System.Drawing.Point(33, 103);
             this.lblE.Name = "lblE";
             this.lblE.Size = new System.Drawing.Size(35, 20);
             this.lblE.TabIndex = 5;
@@ -175,7 +177,7 @@
             // dtpDataFinalPeriodo
             // 
             this.dtpDataFinalPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(72, 94);
+            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(81, 98);
             this.dtpDataFinalPeriodo.Name = "dtpDataFinalPeriodo";
             this.dtpDataFinalPeriodo.Size = new System.Drawing.Size(124, 26);
             this.dtpDataFinalPeriodo.TabIndex = 2;
@@ -183,7 +185,7 @@
             // dtpDataInicialPeriodo
             // 
             this.dtpDataInicialPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(72, 62);
+            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(81, 62);
             this.dtpDataInicialPeriodo.Name = "dtpDataInicialPeriodo";
             this.dtpDataInicialPeriodo.Size = new System.Drawing.Size(124, 26);
             this.dtpDataInicialPeriodo.TabIndex = 1;
@@ -208,7 +210,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1477, 851);
+            this.MaximumSize = new System.Drawing.Size(1182, 681);
             this.MinimumSize = new System.Drawing.Size(1063, 681);
             this.Name = "frmRelatorios";
             this.Text = "frmRelatorios";

@@ -25,8 +25,11 @@ namespace GPSFA_WinForms
         {
             // Carrega no datagrid view os últimos produtos adicionados no banco
             CarregarDadosNaListaDeProdutos();
-            cbbUsuarios.SelectedIndex = 0;
             carregarUsuários();
+            dtpDataInicialPeriodo.Enabled = false;
+            dtpDataFinalPeriodo.Enabled = false;
+            cbbUsuarios.SelectedIndex = 0;
+            cbbUsuarios.Enabled = false;
         }
 
         // Carrega no datagrid view os últimos produtos adicionados no banco
@@ -40,7 +43,7 @@ namespace GPSFA_WinForms
             {
                 StringBuilder query = new StringBuilder();
 
-                query.Append("SELECT prod.nome AS NomeProduto, prod.quantidade AS Quantidade, CONCAT(prod.peso,' ', prod.unidade) AS PesoFormatado, prod.dataDeEntrada, prod.dataDeValidade, vol.nome AS QuemCadastrou FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY prod.dataDeEntrada DESC;");
+                query.Append("SELECT prod.nome AS 'Nome do Produto', prod.quantidade AS 'Quantidade', CONCAT(prod.peso,' ', prod.unidade) AS 'Peso', prod.dataDeEntrada AS 'Data de Cadastro', prod.dataDeValidade AS 'Data de Validade', vol.nome AS 'Quem Cadastrou' FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY prod.dataDeEntrada DESC;");
 
                 MySqlCommand comm = new MySqlCommand();
                 comm.Connection = conexao;
@@ -57,7 +60,7 @@ namespace GPSFA_WinForms
         }
 
 
-        public DataTable BuscarProdutos(FiltroDeBuscaBD filtro)
+        public DataTable BuscarProdutosPorFiltro(FiltroDeBuscaBD filtro)
         {
             DataTable tabela = new DataTable();
 
@@ -79,7 +82,7 @@ namespace GPSFA_WinForms
 
                 if (filtro.FiltrarPorUsuario && !string.IsNullOrEmpty(filtro.NomeUsuario))
                 {
-                    query.Append("AND usr.nome = @nomeUsuario ");
+                    query.Append("AND vol.nome = @nomeUsuario ");
                     comm.Parameters.AddWithValue("@nomeUsuario", filtro.NomeUsuario);
                 }
 
@@ -108,7 +111,7 @@ namespace GPSFA_WinForms
                 NomeUsuario = cbbUsuarios.SelectedItem.ToString(),
             };
 
-            DataTable resultado = BuscarProdutos(novoFiltro);
+            DataTable resultado = BuscarProdutosPorFiltro(novoFiltro);
             dgvRelatorio.DataSource = resultado;
             dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -146,6 +149,38 @@ namespace GPSFA_WinForms
             }
 
             DataBaseConnection.CloseConnection();
+        }
+
+        private void chkbDataEntrada_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkbDataEntrada.Checked)
+            {
+                dtpDataInicialPeriodo.Enabled = true;
+                dtpDataFinalPeriodo.Enabled = true;
+            }
+            else
+            {
+                dtpDataInicialPeriodo.Enabled = false;
+                dtpDataFinalPeriodo.Enabled = false;
+                dtpDataInicialPeriodo.Value = DateTime.Now;
+                dtpDataFinalPeriodo.Value = DateTime.Now;
+
+            }
+        }
+
+        private void chkbListaUsuarios_CheckedChanged (object sender, EventArgs e)
+        {
+            if (chkbListaUsuarios.Checked)
+            {
+                cbbUsuarios.Enabled = true;
+                cbbUsuarios.Items.Remove("Todos");
+            }
+            else
+            {
+                cbbUsuarios.Enabled = false;
+                cbbUsuarios.Items.Insert(0, "Todos");
+                cbbUsuarios.SelectedIndex = 0;
+            }
         }
     }
 }

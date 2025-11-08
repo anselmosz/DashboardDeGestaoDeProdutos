@@ -212,10 +212,18 @@ VALUES(15,'Óleo de Soja',40,900,'ML','1000000000015','2025-08-01','2026-07-20',
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(16,'Leite UHT',18,1,'L','1000000000016','2025-10-28','2025-12-15','2025-12-01',1);
 
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(41,'Arroz Agulhinha',20,5,'KG','2000000000041','2025-11-01','2026-11-01','2026-09-15',1);
+
+
 
 -- Produtos da Mariana Oliveira (codUsu = 2) -> codProd 17..22
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(17,'Farinha de Trigo Integral',14,1,'KG','1000000000021','2025-01-22','2025-11-30','2025-10-15',2);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(46,'Café Torrado e Moído',12,500,'G','2000000000046','2025-11-01','2026-04-15','2026-03-01',2);
+
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(18,'Biscoito Recheado',50,200,'G','1000000000022','2025-03-05','2026-03-01','2026-02-10',2);
@@ -236,6 +244,10 @@ VALUES(22,'Sardinha em Lata',35,125,'G','1000000000026','2025-10-15','2027-01-10
 -- Produtos do Carlos Eduardo Santos (codUsu = 3) -> codProd 23..28
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(23,'Óleo de Girassol',10,900,'ML','1000000000031','2025-02-28','2026-02-20','2026-01-31',3);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(51,'Arroz Integral',22,5,'KG','2000000000051','2025-11-01','2026-10-01','2026-08-10',3);
+
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(24,'Arroz Parboilizado',60,5,'KG','1000000000032','2025-04-03','2026-04-01','2026-02-15',3);
@@ -261,6 +273,9 @@ INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada
 VALUES(30,'Detergente Líquido',40,500,'ML','1000000000042','2025-03-12','2026-03-05','2026-02-01',4);
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(56,'Sabão em Pó',16,2,'KG','2000000000056','2025-11-01','2027-01-01','2026-12-15',4);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(31,'Pasta de Dente',33,90,'G','1000000000043','2025-05-02','2027-05-01','2027-03-30',4);
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
@@ -276,6 +291,9 @@ VALUES(34,'Desinfetante',20,1,'L','1000000000046','2025-10-22','2026-10-15','202
 -- Produtos do Ricardo Mendes (codUsu = 5) -> codProd 35..40
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(35,'Sal Marinho',60,1,'KG','1000000000051','2025-02-11','2027-02-01','2026-12-10',5);
+
+INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
+VALUES(61,'Sal Refinado',30,1,'KG','2000000000061','2025-11-01','2027-01-01','2026-10-01',5);
 
 INSERT INTO tbProdutos(codProd,nome,quantidade,peso,unidade,codBar,dataDeEntrada,dataDeValidade,dataLimiteDeSaida,codUsu)
 VALUES(36,'Gelatina em Pó',44,20,'G','1000000000052','2025-04-27','2026-04-20','2026-03-15',5);
