@@ -19,8 +19,8 @@ namespace GPSFA_WinForms
         public frmRelatorios()
         {
             InitializeComponent();
-
         }
+
         private void frmRelatorios_Load(object sender, EventArgs e)
         {
             // Carrega no datagrid view os últimos produtos adicionados no banco
@@ -32,113 +32,86 @@ namespace GPSFA_WinForms
         // Carrega no datagrid view os últimos produtos adicionados no banco
         private void CarregarDadosNaListaDeProdutos()
         {
-            try
+            dgvRelatorio.Columns.Clear();
+
+            DataTable tabela = new DataTable();
+
+            using (MySqlConnection conexao = DataBaseConnection.OpenConnection())
             {
-                // Limpa os dados do datagrid view quando o método é acionado
-                dgvRelatorio.Rows.Clear();
+                StringBuilder query = new StringBuilder();
 
-                // Consulta SQL responsável por buscar os 8 produtos mais recentemente cadastrados no sistema.
-                // A consulta realiza um INNER JOIN entre as tabelas de produtos e usuários, formatando as datas e retornando informações essenciais para exibição
-                string buscarProdutosCadastrados = "SELECT prod.nome, prod.quantidade, prod.peso, prod.unidade, DATE_FORMAT(prod.dataDeEntrada, '%d/%m/%Y'), DATE_FORMAT(prod.dataDeValidade, '%d/%m/%Y'), tbvol.nome FROM tbprodutos as prod INNER JOIN tbusuarios AS tbusr ON prod.codUsu = tbusr.codUsu INNER JOIN tbvoluntarios AS tbvol ON tbusr.codVol = tbvol.codVol ORDER BY dataDeEntrada DESC;";
+                query.Append("SELECT prod.nome AS NomeProduto, prod.quantidade AS Quantidade, CONCAT(prod.peso,' ', prod.unidade) AS PesoFormatado, prod.dataDeEntrada, prod.dataDeValidade, vol.nome AS QuemCadastrou FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY prod.dataDeEntrada DESC;");
 
-                // Abre conexão com o banco e usa a string para aplicar o comando de busca, realizando a adaptação dos dados para o app
-                MySqlDataAdapter DA = new MySqlDataAdapter(buscarProdutosCadastrados, DataBaseConnection.OpenConnection());
+                MySqlCommand comm = new MySqlCommand();
+                comm.Connection = conexao;
 
+                comm.CommandText = query.ToString();
 
-                // Cria um novo DataTable para armazenar os dados vindos do banco
-                DataTable dt = new DataTable();
+                MySqlDataAdapter DA = new MySqlDataAdapter(comm);
+                DA.Fill(tabela);
 
-                // Executa o DataAdapter (provavelmente DA é um SqlDataAdapter) e preenche o DataTable
-                // O método Fill retorna o número de registros retornados pela consulta
-                if (DA.Fill(dt) < 1)
-                {
-                    // Se não houver registros, exibe uma mensagem informando o usuário
-                    MessageBox.Show("Sem registros no banco de dados");
-                }
-                else
-                {
-                    // Percorre todas as linhas retornadas pelo banco de dados
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        // As próximas colunas são verificadas quanto a valores nulos (DBNull)
-                        // Caso sejam nulas, uma string vazia é atribuída para evitar erros de conversão
-                        string nomeProduto = dr.ItemArray[0] != DBNull.Value ? dr.ItemArray[0].ToString() : "";
-                        string quantidadeProduto = dr.ItemArray[1] != DBNull.Value ? dr.ItemArray[1].ToString() : "";
-                        string peso = dr.ItemArray[2] != DBNull.Value ? dr.ItemArray[2].ToString() : "";
-                        string unidadeMedida = dr.ItemArray[3] != DBNull.Value ? dr.ItemArray[3].ToString() : "";
-                        string dataDeEntrada = dr.ItemArray[4] != DBNull.Value ? dr.ItemArray[4].ToString() : "";
-                        string dataDeValidade = dr.ItemArray[5] != DBNull.Value ? dr.ItemArray[5].ToString() : "";
-                        string cadastradoPor = dr.ItemArray[6] != DBNull.Value ? dr.ItemArray[6].ToString() : "";
-
-                        // Adiciona os dados formatados no DataGridView (interface visual)
-                        // Exemplo de célula: "2 kg"
-                        dgvRelatorio.Rows.Add(nomeProduto, quantidadeProduto, peso + " " + unidadeMedida, dataDeEntrada, dataDeValidade, cadastradoPor);
-                    }
-                    // Libera os recursos utilizados pelo DataAdapter
-                    DA.Dispose();
-                }
-                // Fecha a conexão com o banco de dados para evitar conexões abertas desnecessariamente
+                dgvRelatorio.DataSource = tabela;
+                dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 DataBaseConnection.CloseConnection();
             }
+        }
 
-            catch (Exception ex)
+
+        public DataTable BuscarProdutos(FiltroDeBuscaBD filtro)
+        {
+            DataTable tabela = new DataTable();
+
+            using (MySqlConnection conexao = DataBaseConnection.OpenConnection())
             {
-                // Caso ocorra qualquer erro (falha de conexão, SQL, etc.), exibe uma mensagem de erro para o usuário
-                MessageBox.Show("Erro ao carregar produtos: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                StringBuilder query = new StringBuilder();
+
+                query.Append("SELECT prod.nome AS NomeProduto, prod.quantidade AS Quantidade, CONCAT(prod.peso,' ', prod.unidade) AS PesoFormatado, prod.dataDeEntrada, prod.dataDeValidade, vol.nome AS QuemCadastrou FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol WHERE 1=1 ");
+
+                MySqlCommand comm = new MySqlCommand();
+                comm.Connection = conexao;
+
+                if (filtro.FiltrarPorPeriodo)
+                {
+                    query.Append("AND prod.dataDeEntrada BETWEEN @dataInicial AND @dataFinal ");
+                    comm.Parameters.AddWithValue("@dataInicial", filtro.DataInicial);
+                    comm.Parameters.AddWithValue("@dataFinal", filtro.DataFinal);
+                }
+
+                if (filtro.FiltrarPorUsuario && !string.IsNullOrEmpty(filtro.NomeUsuario))
+                {
+                    query.Append("AND usr.nome = @nomeUsuario ");
+                    comm.Parameters.AddWithValue("@nomeUsuario", filtro.NomeUsuario);
+                }
+
+                query.Append("ORDER BY prod.dataDeEntrada DESC;");
+
+                comm.CommandText = query.ToString();
+
+                MySqlDataAdapter DA = new MySqlDataAdapter(comm);
+                DA.Fill(tabela);
             }
-            // Fecha a conexão com o banco de dados para evitar vazamentos de recursos
-            DataBaseConnection.CloseConnection();
-        }        
+
+            return tabela;
+        }
+
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            dgvRelatorio.Rows.Clear();
+            dgvRelatorio.Columns.Clear();
 
-            string dataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd");
-            string dataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd");
-
-            try
+            FiltroDeBuscaBD novoFiltro = new FiltroDeBuscaBD
             {
-                string querySql = $"SELECT prod.nome, prod.quantidade, prod.peso, prod.unidade, DATE_FORMAT(prod.dataDeEntrada, '%d/%m/%Y'), DATE_FORMAT(prod.dataDeValidade, '%d/%m/%Y'), tbvol.nome FROM tbprodutos as prod INNER JOIN tbusuarios AS tbusr ON prod.codUsu = tbusr.codUsu INNER JOIN tbvoluntarios AS tbvol ON tbusr.codVol = tbvol.codVol WHERE prod.dataDeEntrada BETWEEN '{dataInicial}' AND '{dataFinal}' ORDER BY prod.dataDeEntrada DESC;";
+                FiltrarPorPeriodo = chkbDataEntrada.Checked,
+                DataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd"),
+                DataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd"),
 
-                MySqlDataAdapter DA = new MySqlDataAdapter(querySql, DataBaseConnection.OpenConnection());
+                FiltrarPorUsuario = chkbListaUsuarios.Checked,
+                NomeUsuario = cbbUsuarios.SelectedItem.ToString(),
+            };
 
-                DataTable dt = new DataTable();
+            DataTable resultado = BuscarProdutos(novoFiltro);
+            dgvRelatorio.DataSource = resultado;
+            dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                if (DA.Fill(dt) < 1)
-                {
-                    MessageBox.Show("Sem registros no banco de dados");
-                }
-                else
-                {
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        // As próximas colunas são verificadas quanto a valores nulos (DBNull)
-                        // Caso sejam nulas, uma string vazia é atribuída para evitar erros de conversão
-                        string nomeProduto = dr.ItemArray[0] != DBNull.Value ? dr.ItemArray[0].ToString() : "";
-                        string quantidadeProduto = dr.ItemArray[1] != DBNull.Value ? dr.ItemArray[1].ToString() : "";
-                        string peso = dr.ItemArray[2] != DBNull.Value ? dr.ItemArray[2].ToString() : "";
-                        string unidadeMedida = dr.ItemArray[3] != DBNull.Value ? dr.ItemArray[3].ToString() : "";
-                        string dataDeEntrada = dr.ItemArray[4] != DBNull.Value ? dr.ItemArray[4].ToString() : "";
-                        string dataDeValidade = dr.ItemArray[5] != DBNull.Value ? dr.ItemArray[5].ToString() : "";
-                        string cadastradoPor = dr.ItemArray[6] != DBNull.Value ? dr.ItemArray[6].ToString() : "";
-
-                        // Adiciona os dados formatados no DataGridView (interface visual)
-                        // Exemplo de célula: "2 kg"
-                        dgvRelatorio.Rows.Add(nomeProduto, quantidadeProduto, peso + " " + unidadeMedida, dataDeEntrada, dataDeValidade, cadastradoPor);
-                    }
-                    // Libera os recursos utilizados pelo DataAdapter
-                    DA.Dispose();
-                }
-                // Fecha a conexão com o banco de dados para evitar conexões abertas desnecessariamente
-                DataBaseConnection.CloseConnection();
-            }
-
-            catch (Exception ex)
-            {
-                // Caso ocorra qualquer erro (falha de conexão, SQL, etc.), exibe uma mensagem de erro para o usuário
-                MessageBox.Show("Erro ao carregar produtos: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            // Fecha a conexão com o banco de dados para evitar vazamentos de recursos
             DataBaseConnection.CloseConnection();
         }
 
@@ -147,6 +120,8 @@ namespace GPSFA_WinForms
             dtpDataInicialPeriodo.Value = DateTime.Now;
             dtpDataFinalPeriodo.Value = DateTime.Now;
             cbbUsuarios.SelectedIndex = 0;
+            chkbDataEntrada.Checked = false;
+            chkbListaUsuarios.Checked = false;
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)
@@ -172,8 +147,5 @@ namespace GPSFA_WinForms
 
             DataBaseConnection.CloseConnection();
         }
-
-       
-        
     }
 }

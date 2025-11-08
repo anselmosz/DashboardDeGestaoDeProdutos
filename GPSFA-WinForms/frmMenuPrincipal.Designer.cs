@@ -38,8 +38,8 @@
             this.pnlForm = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.tmrSidebarAnimation = new System.Windows.Forms.Timer(this.components);
             this.btnMenu = new System.Windows.Forms.Button();
+            this.tmrSidebarAnimation = new System.Windows.Forms.Timer(this.components);
             this.pnlForm.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
@@ -137,10 +137,10 @@
             // 
             this.pnlForm.Controls.Add(this.lblHome);
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(103, 0);
-            this.pnlForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlForm.Location = new System.Drawing.Point(251, 0);
+            this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1477, 851);
+            this.pnlForm.Size = new System.Drawing.Size(1329, 851);
             this.pnlForm.TabIndex = 1;
             // 
             // lblHome
@@ -149,7 +149,7 @@
             this.lblHome.Location = new System.Drawing.Point(9, 11);
             this.lblHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(80, 31);
+            this.lblHome.Size = new System.Drawing.Size(64, 25);
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
@@ -168,13 +168,8 @@
             this.pnlSidebar.MaximumSize = new System.Drawing.Size(251, 851);
             this.pnlSidebar.MinimumSize = new System.Drawing.Size(103, 851);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(103, 851);
+            this.pnlSidebar.Size = new System.Drawing.Size(251, 851);
             this.pnlSidebar.TabIndex = 0;
-            // 
-            // tmrSidebarAnimation
-            // 
-            this.tmrSidebarAnimation.Interval = 10;
-            this.tmrSidebarAnimation.Tick += new System.EventHandler(this.tmrSidebarAnimation_Tick);
             // 
             // btnMenu
             // 
@@ -194,6 +189,11 @@
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // tmrSidebarAnimation
+            // 
+            this.tmrSidebarAnimation.Interval = 10;
+            this.tmrSidebarAnimation.Tick += new System.EventHandler(this.tmrSidebarAnimation_Tick);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -204,7 +204,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
             this.pnlSidebar.ResumeLayout(false);

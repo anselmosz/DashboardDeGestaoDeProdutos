@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRelatorios = new System.Windows.Forms.Label();
             this.dgvRelatorio = new System.Windows.Forms.DataGridView();
-            this.nomeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoUnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtValidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quemCadastrou = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
+            this.chkbDataEntrada = new System.Windows.Forms.CheckBox();
+            this.cbbUsuarios = new System.Windows.Forms.ComboBox();
+            this.lblTitleFiltros = new System.Windows.Forms.Label();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
             this.lblE = new System.Windows.Forms.Label();
@@ -44,10 +42,7 @@
             this.dtpDataFinalPeriodo = new System.Windows.Forms.DateTimePicker();
             this.dtpDataInicialPeriodo = new System.Windows.Forms.DateTimePicker();
             this.btnExportarRelatorio = new System.Windows.Forms.Button();
-            this.lblTitleFiltros = new System.Windows.Forms.Label();
-            this.cbbUsuarios = new System.Windows.Forms.ComboBox();
-            this.lblTitlePesquisarUsuario = new System.Windows.Forms.Label();
-            this.ckbDataEntrada = new System.Windows.Forms.CheckBox();
+            this.chkbListaUsuarios = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorio)).BeginInit();
             this.pnlFiltrosDeBusca.SuspendLayout();
             this.SuspendLayout();
@@ -57,77 +52,30 @@
             this.lblRelatorios.AutoSize = true;
             this.lblRelatorios.Location = new System.Drawing.Point(8, 9);
             this.lblRelatorios.Name = "lblRelatorios";
-            this.lblRelatorios.Size = new System.Drawing.Size(81, 20);
+            this.lblRelatorios.Size = new System.Drawing.Size(98, 25);
             this.lblRelatorios.TabIndex = 2;
             this.lblRelatorios.Text = "Relatórios";
             // 
             // dgvRelatorio
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRelatorio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeProduto,
-            this.quantidade,
-            this.pesoUnd,
-            this.dtEntrada,
-            this.dtValidade,
-            this.quemCadastrou});
-            this.dgvRelatorio.Location = new System.Drawing.Point(12, 222);
+            this.dgvRelatorio.Location = new System.Drawing.Point(12, 273);
             this.dgvRelatorio.Name = "dgvRelatorio";
             this.dgvRelatorio.RowHeadersWidth = 51;
-            this.dgvRelatorio.Size = new System.Drawing.Size(1040, 447);
+            this.dgvRelatorio.Size = new System.Drawing.Size(1304, 566);
             this.dgvRelatorio.TabIndex = 3;
-            // 
-            // nomeProduto
-            // 
-            this.nomeProduto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeProduto.HeaderText = "Nome do Produto";
-            this.nomeProduto.MaxInputLength = 100;
-            this.nomeProduto.MinimumWidth = 6;
-            this.nomeProduto.Name = "nomeProduto";
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.MaxInputLength = 10;
-            this.quantidade.MinimumWidth = 6;
-            this.quantidade.Name = "quantidade";
-            // 
-            // pesoUnd
-            // 
-            this.pesoUnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pesoUnd.HeaderText = "Peso";
-            this.pesoUnd.MaxInputLength = 10;
-            this.pesoUnd.MinimumWidth = 6;
-            this.pesoUnd.Name = "pesoUnd";
-            // 
-            // dtEntrada
-            // 
-            this.dtEntrada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dtEntrada.HeaderText = "Data de Entrada";
-            this.dtEntrada.MaxInputLength = 20;
-            this.dtEntrada.MinimumWidth = 6;
-            this.dtEntrada.Name = "dtEntrada";
-            // 
-            // dtValidade
-            // 
-            this.dtValidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dtValidade.HeaderText = "Data de Validade";
-            this.dtValidade.MaxInputLength = 100;
-            this.dtValidade.Name = "dtValidade";
-            // 
-            // quemCadastrou
-            // 
-            this.quemCadastrou.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quemCadastrou.HeaderText = "Adicionado por";
-            this.quemCadastrou.MaxInputLength = 100;
-            this.quemCadastrou.MinimumWidth = 6;
-            this.quemCadastrou.Name = "quemCadastrou";
             // 
             // pnlFiltrosDeBusca
             // 
-            this.pnlFiltrosDeBusca.Controls.Add(this.ckbDataEntrada);
-            this.pnlFiltrosDeBusca.Controls.Add(this.lblTitlePesquisarUsuario);
+            this.pnlFiltrosDeBusca.Controls.Add(this.chkbListaUsuarios);
+            this.pnlFiltrosDeBusca.Controls.Add(this.chkbDataEntrada);
             this.pnlFiltrosDeBusca.Controls.Add(this.cbbUsuarios);
             this.pnlFiltrosDeBusca.Controls.Add(this.lblTitleFiltros);
             this.pnlFiltrosDeBusca.Controls.Add(this.btnLimparFiltros);
@@ -139,12 +87,43 @@
             this.pnlFiltrosDeBusca.Controls.Add(this.btnExportarRelatorio);
             this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(12, 32);
             this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
-            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1040, 184);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1304, 235);
             this.pnlFiltrosDeBusca.TabIndex = 4;
+            // 
+            // chkbDataEntrada
+            // 
+            this.chkbDataEntrada.AutoSize = true;
+            this.chkbDataEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbDataEntrada.Location = new System.Drawing.Point(15, 32);
+            this.chkbDataEntrada.Name = "chkbDataEntrada";
+            this.chkbDataEntrada.Size = new System.Drawing.Size(217, 29);
+            this.chkbDataEntrada.TabIndex = 14;
+            this.chkbDataEntrada.Text = "Período de entrada";
+            this.chkbDataEntrada.UseVisualStyleBackColor = true;
+            // 
+            // cbbUsuarios
+            // 
+            this.cbbUsuarios.FormattingEnabled = true;
+            this.cbbUsuarios.Items.AddRange(new object[] {
+            "Todos"});
+            this.cbbUsuarios.Location = new System.Drawing.Point(16, 188);
+            this.cbbUsuarios.Name = "cbbUsuarios";
+            this.cbbUsuarios.Size = new System.Drawing.Size(317, 33);
+            this.cbbUsuarios.TabIndex = 12;
+            // 
+            // lblTitleFiltros
+            // 
+            this.lblTitleFiltros.AutoSize = true;
+            this.lblTitleFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleFiltros.Location = new System.Drawing.Point(3, 3);
+            this.lblTitleFiltros.Name = "lblTitleFiltros";
+            this.lblTitleFiltros.Size = new System.Drawing.Size(71, 25);
+            this.lblTitleFiltros.TabIndex = 11;
+            this.lblTitleFiltros.Text = "Filtros";
             // 
             // btnLimparFiltros
             // 
-            this.btnLimparFiltros.Location = new System.Drawing.Point(690, 3);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(954, 3);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Size = new System.Drawing.Size(114, 41);
             this.btnLimparFiltros.TabIndex = 9;
@@ -154,7 +133,7 @@
             // 
             // btnAplicarFiltros
             // 
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(570, 3);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(834, 3);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
             this.btnAplicarFiltros.Size = new System.Drawing.Size(114, 41);
             this.btnAplicarFiltros.TabIndex = 8;
@@ -165,92 +144,62 @@
             // lblE
             // 
             this.lblE.AutoSize = true;
-            this.lblE.Location = new System.Drawing.Point(23, 91);
+            this.lblE.Location = new System.Drawing.Point(24, 103);
             this.lblE.Name = "lblE";
-            this.lblE.Size = new System.Drawing.Size(35, 20);
+            this.lblE.Size = new System.Drawing.Size(44, 25);
             this.lblE.TabIndex = 5;
             this.lblE.Text = "Fim";
             // 
             // lblDataInicial
             // 
             this.lblDataInicial.AutoSize = true;
-            this.lblDataInicial.Location = new System.Drawing.Point(11, 59);
+            this.lblDataInicial.Location = new System.Drawing.Point(11, 67);
             this.lblDataInicial.Name = "lblDataInicial";
-            this.lblDataInicial.Size = new System.Drawing.Size(46, 20);
+            this.lblDataInicial.Size = new System.Drawing.Size(57, 25);
             this.lblDataInicial.TabIndex = 4;
             this.lblDataInicial.Text = "Inicio";
             // 
             // dtpDataFinalPeriodo
             // 
             this.dtpDataFinalPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(63, 88);
+            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(74, 103);
             this.dtpDataFinalPeriodo.Name = "dtpDataFinalPeriodo";
-            this.dtpDataFinalPeriodo.Size = new System.Drawing.Size(102, 26);
+            this.dtpDataFinalPeriodo.Size = new System.Drawing.Size(124, 30);
             this.dtpDataFinalPeriodo.TabIndex = 2;
             // 
             // dtpDataInicialPeriodo
             // 
             this.dtpDataInicialPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(63, 56);
+            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(74, 67);
             this.dtpDataInicialPeriodo.Name = "dtpDataInicialPeriodo";
-            this.dtpDataInicialPeriodo.Size = new System.Drawing.Size(102, 26);
+            this.dtpDataInicialPeriodo.Size = new System.Drawing.Size(124, 30);
             this.dtpDataInicialPeriodo.TabIndex = 1;
             // 
             // btnExportarRelatorio
             // 
-            this.btnExportarRelatorio.Location = new System.Drawing.Point(810, 3);
+            this.btnExportarRelatorio.Location = new System.Drawing.Point(1074, 3);
             this.btnExportarRelatorio.Name = "btnExportarRelatorio";
             this.btnExportarRelatorio.Size = new System.Drawing.Size(227, 41);
             this.btnExportarRelatorio.TabIndex = 0;
             this.btnExportarRelatorio.Text = "Exportar relatório em XLS";
             this.btnExportarRelatorio.UseVisualStyleBackColor = true;
             // 
-            // lblTitleFiltros
+            // chkbListaUsuarios
             // 
-            this.lblTitleFiltros.AutoSize = true;
-            this.lblTitleFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleFiltros.Location = new System.Drawing.Point(3, 3);
-            this.lblTitleFiltros.Name = "lblTitleFiltros";
-            this.lblTitleFiltros.Size = new System.Drawing.Size(59, 20);
-            this.lblTitleFiltros.TabIndex = 11;
-            this.lblTitleFiltros.Text = "Filtros";
-            // 
-            // cbbUsuarios
-            // 
-            this.cbbUsuarios.FormattingEnabled = true;
-            this.cbbUsuarios.Items.AddRange(new object[] {
-            "Todos"});
-            this.cbbUsuarios.Location = new System.Drawing.Point(9, 146);
-            this.cbbUsuarios.Name = "cbbUsuarios";
-            this.cbbUsuarios.Size = new System.Drawing.Size(317, 28);
-            this.cbbUsuarios.TabIndex = 12;
-            // 
-            // lblTitlePesquisarUsuario
-            // 
-            this.lblTitlePesquisarUsuario.AutoSize = true;
-            this.lblTitlePesquisarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitlePesquisarUsuario.Location = new System.Drawing.Point(5, 123);
-            this.lblTitlePesquisarUsuario.Name = "lblTitlePesquisarUsuario";
-            this.lblTitlePesquisarUsuario.Size = new System.Drawing.Size(155, 20);
-            this.lblTitlePesquisarUsuario.TabIndex = 13;
-            this.lblTitlePesquisarUsuario.Text = "Pesquisar Usuário";
-            // 
-            // ckbDataEntrada
-            // 
-            this.ckbDataEntrada.AutoSize = true;
-            this.ckbDataEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbDataEntrada.Location = new System.Drawing.Point(15, 32);
-            this.ckbDataEntrada.Name = "ckbDataEntrada";
-            this.ckbDataEntrada.Size = new System.Drawing.Size(181, 24);
-            this.ckbDataEntrada.TabIndex = 14;
-            this.ckbDataEntrada.Text = "Período de entrada";
-            this.ckbDataEntrada.UseVisualStyleBackColor = true;
+            this.chkbListaUsuarios.AutoSize = true;
+            this.chkbListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbListaUsuarios.Location = new System.Drawing.Point(15, 153);
+            this.chkbListaUsuarios.Name = "chkbListaUsuarios";
+            this.chkbListaUsuarios.Size = new System.Drawing.Size(214, 29);
+            this.chkbListaUsuarios.TabIndex = 15;
+            this.chkbListaUsuarios.Text = "Selecionar usuário";
+            this.chkbListaUsuarios.UseVisualStyleBackColor = true;
             // 
             // frmRelatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1328, 851);
             this.Controls.Add(this.pnlFiltrosDeBusca);
             this.Controls.Add(this.dgvRelatorio);
             this.Controls.Add(this.lblRelatorios);
@@ -280,15 +229,9 @@
         private System.Windows.Forms.Label lblDataInicial;
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Button btnLimparFiltros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pesoUnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtEntrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtValidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quemCadastrou;
         private System.Windows.Forms.Label lblTitleFiltros;
-        private System.Windows.Forms.Label lblTitlePesquisarUsuario;
         private System.Windows.Forms.ComboBox cbbUsuarios;
-        private System.Windows.Forms.CheckBox ckbDataEntrada;
+        private System.Windows.Forms.CheckBox chkbDataEntrada;
+        private System.Windows.Forms.CheckBox chkbListaUsuarios;
     }
 }
