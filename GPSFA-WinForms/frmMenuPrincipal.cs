@@ -13,7 +13,7 @@ namespace GPSFA_WinForms
     public partial class frmMenuPrincipal : Form
     {
         private Form frmAtivo;
-
+        bool sidebarExpand;
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -40,11 +40,16 @@ namespace GPSFA_WinForms
 
         private void ActiveButton(Button frmAtivo)
         {
-            foreach (Control ctrl in pnlSideMenu.Controls)
+            foreach (Control ctrl in pnlSidebar.Controls)
             {
                 ctrl.ForeColor = Color.Black;
             }
             frmAtivo.ForeColor = Color.Red;
+        }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnHome);
+            ActiveFormClose();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -59,16 +64,40 @@ namespace GPSFA_WinForms
             FormShow(new frmVoluntarios());
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            ActiveButton(btnMenu);
-            ActiveFormClose();
-        }
 
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
             ActiveButton(btnRelatorios);
             FormShow(new frmRelatorios());
+        }
+
+        
+
+        private void tmrSidebarAnimation_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                // se a sidebar estiver expandida, ela minimiza
+                pnlSidebar.Width -= 10;
+                if (pnlSidebar.Width == pnlSidebar.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    tmrSidebarAnimation.Stop();
+                }
+            }
+            else
+            {
+                pnlSidebar.Width += 10;
+                if (pnlSidebar.Width == pnlSidebar.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    tmrSidebarAnimation.Stop();
+                }
+            }
+        }
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            tmrSidebarAnimation.Start();
         }
     }
 }
