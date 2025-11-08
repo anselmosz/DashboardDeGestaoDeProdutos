@@ -139,6 +139,8 @@
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlForm.Location = new System.Drawing.Point(251, 0);
             this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlForm.MaximumSize = new System.Drawing.Size(1477, 851);
+            this.pnlForm.MinimumSize = new System.Drawing.Size(1329, 851);
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(1329, 851);
             this.pnlForm.TabIndex = 1;
