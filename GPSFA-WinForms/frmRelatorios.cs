@@ -137,7 +137,7 @@ namespace GPSFA_WinForms
         {
             MySqlCommand comm = new MySqlCommand();
 
-            comm.CommandText = "SELECT tbvol.nome, tbusr.email FROM tbusuarios AS tbusr INNER JOIN tbvoluntarios AS tbvol ON tbusr.codVol = tbvol.codvol ORDER BY tbvol.nome DESC;";
+            comm.CommandText = "SELECT nome FROM tbvoluntarios ORDER BY nome DESC;";
 
             comm.Connection = DataBaseConnection.OpenConnection();
 

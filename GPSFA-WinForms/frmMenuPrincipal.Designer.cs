@@ -46,16 +46,17 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 109);
+            this.btnHome.Location = new System.Drawing.Point(0, 124);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(198, 55);
+            this.btnHome.Size = new System.Drawing.Size(220, 57);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "        Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -65,16 +66,17 @@
             // btnSair
             // 
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSair.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(0, 626);
+            this.btnSair.Location = new System.Drawing.Point(0, 602);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSair.Name = "btnSair";
             this.btnSair.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(198, 55);
+            this.btnSair.Size = new System.Drawing.Size(220, 79);
             this.btnSair.TabIndex = 5;
             this.btnSair.Text = "        Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -82,16 +84,17 @@
             // 
             // btnRelatorios
             // 
-            this.btnRelatorios.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRelatorios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.btnRelatorios.FlatAppearance.BorderSize = 0;
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorios.ForeColor = System.Drawing.Color.White;
             this.btnRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorios.Image")));
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 238);
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 253);
             this.btnRelatorios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnRelatorios.Size = new System.Drawing.Size(198, 55);
+            this.btnRelatorios.Size = new System.Drawing.Size(220, 57);
             this.btnRelatorios.TabIndex = 3;
             this.btnRelatorios.Text = "        Relatórios";
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -100,16 +103,17 @@
             // 
             // btnVoluntarios
             // 
-            this.btnVoluntarios.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVoluntarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.btnVoluntarios.FlatAppearance.BorderSize = 0;
             this.btnVoluntarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoluntarios.ForeColor = System.Drawing.Color.White;
             this.btnVoluntarios.Image = ((System.Drawing.Image)(resources.GetObject("btnVoluntarios.Image")));
             this.btnVoluntarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoluntarios.Location = new System.Drawing.Point(0, 303);
+            this.btnVoluntarios.Location = new System.Drawing.Point(0, 318);
             this.btnVoluntarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVoluntarios.Name = "btnVoluntarios";
             this.btnVoluntarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnVoluntarios.Size = new System.Drawing.Size(198, 55);
+            this.btnVoluntarios.Size = new System.Drawing.Size(220, 57);
             this.btnVoluntarios.TabIndex = 2;
             this.btnVoluntarios.Text = "        Voluntários";
             this.btnVoluntarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -118,16 +122,17 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 173);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 188);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(198, 55);
+            this.btnDashboard.Size = new System.Drawing.Size(220, 57);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "        Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,13 +141,12 @@
             // 
             // pnlForm
             // 
+            this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
             this.pnlForm.Controls.Add(this.lblHome);
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(82, 0);
-            this.pnlForm.MaximumSize = new System.Drawing.Size(1182, 681);
-            this.pnlForm.MinimumSize = new System.Drawing.Size(1063, 681);
+            this.pnlForm.Location = new System.Drawing.Point(85, 0);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1182, 681);
+            this.pnlForm.Size = new System.Drawing.Size(1179, 681);
             this.pnlForm.TabIndex = 1;
             // 
             // lblHome
@@ -156,7 +160,7 @@
             // 
             // pnlSidebar
             // 
-            this.pnlSidebar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.pnlSidebar.Controls.Add(this.btnMenu);
             this.pnlSidebar.Controls.Add(this.btnHome);
             this.pnlSidebar.Controls.Add(this.btnSair);
@@ -166,24 +170,26 @@
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlSidebar.MaximumSize = new System.Drawing.Size(200, 1080);
-            this.pnlSidebar.MinimumSize = new System.Drawing.Size(82, 681);
+            this.pnlSidebar.MaximumSize = new System.Drawing.Size(220, 1080);
+            this.pnlSidebar.MinimumSize = new System.Drawing.Size(85, 681);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(82, 681);
+            this.pnlSidebar.Size = new System.Drawing.Size(85, 681);
             this.pnlSidebar.TabIndex = 0;
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 0);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(198, 99);
+            this.btnMenu.Size = new System.Drawing.Size(220, 82);
             this.btnMenu.TabIndex = 7;
             this.btnMenu.Text = "        Menu";
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -192,19 +198,20 @@
             // 
             // tmrSidebarAnimation
             // 
-            this.tmrSidebarAnimation.Interval = 10;
+            this.tmrSidebarAnimation.Interval = 20;
             this.tmrSidebarAnimation.Tick += new System.EventHandler(this.tmrSidebarAnimation_Tick);
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlSidebar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MaximumSize = new System.Drawing.Size(1920, 1078);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

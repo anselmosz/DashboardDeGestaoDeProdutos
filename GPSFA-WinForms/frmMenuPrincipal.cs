@@ -28,6 +28,7 @@ namespace GPSFA_WinForms
 
             pnlForm.Controls.Add(frm);
             frm.BringToFront();
+            frm.Dock = DockStyle.Fill;
             frm.Show();
         }
 
@@ -42,9 +43,11 @@ namespace GPSFA_WinForms
         {
             foreach (Control ctrl in pnlSidebar.Controls)
             {
-                ctrl.ForeColor = Color.Black;
+                ctrl.ForeColor = Color.White;
+                ctrl.BackColor = Color.FromArgb(48, 112, 99);
             }
-            frmAtivo.ForeColor = Color.Red;
+            frmAtivo.BackColor = Color.FromArgb(112, 194, 177);
+
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
