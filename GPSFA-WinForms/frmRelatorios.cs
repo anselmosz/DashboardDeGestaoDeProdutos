@@ -28,8 +28,8 @@ namespace GPSFA_WinForms
             carregarUsuários();
             dtpDataInicialPeriodo.Enabled = false;
             dtpDataFinalPeriodo.Enabled = false;
-            cbbUsuarios.SelectedIndex = 0;
-            cbbUsuarios.Enabled = false;
+            cbbListaDeUsuarios.SelectedIndex = 0;
+            cbbListaDeUsuarios.Enabled = false;
         }
 
         // Carrega no datagrid view os últimos produtos adicionados no banco
@@ -60,7 +60,7 @@ namespace GPSFA_WinForms
         }
 
 
-        public DataTable BuscarProdutosPorFiltro(FiltroDeBuscaBD filtro)
+        public DataTable BuscarProdutosPorFiltro(params FiltroDeBuscaBD[] filtros)
         {
             DataTable tabela = new DataTable();
 
@@ -70,30 +70,43 @@ namespace GPSFA_WinForms
 
                 query.Append("SELECT prod.nome AS 'Nome do Produto', prod.quantidade AS 'Quantidade', CONCAT(prod.peso,' ', prod.unidade) AS 'Peso', prod.dataDeEntrada AS 'Data de Cadastro', prod.dataDeValidade AS 'Data de Validade', vol.nome AS 'Quem Cadastrou' FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol WHERE 1=1 ");
 
-                MySqlCommand comm = new MySqlCommand();
-                comm.Connection = conexao;
-
-                if (filtro.FiltrarPorPeriodo)
+                using (MySqlCommand comm = new MySqlCommand())
                 {
-                    query.Append("AND prod.dataDeEntrada BETWEEN @dataInicial AND @dataFinal ");
-                    comm.Parameters.AddWithValue("@dataInicial", filtro.DataInicial);
-                    comm.Parameters.AddWithValue("@dataFinal", filtro.DataFinal);
+                    comm.Connection = conexao;
+                    int paramCount = 0;
+
+                    foreach (var filtro in filtros)
+                    {
+                        // Filtro por período
+                        if (filtro.FiltrarPorPeriodo && !string.IsNullOrEmpty(filtro.DataInicial) && !string.IsNullOrEmpty(filtro.DataFinal))
+                        {
+                            string paramInicio = "@dataInicio" + paramCount;
+                            string paramFim = "@dataFim" + paramCount;
+                            query.Append($" AND prod.dataDeEntrada BETWEEN {paramInicio} AND {paramFim} ");
+
+                            comm.Parameters.AddWithValue(paramInicio, filtro.DataInicial);
+                            comm.Parameters.AddWithValue(paramFim, filtro.DataFinal);
+                            paramCount++;
+                        }
+
+                        // Filtro por voluntário
+                        if (filtro.FiltrarPorUsuario && !string.IsNullOrEmpty(filtro.NomeUsuario))
+                        {
+                            string paramNome = "@nomeUsuario" + paramCount;
+                            query.Append($" AND vol.nome LIKE {paramNome} ");
+                            comm.Parameters.AddWithValue(paramNome, "%" + filtro.NomeUsuario + "%");
+                            paramCount++;
+                        }
+                    }
+                    query.Append(" ORDER BY prod.dataDeEntrada DESC;");
+
+                    comm.CommandText = query.ToString();
+                    using(MySqlDataAdapter DA = new MySqlDataAdapter(comm))
+                    {
+                        DA.Fill(tabela);
+                    }
                 }
-
-                if (filtro.FiltrarPorUsuario && !string.IsNullOrEmpty(filtro.NomeUsuario))
-                {
-                    query.Append("AND vol.nome = @nomeUsuario ");
-                    comm.Parameters.AddWithValue("@nomeUsuario", filtro.NomeUsuario);
-                }
-
-                query.Append("ORDER BY prod.dataDeEntrada DESC;");
-
-                comm.CommandText = query.ToString();
-
-                MySqlDataAdapter DA = new MySqlDataAdapter(comm);
-                DA.Fill(tabela);
             }
-
             return tabela;
         }
 
@@ -101,20 +114,38 @@ namespace GPSFA_WinForms
         {
             dgvRelatorio.Columns.Clear();
 
-            FiltroDeBuscaBD novoFiltro = new FiltroDeBuscaBD
+            try
             {
-                FiltrarPorPeriodo = chkbDataEntrada.Checked,
-                DataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd"),
-                DataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd"),
+                if (cbbListaDeUsuarios.SelectedItem == null)
+                {
+                    MessageBox.Show($"Selecione uma opção válida da lista para usar o filtro", "Erro do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    limparFiltros();
+                    CarregarDadosNaListaDeProdutos();
+                }
+                else
+                {
+                    FiltroDeBuscaBD filtroDeData = new FiltroDeBuscaBD
+                    {
+                        FiltrarPorPeriodo = chkbDataEntrada.Checked,
+                        DataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd"),
+                        DataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd"),
+                    };
+                    
+                    FiltroDeBuscaBD filtroDeVoluntario = new FiltroDeBuscaBD
+                    {
+                        FiltrarPorUsuario = chkbListaUsuarios.Checked,
+                        NomeUsuario = cbbListaDeUsuarios.SelectedItem.ToString(),
+                    };
 
-                FiltrarPorUsuario = chkbListaUsuarios.Checked,
-                NomeUsuario = cbbUsuarios.SelectedItem.ToString(),
-            };
-
-            DataTable resultado = BuscarProdutosPorFiltro(novoFiltro);
-            dgvRelatorio.DataSource = resultado;
-            dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+                    DataTable resultado = BuscarProdutosPorFiltro(filtroDeData, filtroDeVoluntario);
+                    dgvRelatorio.DataSource = resultado;
+                    dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                }
+            }
+            catch (Exception error) {
+                MessageBox.Show($"Erro: {error}", "Erro do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                limparFiltros();
+            }
             DataBaseConnection.CloseConnection();
         }
 
@@ -122,7 +153,7 @@ namespace GPSFA_WinForms
         {
             dtpDataInicialPeriodo.Value = DateTime.Now;
             dtpDataFinalPeriodo.Value = DateTime.Now;
-            cbbUsuarios.SelectedIndex = 0;
+            cbbListaDeUsuarios.SelectedIndex = 0;
             chkbDataEntrada.Checked = false;
             chkbListaUsuarios.Checked = false;
         }
@@ -145,7 +176,7 @@ namespace GPSFA_WinForms
 
             while (DR.Read())
             {
-                cbbUsuarios.Items.Add(DR.GetString(0));
+                cbbListaDeUsuarios.Items.Add(DR.GetString(0));
             }
 
             DataBaseConnection.CloseConnection();
@@ -172,14 +203,14 @@ namespace GPSFA_WinForms
         {
             if (chkbListaUsuarios.Checked)
             {
-                cbbUsuarios.Enabled = true;
-                cbbUsuarios.Items.Remove("Todos");
+                cbbListaDeUsuarios.Enabled = true;
+                cbbListaDeUsuarios.Items.Remove("Todos");
             }
             else
             {
-                cbbUsuarios.Enabled = false;
-                cbbUsuarios.Items.Insert(0, "Todos");
-                cbbUsuarios.SelectedIndex = 0;
+                cbbListaDeUsuarios.Enabled = false;
+                cbbListaDeUsuarios.Items.Insert(0, "Todos");
+                cbbListaDeUsuarios.SelectedIndex = 0;
             }
         }
     }
