@@ -82,9 +82,10 @@
             this.panel1.Controls.Add(this.cbxCategoria);
             this.panel1.Controls.Add(this.lblCategoria);
             this.panel1.Controls.Add(this.lblStatus);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 759);
+            this.panel1.Size = new System.Drawing.Size(245, 681);
             this.panel1.TabIndex = 0;
             // 
             // btnLimparFiltros
@@ -224,9 +225,10 @@
             this.panel2.Controls.Add(this.lblSubTitulo);
             this.panel2.Controls.Add(this.lblTituloEstoque);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(251, 1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(245, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 759);
+            this.panel2.Size = new System.Drawing.Size(799, 681);
             this.panel2.TabIndex = 1;
             // 
             // lblQRCODE
@@ -245,9 +247,9 @@
             this.panel4.Controls.Add(this.btnCarregaTodosProdutos);
             this.panel4.Controls.Add(this.txtNomeOrCod);
             this.panel4.Controls.Add(this.btnPesquisar);
-            this.panel4.Location = new System.Drawing.Point(21, 136);
+            this.panel4.Location = new System.Drawing.Point(22, 132);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1168, 57);
+            this.panel4.Size = new System.Drawing.Size(759, 57);
             this.panel4.TabIndex = 13;
             // 
             // btnCarregaTodosProdutos
@@ -259,7 +261,7 @@
             this.btnCarregaTodosProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregaTodosProdutos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnCarregaTodosProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnCarregaTodosProdutos.Location = new System.Drawing.Point(1069, 17);
+            this.btnCarregaTodosProdutos.Location = new System.Drawing.Point(658, 17);
             this.btnCarregaTodosProdutos.Name = "btnCarregaTodosProdutos";
             this.btnCarregaTodosProdutos.Size = new System.Drawing.Size(84, 26);
             this.btnCarregaTodosProdutos.TabIndex = 14;
@@ -274,7 +276,7 @@
             this.txtNomeOrCod.Location = new System.Drawing.Point(17, 17);
             this.txtNomeOrCod.Multiline = true;
             this.txtNomeOrCod.Name = "txtNomeOrCod";
-            this.txtNomeOrCod.Size = new System.Drawing.Size(893, 26);
+            this.txtNomeOrCod.Size = new System.Drawing.Size(505, 26);
             this.txtNomeOrCod.TabIndex = 13;
             // 
             // btnPesquisar
@@ -286,9 +288,9 @@
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(962, 17);
+            this.btnPesquisar.Location = new System.Drawing.Point(538, 17);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(84, 26);
+            this.btnPesquisar.Size = new System.Drawing.Size(100, 26);
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -308,12 +310,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 83);
+            this.label1.Location = new System.Drawing.Point(17, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1179, 20);
+            this.label1.Size = new System.Drawing.Size(756, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "_________________________________________________________________________________" +
-    "_________________________________________________";
+    "__";
             // 
             // dgvEstoque
             // 
@@ -327,10 +329,10 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(21, 326);
+            this.dgvEstoque.Location = new System.Drawing.Point(21, 322);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1165, 410);
+            this.dgvEstoque.Size = new System.Drawing.Size(760, 347);
             this.dgvEstoque.TabIndex = 5;
             this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             // 
@@ -403,9 +405,9 @@
             this.panel3.Controls.Add(this.btnLerQRCode);
             this.panel3.Controls.Add(this.btnDarBaixa);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(21, 247);
+            this.panel3.Location = new System.Drawing.Point(22, 236);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1168, 57);
+            this.panel3.Size = new System.Drawing.Size(759, 57);
             this.panel3.TabIndex = 2;
             // 
             // btnLerQRCode
@@ -418,7 +420,7 @@
             this.btnLerQRCode.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnLerQRCode.ForeColor = System.Drawing.Color.White;
             this.btnLerQRCode.Image = ((System.Drawing.Image)(resources.GetObject("btnLerQRCode.Image")));
-            this.btnLerQRCode.Location = new System.Drawing.Point(824, 17);
+            this.btnLerQRCode.Location = new System.Drawing.Point(538, 17);
             this.btnLerQRCode.Name = "btnLerQRCode";
             this.btnLerQRCode.Size = new System.Drawing.Size(100, 26);
             this.btnLerQRCode.TabIndex = 12;
@@ -435,7 +437,7 @@
             this.btnDarBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDarBaixa.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnDarBaixa.ForeColor = System.Drawing.Color.White;
-            this.btnDarBaixa.Location = new System.Drawing.Point(962, 17);
+            this.btnDarBaixa.Location = new System.Drawing.Point(658, 17);
             this.btnDarBaixa.Name = "btnDarBaixa";
             this.btnDarBaixa.Size = new System.Drawing.Size(84, 26);
             this.btnDarBaixa.TabIndex = 11;
@@ -447,7 +449,7 @@
             this.textBox1.Location = new System.Drawing.Point(17, 17);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(755, 26);
+            this.textBox1.Size = new System.Drawing.Size(505, 26);
             this.textBox1.TabIndex = 11;
             // 
             // frmEstoque
@@ -455,10 +457,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(1464, 761);
+            this.ClientSize = new System.Drawing.Size(1044, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEstoque";

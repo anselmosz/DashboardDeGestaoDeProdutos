@@ -1,61 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\",
+  "WorkspaceRootPath": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:GPSFA-WinForms\\frmMenuPrincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:GPSFA-WinForms\\frmGestaoDeVoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\caua.gpereira2\\source\\repos\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:GPSFA-WinForms\\frmMenuPrincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:GPSFA-WinForms\\frmGestaoDeVoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:GPSFA-WinForms\\frmRelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -66,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\Program.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\Program.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\Program.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\Program.cs",
               "RelativeToolTip": "GPSFA-WinForms\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T12:09:30.774Z",
               "EditorCaption": ""
@@ -93,22 +85,22 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "frmEditarEstoque.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEditarEstoque.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmEditarEstoque.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwAIAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T12:08:38.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "frmEditarEstoque.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEditarEstoque.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs [Design]",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs [Design]",
               "RelativeToolTip": "GPSFA-WinForms\\frmEditarEstoque.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T12:08:36.358Z",
@@ -116,37 +108,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DataBaseConnection.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
               "RelativeToolTip": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:06:08.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T12:06:08.673Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "frmEstoque.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEstoque.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmEstoque.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowAgBAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAYwAgBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T12:02:58.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "frmRelatorios.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
+              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs [Design]",
+              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T11:43:37.698Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmEstoque.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEstoque.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs [Design]",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs [Design]",
               "RelativeToolTip": "GPSFA-WinForms\\frmEstoque.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T12:03:03.235Z",
@@ -154,49 +157,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmDashboard.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmDashboard.cs",
-              "RelativeToolTip": "GPSFA-WinForms\\frmDashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:00:30.552Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmDashboard.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmDashboard.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:00:25.574Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmMenuPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmMenuPrincipal.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T11:46:00.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "frmMenuPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs [Design]",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs [Design]",
               "RelativeToolTip": "GPSFA-WinForms\\frmMenuPrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T11:30:45.969Z",
@@ -204,11 +182,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "frmRelatorios.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAMwI0AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,40 +195,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmRelatorios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T11:43:37.698Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "frmGestaoDeVoluntarios.cs",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
-              "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
+              "ToolTip": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
               "RelativeToolTip": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:16:10.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T11:16:10.85Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "frmGestaoDeVoluntarios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
+              "DocumentMoniker": "C:\\Users\\matheus.sanselmo1\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
               "ToolTip": "C:\\Users\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\Caua.gpereira2\\source\\repos\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T17:53:46.946Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-09T17:53:46.946Z"
             }
           ]
         }

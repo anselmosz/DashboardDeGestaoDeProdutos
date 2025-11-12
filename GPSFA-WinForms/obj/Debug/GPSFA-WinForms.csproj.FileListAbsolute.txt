@@ -136,7 +136,6 @@ C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmRelatorios.resources
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmVoluntarios.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmGestaoDeVoluntarios.resources
-C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmEstoque.resources
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.csproj.AssemblyReference.cache
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe.config
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmDashboard.resources
@@ -208,3 +207,5 @@ C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-Wi.9FD634F4.Up2Date
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEditarEstoque.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEstoque.resources
