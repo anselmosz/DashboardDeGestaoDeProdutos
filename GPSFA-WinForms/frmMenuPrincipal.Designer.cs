@@ -38,6 +38,7 @@
             this.pnlForm = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.tmrSidebarAnimation = new System.Windows.Forms.Timer(this.components);
             this.pnlForm.SuspendLayout();
@@ -56,7 +57,7 @@
             this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(220, 70);
+            this.btnHome.Size = new System.Drawing.Size(220, 53);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "        Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -90,11 +91,11 @@
             this.btnRelatorios.ForeColor = System.Drawing.Color.White;
             this.btnRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorios.Image")));
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRelatorios.Location = new System.Drawing.Point(0, 277);
+            this.btnRelatorios.Location = new System.Drawing.Point(0, 243);
             this.btnRelatorios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnRelatorios.Size = new System.Drawing.Size(220, 70);
+            this.btnRelatorios.Size = new System.Drawing.Size(220, 53);
             this.btnRelatorios.TabIndex = 3;
             this.btnRelatorios.Text = "        Relatórios";
             this.btnRelatorios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -109,11 +110,11 @@
             this.btnVoluntarios.ForeColor = System.Drawing.Color.White;
             this.btnVoluntarios.Image = ((System.Drawing.Image)(resources.GetObject("btnVoluntarios.Image")));
             this.btnVoluntarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoluntarios.Location = new System.Drawing.Point(0, 357);
+            this.btnVoluntarios.Location = new System.Drawing.Point(0, 306);
             this.btnVoluntarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVoluntarios.Name = "btnVoluntarios";
             this.btnVoluntarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnVoluntarios.Size = new System.Drawing.Size(220, 70);
+            this.btnVoluntarios.Size = new System.Drawing.Size(220, 53);
             this.btnVoluntarios.TabIndex = 2;
             this.btnVoluntarios.Text = "        Voluntários";
             this.btnVoluntarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,11 +129,11 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 197);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 180);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(220, 70);
+            this.btnDashboard.Size = new System.Drawing.Size(220, 53);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "        Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -161,6 +162,7 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.pnlSidebar.Controls.Add(this.btnEstoque);
             this.pnlSidebar.Controls.Add(this.btnMenu);
             this.pnlSidebar.Controls.Add(this.btnHome);
             this.pnlSidebar.Controls.Add(this.btnSair);
@@ -175,6 +177,25 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(82, 681);
             this.pnlSidebar.TabIndex = 0;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.ForeColor = System.Drawing.Color.White;
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
+            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstoque.Location = new System.Drawing.Point(0, 369);
+            this.btnEstoque.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEstoque.Size = new System.Drawing.Size(220, 53);
+            this.btnEstoque.TabIndex = 8;
+            this.btnEstoque.Text = "        Estoque";
+            this.btnEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnMenu
             // 
@@ -235,5 +256,6 @@
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Timer tmrSidebarAnimation;
         private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }

@@ -145,6 +145,12 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstoque.Designer.cs">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,16 +163,19 @@
     <Compile Include="frmRelatorios.Designer.cs">
       <DependentUpon>frmRelatorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVoluntarios.cs">
+    <Compile Include="frmGestaoDeVoluntarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVoluntarios.Designer.cs">
-      <DependentUpon>frmVoluntarios.cs</DependentUpon>
+    <Compile Include="frmGestaoDeVoluntarios.Designer.cs">
+      <DependentUpon>frmGestaoDeVoluntarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstoque.resx">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -174,8 +183,8 @@
     <EmbeddedResource Include="frmRelatorios.resx">
       <DependentUpon>frmRelatorios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVoluntarios.resx">
-      <DependentUpon>frmVoluntarios.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestaoDeVoluntarios.resx">
+      <DependentUpon>frmGestaoDeVoluntarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

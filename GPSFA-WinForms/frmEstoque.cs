@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GPSFA_WinForms
 {
-    public partial class frmVoluntarios : Form
+    public partial class frmEstoque : Form
     {
-        public frmVoluntarios()
+        public frmEstoque()
         {
             InitializeComponent();
         }

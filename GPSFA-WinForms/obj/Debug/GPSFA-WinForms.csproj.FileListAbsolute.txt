@@ -123,7 +123,6 @@ C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.pdb
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmMenuPrincipal.resources
-C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmVoluntarios.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmRelatorios.resources
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\EntityFramework.dll
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\EntityFramework.SqlServer.dll
@@ -136,3 +135,5 @@ C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmMenuPrincipal.resources
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmRelatorios.resources
 C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmVoluntarios.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmGestaoDeVoluntarios.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmEstoque.resources

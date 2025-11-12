@@ -64,7 +64,7 @@ namespace GPSFA_WinForms
         private void btnVoluntarios_Click(object sender, EventArgs e)
         {
             ActiveButton(btnVoluntarios);
-            FormShow(new frmVoluntarios());
+            FormShow(new frmGestaoDeVoluntarios());
         }
 
 
@@ -74,8 +74,18 @@ namespace GPSFA_WinForms
             FormShow(new frmRelatorios());
         }
 
-        
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnEstoque);
+            FormShow(new frmEstoque());
+        }
 
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            tmrSidebarAnimation.Start();
+        }
+
+       
         private void tmrSidebarAnimation_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -97,10 +107,6 @@ namespace GPSFA_WinForms
                     tmrSidebarAnimation.Stop();
                 }
             }
-        }
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            tmrSidebarAnimation.Start();
         }
     }
 }

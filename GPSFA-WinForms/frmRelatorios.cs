@@ -35,7 +35,7 @@ namespace GPSFA_WinForms
         // Carrega no datagrid view os últimos produtos adicionados no banco
         private void CarregarDadosNaListaDeProdutos()
         {
-            dgvRelatorio.Columns.Clear();
+            dgvRelatorioDeProdutos.Columns.Clear();
 
             DataTable tabela = new DataTable();
 
@@ -53,8 +53,8 @@ namespace GPSFA_WinForms
                 MySqlDataAdapter DA = new MySqlDataAdapter(comm);
                 DA.Fill(tabela);
 
-                dgvRelatorio.DataSource = tabela;
-                dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvRelatorioDeProdutos.DataSource = tabela;
+                dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                 DataBaseConnection.CloseConnection();
             }
         }
@@ -112,7 +112,7 @@ namespace GPSFA_WinForms
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            dgvRelatorio.Columns.Clear();
+            dgvRelatorioDeProdutos.Columns.Clear();
 
             try
             {
@@ -138,8 +138,8 @@ namespace GPSFA_WinForms
                     };
 
                     DataTable resultado = BuscarProdutosPorFiltro(filtroDeData, filtroDeVoluntario);
-                    dgvRelatorio.DataSource = resultado;
-                    dgvRelatorio.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvRelatorioDeProdutos.DataSource = resultado;
+                    dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                 }
             }
             catch (Exception error) {
@@ -212,6 +212,11 @@ namespace GPSFA_WinForms
                 cbbListaDeUsuarios.Items.Insert(0, "Todos");
                 cbbListaDeUsuarios.SelectedIndex = 0;
             }
+        }
+
+        private void btnExportarRelatorio_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
