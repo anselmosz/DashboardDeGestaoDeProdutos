@@ -47,6 +47,7 @@ namespace Projeto_Socorrista
             dgvEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvEstoque.MultiSelect = false;
         }
+
         private void carregaDados(string busca = "", DateTime? validade = null, string unidade = "", string status = "")
         {
             dgvEstoque.Rows.Clear();
@@ -216,22 +217,24 @@ namespace Projeto_Socorrista
 
         private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // ignore header row
+            if (e.ColumnIndex == dgvEstoque.Columns["Editar"].Index && e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == dgvEstoque.Columns["Editar"].Index)
+                // Obter o código do produto da linha selecionada
+                string rowData = dgvEstoque.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
+                frmEditarEstoque f = new frmEditarEstoque(rowData);
+                f.DadosAtualizados += () =>
                 {
-                    // Obter o código do produto da linha selecionada
-                    string codProd = dgvEstoque.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
-                    frmEditarEstoque f = new frmEditarEstoque(codProd);
-                    f.DadosAtualizados += () =>
-                    {
-                        AtualizarStatusValidade();
-                        carregaDados();
-                    };
+                    AtualizarStatusValidade();
+                    carregaDados();
+                };
 
-                    f.Show();
-                }
+                f.Show();
             }
+            else
+            {
+                MessageBox.Show("Clique no botão 'Editar' para mudar os dados do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)

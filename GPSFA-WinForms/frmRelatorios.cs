@@ -1,6 +1,7 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using Mysqlx;
+using Projeto_Socorrista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,10 +27,28 @@ namespace GPSFA_WinForms
             // Carrega no datagrid view os últimos produtos adicionados no banco
             CarregarDadosNaListaDeProdutos();
             carregarUsuários();
+            ConfigDGVRelatorios();
             dtpDataInicialPeriodo.Enabled = false;
             dtpDataFinalPeriodo.Enabled = false;
             cbbListaDeUsuarios.SelectedIndex = 0;
             cbbListaDeUsuarios.Enabled = false;
+        }
+
+        private void ConfigDGVRelatorios()
+        { // Ajustar para ocupar toda a largura
+            dgvRelatorioDeProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            // Alternar cores das linhas
+            dgvRelatorioDeProdutos.RowsDefaultCellStyle.BackColor = Color.LightGray;
+            // Aumentar fonte
+            dgvRelatorioDeProdutos.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
+            dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            // Ajustar altura das linhas
+            dgvRelatorioDeProdutos.RowTemplate.Height = 40;
+            // Habilitar quebra de texto
+            dgvRelatorioDeProdutos.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            // Ajustar seleção de célula
+            dgvRelatorioDeProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRelatorioDeProdutos.MultiSelect = false;
         }
 
         // Carrega no datagrid view os últimos produtos adicionados no banco
@@ -54,6 +73,7 @@ namespace GPSFA_WinForms
                 DA.Fill(tabela);
 
                 dgvRelatorioDeProdutos.DataSource = tabela;
+
                 dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
                 DataBaseConnection.CloseConnection();
             }
@@ -218,5 +238,6 @@ namespace GPSFA_WinForms
         {
 
         }
+
     }
 }

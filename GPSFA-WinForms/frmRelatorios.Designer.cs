@@ -41,11 +41,11 @@
             this.dtpDataFinalPeriodo = new System.Windows.Forms.DateTimePicker();
             this.dtpDataInicialPeriodo = new System.Windows.Forms.DateTimePicker();
             this.btnExportarRelatorio = new System.Windows.Forms.Button();
-            this.gpbFiltrosDoRelatorio = new System.Windows.Forms.GroupBox();
             this.dgvRelatorioDeProdutos = new System.Windows.Forms.DataGridView();
+            this.gpbFiltrosDoRelatorio = new System.Windows.Forms.GroupBox();
             this.pnlFiltrosDeBusca.SuspendLayout();
-            this.gpbFiltrosDoRelatorio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).BeginInit();
+            this.gpbFiltrosDoRelatorio.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFiltrosDeBusca
@@ -133,7 +133,7 @@
             // 
             this.lblE.AutoSize = true;
             this.lblE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblE.Location = new System.Drawing.Point(32, 93);
+            this.lblE.Location = new System.Drawing.Point(35, 99);
             this.lblE.Name = "lblE";
             this.lblE.Size = new System.Drawing.Size(35, 20);
             this.lblE.TabIndex = 5;
@@ -143,7 +143,7 @@
             // 
             this.lblDataInicial.AutoSize = true;
             this.lblDataInicial.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDataInicial.Location = new System.Drawing.Point(21, 61);
+            this.lblDataInicial.Location = new System.Drawing.Point(24, 67);
             this.lblDataInicial.Name = "lblDataInicial";
             this.lblDataInicial.Size = new System.Drawing.Size(46, 20);
             this.lblDataInicial.TabIndex = 4;
@@ -176,6 +176,28 @@
             this.btnExportarRelatorio.UseVisualStyleBackColor = true;
             this.btnExportarRelatorio.Click += new System.EventHandler(this.btnExportarRelatorio_Click);
             // 
+            // dgvRelatorioDeProdutos
+            // 
+            this.dgvRelatorioDeProdutos.AllowUserToAddRows = false;
+            this.dgvRelatorioDeProdutos.AllowUserToDeleteRows = false;
+            this.dgvRelatorioDeProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvRelatorioDeProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRelatorioDeProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRelatorioDeProdutos.Location = new System.Drawing.Point(12, 193);
+            this.dgvRelatorioDeProdutos.Name = "dgvRelatorioDeProdutos";
+            this.dgvRelatorioDeProdutos.ReadOnly = true;
+            this.dgvRelatorioDeProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvRelatorioDeProdutos.Size = new System.Drawing.Size(1020, 476);
+            this.dgvRelatorioDeProdutos.TabIndex = 16;
+            // 
             // gpbFiltrosDoRelatorio
             // 
             this.gpbFiltrosDoRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -196,30 +218,7 @@
             this.gpbFiltrosDoRelatorio.Size = new System.Drawing.Size(1020, 142);
             this.gpbFiltrosDoRelatorio.TabIndex = 16;
             this.gpbFiltrosDoRelatorio.TabStop = false;
-            this.gpbFiltrosDoRelatorio.Text = "Filtros de pesquisa";
-            // 
-            // dgvRelatorioDeProdutos
-            // 
-            this.dgvRelatorioDeProdutos.AllowUserToAddRows = false;
-            this.dgvRelatorioDeProdutos.AllowUserToDeleteRows = false;
-            this.dgvRelatorioDeProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvRelatorioDeProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRelatorioDeProdutos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRelatorioDeProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRelatorioDeProdutos.Location = new System.Drawing.Point(12, 193);
-            this.dgvRelatorioDeProdutos.Name = "dgvRelatorioDeProdutos";
-            this.dgvRelatorioDeProdutos.ReadOnly = true;
-            this.dgvRelatorioDeProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvRelatorioDeProdutos.Size = new System.Drawing.Size(856, 476);
-            this.dgvRelatorioDeProdutos.TabIndex = 16;
+            this.gpbFiltrosDoRelatorio.Text = "Filtros";
             // 
             // frmRelatorios
             // 
@@ -238,9 +237,9 @@
             this.Load += new System.EventHandler(this.frmRelatorios_Load);
             this.pnlFiltrosDeBusca.ResumeLayout(false);
             this.pnlFiltrosDeBusca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).EndInit();
             this.gpbFiltrosDoRelatorio.ResumeLayout(false);
             this.gpbFiltrosDoRelatorio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +258,7 @@
         private System.Windows.Forms.ComboBox cbbListaDeUsuarios;
         private System.Windows.Forms.CheckBox chkbDataEntrada;
         private System.Windows.Forms.CheckBox chkbListaUsuarios;
-        private System.Windows.Forms.GroupBox gpbFiltrosDoRelatorio;
         private System.Windows.Forms.DataGridView dgvRelatorioDeProdutos;
+        private System.Windows.Forms.GroupBox gpbFiltrosDoRelatorio;
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
+            this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
+            this.lblTitleEstoque = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
@@ -57,17 +59,40 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
-            this.lblTituloEstoque = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLerQRCode = new System.Windows.Forms.Button();
             this.btnDarBaixa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnlFiltrosDeBusca.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlFiltrosDeBusca
+            // 
+            this.pnlFiltrosDeBusca.AutoSize = true;
+            this.pnlFiltrosDeBusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.pnlFiltrosDeBusca.Controls.Add(this.lblTitleEstoque);
+            this.pnlFiltrosDeBusca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(0, 0);
+            this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
+            this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1044, 39);
+            this.pnlFiltrosDeBusca.TabIndex = 15;
+            // 
+            // lblTitleEstoque
+            // 
+            this.lblTitleEstoque.AutoSize = true;
+            this.lblTitleEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleEstoque.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTitleEstoque.Location = new System.Drawing.Point(12, 9);
+            this.lblTitleEstoque.Name = "lblTitleEstoque";
+            this.lblTitleEstoque.Size = new System.Drawing.Size(174, 20);
+            this.lblTitleEstoque.TabIndex = 11;
+            this.lblTitleEstoque.Text = "Controle de Estoque";
             // 
             // panel1
             // 
@@ -83,10 +108,10 @@
             this.panel1.Controls.Add(this.lblCategoria);
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 681);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(245, 642);
+            this.panel1.TabIndex = 15;
             // 
             // btnLimparFiltros
             // 
@@ -103,7 +128,6 @@
             this.btnLimparFiltros.TabIndex = 15;
             this.btnLimparFiltros.Text = "Limpar Filtros";
             this.btnLimparFiltros.UseVisualStyleBackColor = false;
-            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // dtpDataValidade
             // 
@@ -139,7 +163,6 @@
             this.btnAplicarFiltros.TabIndex = 11;
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
-            this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
             // lblValidadeAte
             // 
@@ -223,19 +246,18 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvEstoque);
             this.panel2.Controls.Add(this.lblSubTitulo);
-            this.panel2.Controls.Add(this.lblTituloEstoque);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(245, 0);
+            this.panel2.Location = new System.Drawing.Point(245, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 681);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(799, 642);
+            this.panel2.TabIndex = 16;
             // 
             // lblQRCODE
             // 
             this.lblQRCODE.AutoSize = true;
             this.lblQRCODE.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblQRCODE.Location = new System.Drawing.Point(17, 210);
+            this.lblQRCODE.Location = new System.Drawing.Point(17, 177);
             this.lblQRCODE.Name = "lblQRCODE";
             this.lblQRCODE.Size = new System.Drawing.Size(210, 21);
             this.lblQRCODE.TabIndex = 14;
@@ -247,7 +269,7 @@
             this.panel4.Controls.Add(this.btnCarregaTodosProdutos);
             this.panel4.Controls.Add(this.txtNomeOrCod);
             this.panel4.Controls.Add(this.btnPesquisar);
-            this.panel4.Location = new System.Drawing.Point(22, 132);
+            this.panel4.Location = new System.Drawing.Point(22, 99);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(759, 57);
             this.panel4.TabIndex = 13;
@@ -267,7 +289,6 @@
             this.btnCarregaTodosProdutos.TabIndex = 14;
             this.btnCarregaTodosProdutos.Text = "Todos";
             this.btnCarregaTodosProdutos.UseVisualStyleBackColor = false;
-            this.btnCarregaTodosProdutos.Click += new System.EventHandler(this.btnCarregaTodosProdutos_Click);
             // 
             // txtNomeOrCod
             // 
@@ -294,13 +315,12 @@
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // lblCodOrNome
             // 
             this.lblCodOrNome.AutoSize = true;
             this.lblCodOrNome.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblCodOrNome.Location = new System.Drawing.Point(17, 108);
+            this.lblCodOrNome.Location = new System.Drawing.Point(17, 75);
             this.lblCodOrNome.Name = "lblCodOrNome";
             this.lblCodOrNome.Size = new System.Drawing.Size(146, 21);
             this.lblCodOrNome.TabIndex = 2;
@@ -310,7 +330,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 82);
+            this.label1.Location = new System.Drawing.Point(17, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(756, 20);
             this.label1.TabIndex = 9;
@@ -329,12 +349,11 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(21, 322);
+            this.dgvEstoque.Location = new System.Drawing.Point(21, 266);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(760, 347);
+            this.dgvEstoque.Size = new System.Drawing.Size(760, 364);
             this.dgvEstoque.TabIndex = 5;
-            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             // 
             // codigo
             // 
@@ -382,22 +401,11 @@
             // 
             this.lblSubTitulo.AutoSize = true;
             this.lblSubTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblSubTitulo.Location = new System.Drawing.Point(17, 61);
+            this.lblSubTitulo.Location = new System.Drawing.Point(17, 22);
             this.lblSubTitulo.Name = "lblSubTitulo";
             this.lblSubTitulo.Size = new System.Drawing.Size(404, 21);
             this.lblSubTitulo.TabIndex = 4;
             this.lblSubTitulo.Text = "Consulta e gerenciamento de produtos em estoque";
-            // 
-            // lblTituloEstoque
-            // 
-            this.lblTituloEstoque.AutoSize = true;
-            this.lblTituloEstoque.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloEstoque.ForeColor = System.Drawing.Color.Navy;
-            this.lblTituloEstoque.Location = new System.Drawing.Point(16, 22);
-            this.lblTituloEstoque.Name = "lblTituloEstoque";
-            this.lblTituloEstoque.Size = new System.Drawing.Size(205, 25);
-            this.lblTituloEstoque.TabIndex = 3;
-            this.lblTituloEstoque.Text = "Controle de Estoque ";
             // 
             // panel3
             // 
@@ -405,7 +413,7 @@
             this.panel3.Controls.Add(this.btnLerQRCode);
             this.panel3.Controls.Add(this.btnDarBaixa);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(22, 236);
+            this.panel3.Location = new System.Drawing.Point(22, 203);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(759, 57);
             this.panel3.TabIndex = 2;
@@ -460,6 +468,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 681);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlFiltrosDeBusca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -467,6 +476,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de estoque ";
             this.Load += new System.EventHandler(this.frmEstoque_Load);
+            this.pnlFiltrosDeBusca.ResumeLayout(false);
+            this.pnlFiltrosDeBusca.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -477,37 +488,33 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel pnlFiltrosDeBusca;
+        private System.Windows.Forms.Label lblTitleEstoque;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvEstoque;
-        private System.Windows.Forms.Label lblSubTitulo;
-        private System.Windows.Forms.Label lblTituloEstoque;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnLerQRCode;
-        private System.Windows.Forms.Button btnDarBaixa;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cbxStatus;
-        private System.Windows.Forms.Label lblValidadeAte;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.Label lblCodOrNome;
-        private System.Windows.Forms.Label lblFiltros;
+        private System.Windows.Forms.Button btnLimparFiltros;
+        private System.Windows.Forms.DateTimePicker dtpDataValidade;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAplicarFiltros;
+        private System.Windows.Forms.Label lblValidadeAte;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.Label lblFiltros;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblQRCODE;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnCarregaTodosProdutos;
         private System.Windows.Forms.TextBox txtNomeOrCod;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Label lblQRCODE;
-        private System.Windows.Forms.DateTimePicker dtpDataValidade;
-        private System.Windows.Forms.Button btnLimparFiltros;
-        private System.Windows.Forms.Button btnCarregaTodosProdutos;
+        private System.Windows.Forms.Label lblCodOrNome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvEstoque;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn produto;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
@@ -515,5 +522,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn peso;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteSaida;
+        private System.Windows.Forms.Label lblSubTitulo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnLerQRCode;
+        private System.Windows.Forms.Button btnDarBaixa;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

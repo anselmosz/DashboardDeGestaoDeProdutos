@@ -26,7 +26,6 @@ namespace Projeto_Socorrista
         {
             
             InitializeComponent();
-            codProduto = Convert.ToInt32(codProd);
             carregaDadosProduto(codProduto);
 
         }
