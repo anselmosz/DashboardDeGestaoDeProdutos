@@ -157,6 +157,12 @@
     <Compile Include="frmEstoque.Designer.cs">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGerenciarDadosDoVoluntario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerenciarDadosDoVoluntario.Designer.cs">
+      <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerenciarDadosDoVoluntario.resx">
+      <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
