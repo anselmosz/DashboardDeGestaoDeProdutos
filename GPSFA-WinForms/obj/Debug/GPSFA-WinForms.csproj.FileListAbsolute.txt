@@ -198,7 +198,6 @@ C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.csproj.AssemblyReference.cache
-C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmCadastrarAlimentos.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmDashboard.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEditarEstoque.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEstoque.resources
@@ -217,3 +216,5 @@ C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe.config
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmTeste.resources
 C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmSplash.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmLogin.resources
+C:\Users\matheus.sanselmo1\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmGerenciarProdutos.resources

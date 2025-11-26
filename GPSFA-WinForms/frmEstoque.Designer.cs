@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleEstoque = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,9 +78,10 @@
             this.pnlFiltrosDeBusca.Controls.Add(this.lblTitleEstoque);
             this.pnlFiltrosDeBusca.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(0, 0);
+            this.pnlFiltrosDeBusca.Margin = new System.Windows.Forms.Padding(5);
             this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
-            this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1664, 39);
+            this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(17, 0, 17, 16);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1884, 51);
             this.pnlFiltrosDeBusca.TabIndex = 15;
             // 
             // lblTitleEstoque
@@ -87,7 +89,8 @@
             this.lblTitleEstoque.AutoSize = true;
             this.lblTitleEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleEstoque.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitleEstoque.Location = new System.Drawing.Point(12, 9);
+            this.lblTitleEstoque.Location = new System.Drawing.Point(20, 15);
+            this.lblTitleEstoque.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTitleEstoque.Name = "lblTitleEstoque";
             this.lblTitleEstoque.Size = new System.Drawing.Size(186, 20);
             this.lblTitleEstoque.TabIndex = 11;
@@ -103,17 +106,18 @@
             this.panel2.Controls.Add(this.dgvEstoque);
             this.panel2.Controls.Add(this.lblSubTitulo);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(245, 39);
+            this.panel2.Location = new System.Drawing.Point(465, 63);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1419, 872);
+            this.panel2.Size = new System.Drawing.Size(1575, 1409);
             this.panel2.TabIndex = 20;
             // 
             // lblQRCODE
             // 
             this.lblQRCODE.AutoSize = true;
             this.lblQRCODE.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblQRCODE.Location = new System.Drawing.Point(17, 177);
+            this.lblQRCODE.Location = new System.Drawing.Point(28, 286);
+            this.lblQRCODE.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQRCODE.Name = "lblQRCODE";
             this.lblQRCODE.Size = new System.Drawing.Size(210, 21);
             this.lblQRCODE.TabIndex = 14;
@@ -125,9 +129,10 @@
             this.panel4.Controls.Add(this.btnCarregaTodosProdutos);
             this.panel4.Controls.Add(this.txtNomeOrCod);
             this.panel4.Controls.Add(this.btnPesquisar);
-            this.panel4.Location = new System.Drawing.Point(22, 99);
+            this.panel4.Location = new System.Drawing.Point(37, 160);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(759, 57);
+            this.panel4.Size = new System.Drawing.Size(1265, 92);
             this.panel4.TabIndex = 13;
             // 
             // btnCarregaTodosProdutos
@@ -139,9 +144,10 @@
             this.btnCarregaTodosProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregaTodosProdutos.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnCarregaTodosProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnCarregaTodosProdutos.Location = new System.Drawing.Point(658, 17);
+            this.btnCarregaTodosProdutos.Location = new System.Drawing.Point(1097, 27);
+            this.btnCarregaTodosProdutos.Margin = new System.Windows.Forms.Padding(5);
             this.btnCarregaTodosProdutos.Name = "btnCarregaTodosProdutos";
-            this.btnCarregaTodosProdutos.Size = new System.Drawing.Size(84, 26);
+            this.btnCarregaTodosProdutos.Size = new System.Drawing.Size(140, 42);
             this.btnCarregaTodosProdutos.TabIndex = 14;
             this.btnCarregaTodosProdutos.Text = "Todos";
             this.btnCarregaTodosProdutos.UseVisualStyleBackColor = false;
@@ -150,10 +156,11 @@
             // 
             this.txtNomeOrCod.BackColor = System.Drawing.Color.White;
             this.txtNomeOrCod.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.txtNomeOrCod.Location = new System.Drawing.Point(17, 17);
+            this.txtNomeOrCod.Location = new System.Drawing.Point(28, 27);
+            this.txtNomeOrCod.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomeOrCod.Multiline = true;
             this.txtNomeOrCod.Name = "txtNomeOrCod";
-            this.txtNomeOrCod.Size = new System.Drawing.Size(505, 26);
+            this.txtNomeOrCod.Size = new System.Drawing.Size(839, 40);
             this.txtNomeOrCod.TabIndex = 13;
             // 
             // btnPesquisar
@@ -165,9 +172,10 @@
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(538, 17);
+            this.btnPesquisar.Location = new System.Drawing.Point(897, 27);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(5);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(100, 26);
+            this.btnPesquisar.Size = new System.Drawing.Size(167, 42);
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -176,7 +184,8 @@
             // 
             this.lblCodOrNome.AutoSize = true;
             this.lblCodOrNome.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblCodOrNome.Location = new System.Drawing.Point(17, 75);
+            this.lblCodOrNome.Location = new System.Drawing.Point(28, 121);
+            this.lblCodOrNome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCodOrNome.Name = "lblCodOrNome";
             this.lblCodOrNome.Size = new System.Drawing.Size(146, 21);
             this.lblCodOrNome.TabIndex = 2;
@@ -186,7 +195,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Location = new System.Drawing.Point(28, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(756, 20);
             this.label1.TabIndex = 9;
@@ -205,10 +215,11 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(21, 266);
+            this.dgvEstoque.Location = new System.Drawing.Point(35, 430);
+            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(5);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(760, 364);
+            this.dgvEstoque.Size = new System.Drawing.Size(1267, 588);
             this.dgvEstoque.TabIndex = 5;
             // 
             // codigo
@@ -257,7 +268,8 @@
             // 
             this.lblSubTitulo.AutoSize = true;
             this.lblSubTitulo.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblSubTitulo.Location = new System.Drawing.Point(17, 22);
+            this.lblSubTitulo.Location = new System.Drawing.Point(28, 36);
+            this.lblSubTitulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSubTitulo.Name = "lblSubTitulo";
             this.lblSubTitulo.Size = new System.Drawing.Size(404, 21);
             this.lblSubTitulo.TabIndex = 4;
@@ -269,9 +281,10 @@
             this.panel3.Controls.Add(this.btnLerQRCode);
             this.panel3.Controls.Add(this.btnDarBaixa);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(22, 203);
+            this.panel3.Location = new System.Drawing.Point(37, 328);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(759, 57);
+            this.panel3.Size = new System.Drawing.Size(1265, 92);
             this.panel3.TabIndex = 2;
             // 
             // btnLerQRCode
@@ -283,9 +296,10 @@
             this.btnLerQRCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLerQRCode.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnLerQRCode.ForeColor = System.Drawing.Color.White;
-            this.btnLerQRCode.Location = new System.Drawing.Point(538, 17);
+            this.btnLerQRCode.Location = new System.Drawing.Point(897, 27);
+            this.btnLerQRCode.Margin = new System.Windows.Forms.Padding(5);
             this.btnLerQRCode.Name = "btnLerQRCode";
-            this.btnLerQRCode.Size = new System.Drawing.Size(100, 26);
+            this.btnLerQRCode.Size = new System.Drawing.Size(167, 42);
             this.btnLerQRCode.TabIndex = 12;
             this.btnLerQRCode.Text = "   Ler Código";
             this.btnLerQRCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -300,19 +314,21 @@
             this.btnDarBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDarBaixa.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnDarBaixa.ForeColor = System.Drawing.Color.White;
-            this.btnDarBaixa.Location = new System.Drawing.Point(658, 17);
+            this.btnDarBaixa.Location = new System.Drawing.Point(1097, 27);
+            this.btnDarBaixa.Margin = new System.Windows.Forms.Padding(5);
             this.btnDarBaixa.Name = "btnDarBaixa";
-            this.btnDarBaixa.Size = new System.Drawing.Size(84, 26);
+            this.btnDarBaixa.Size = new System.Drawing.Size(140, 42);
             this.btnDarBaixa.TabIndex = 11;
             this.btnDarBaixa.Text = "Dar baixa";
             this.btnDarBaixa.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 17);
+            this.textBox1.Location = new System.Drawing.Point(28, 27);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(505, 26);
+            this.textBox1.Size = new System.Drawing.Size(839, 40);
             this.textBox1.TabIndex = 11;
             // 
             // panel1
@@ -329,9 +345,10 @@
             this.panel1.Controls.Add(this.lblCategoria);
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 39);
+            this.panel1.Location = new System.Drawing.Point(0, 51);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 872);
+            this.panel1.Size = new System.Drawing.Size(407, 860);
             this.panel1.TabIndex = 19;
             // 
             // btnLimparFiltros
@@ -343,27 +360,30 @@
             this.btnLimparFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimparFiltros.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparFiltros.ForeColor = System.Drawing.Color.White;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(131, 289);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(215, 387);
+            this.btnLimparFiltros.Margin = new System.Windows.Forms.Padding(5);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
-            this.btnLimparFiltros.Size = new System.Drawing.Size(95, 28);
+            this.btnLimparFiltros.Size = new System.Drawing.Size(158, 45);
             this.btnLimparFiltros.TabIndex = 15;
             this.btnLimparFiltros.Text = "Limpar Filtros";
             this.btnLimparFiltros.UseVisualStyleBackColor = false;
             // 
             // dtpDataValidade
             // 
-            this.dtpDataValidade.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.dtpDataValidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataValidade.Location = new System.Drawing.Point(18, 236);
+            this.dtpDataValidade.Location = new System.Drawing.Point(29, 340);
+            this.dtpDataValidade.Margin = new System.Windows.Forms.Padding(5);
             this.dtpDataValidade.Name = "dtpDataValidade";
-            this.dtpDataValidade.Size = new System.Drawing.Size(208, 22);
+            this.dtpDataValidade.Size = new System.Drawing.Size(344, 29);
             this.dtpDataValidade.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 42);
+            this.label4.Location = new System.Drawing.Point(17, 68);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 20);
             this.label4.TabIndex = 13;
@@ -378,9 +398,10 @@
             this.btnAplicarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAplicarFiltros.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
             this.btnAplicarFiltros.ForeColor = System.Drawing.Color.White;
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(18, 289);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(28, 387);
+            this.btnAplicarFiltros.Margin = new System.Windows.Forms.Padding(5);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
-            this.btnAplicarFiltros.Size = new System.Drawing.Size(95, 28);
+            this.btnAplicarFiltros.Size = new System.Drawing.Size(158, 45);
             this.btnAplicarFiltros.TabIndex = 11;
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
@@ -389,7 +410,9 @@
             // 
             this.lblValidadeAte.AutoSize = true;
             this.lblValidadeAte.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblValidadeAte.Location = new System.Drawing.Point(15, 210);
+            this.lblValidadeAte.ForeColor = System.Drawing.Color.White;
+            this.lblValidadeAte.Location = new System.Drawing.Point(24, 298);
+            this.lblValidadeAte.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblValidadeAte.Name = "lblValidadeAte";
             this.lblValidadeAte.Size = new System.Drawing.Size(109, 21);
             this.lblValidadeAte.TabIndex = 7;
@@ -398,23 +421,25 @@
             // cbxStatus
             // 
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxStatus.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.cbxStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
             "Selecione...",
             "Valido",
             "Vencido"});
-            this.cbxStatus.Location = new System.Drawing.Point(18, 99);
+            this.cbxStatus.Location = new System.Drawing.Point(30, 160);
+            this.cbxStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(208, 24);
+            this.cbxStatus.Size = new System.Drawing.Size(344, 29);
             this.cbxStatus.TabIndex = 9;
             // 
             // lblFiltros
             // 
             this.lblFiltros.AutoSize = true;
             this.lblFiltros.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
-            this.lblFiltros.ForeColor = System.Drawing.Color.Navy;
-            this.lblFiltros.Location = new System.Drawing.Point(10, 22);
+            this.lblFiltros.ForeColor = System.Drawing.Color.White;
+            this.lblFiltros.Location = new System.Drawing.Point(17, 36);
+            this.lblFiltros.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblFiltros.Name = "lblFiltros";
             this.lblFiltros.Size = new System.Drawing.Size(67, 25);
             this.lblFiltros.TabIndex = 10;
@@ -423,7 +448,7 @@
             // cbxCategoria
             // 
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.cbxCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Items.AddRange(new object[] {
             "Selecione...",
@@ -433,16 +458,19 @@
             "Mililitros (ml)",
             "Unidades",
             "Caixas"});
-            this.cbxCategoria.Location = new System.Drawing.Point(18, 171);
+            this.cbxCategoria.Location = new System.Drawing.Point(29, 253);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(208, 24);
+            this.cbxCategoria.Size = new System.Drawing.Size(344, 29);
             this.cbxCategoria.TabIndex = 2;
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblCategoria.Location = new System.Drawing.Point(15, 142);
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(24, 206);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(88, 21);
             this.lblCategoria.TabIndex = 5;
@@ -452,25 +480,30 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblStatus.Location = new System.Drawing.Point(15, 73);
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(25, 118);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(61, 21);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status:";
             // 
-            // frmControleDeAlimentos
+            // frmEstoque
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.ClientSize = new System.Drawing.Size(1664, 911);
+            this.ClientSize = new System.Drawing.Size(1884, 911);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFiltrosDeBusca);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmControleDeAlimentos";
+            this.Name = "frmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulário de estoque ";
             this.Load += new System.EventHandler(this.frmEstoque_Load);

@@ -167,11 +167,11 @@
   <ItemGroup>
     <Compile Include="data.dbfransisco\DataBaseConnection.cs" />
     <Compile Include="classes\FiltroDeBuscaBD.cs" />
-    <Compile Include="frmCadastrarAlimentos.cs">
+    <Compile Include="frmGerenciarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastrarAlimentos.Designer.cs">
-      <DependentUpon>frmCadastrarAlimentos.cs</DependentUpon>
+    <Compile Include="frmGerenciarProdutos.Designer.cs">
+      <DependentUpon>frmGerenciarProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
@@ -196,6 +196,12 @@
     </Compile>
     <Compile Include="frmGerenciarDadosDoVoluntario.Designer.cs">
       <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -229,8 +235,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastrarAlimentos.resx">
-      <DependentUpon>frmCadastrarAlimentos.cs</DependentUpon>
+    <EmbeddedResource Include="frmGerenciarProdutos.resx">
+      <DependentUpon>frmGerenciarProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerenciarDadosDoVoluntario.resx">
       <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -285,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="icons\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

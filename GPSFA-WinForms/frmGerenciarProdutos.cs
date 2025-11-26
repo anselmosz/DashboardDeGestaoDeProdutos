@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace GPSFA_WinForms
 {
-    public partial class frmCadastrarAlimentos : Form
+    public partial class frmGerenciarProdutos : Form
     {
         const int MF_BYCOMMAND = 0X400;
         [DllImport("user32")]
@@ -23,7 +23,7 @@ namespace GPSFA_WinForms
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
 
-        public frmCadastrarAlimentos()
+        public frmGerenciarProdutos()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace GPSFA_WinForms
 
             //carregaProdutosNaLista();
             limparCamposDeCadastro();
-            CarregarListaProdutos();
+            //CarregarListaProdutos();
             //cbbTipoDoacao.SelectedIndex = 0;
             cbbUnidadeMedida.SelectedIndex = 0;
         }
@@ -89,32 +89,7 @@ namespace GPSFA_WinForms
 
             return resp;
         }
-        private void CarregarListaProdutos()
-        {
-            dgvProdutos.Columns.Clear();
-
-            DataTable tabela = new DataTable();
-
-            using (MySqlConnection conexao = DataBaseConnection.OpenConnection())
-            {
-                StringBuilder query = new StringBuilder();
-
-                query.Append("SELECT prod.nome AS 'Nome do Produto', prod.quantidade AS 'Quantidade', CONCAT(prod.peso,' ', prod.unidade) AS 'Peso', prod.dataDeEntrada AS 'Data de Cadastro', prod.dataDeValidade AS 'Data de Validade', vol.nome AS 'Quem Cadastrou' FROM tbprodutos AS prod INNER JOIN tbUsuarios AS usr ON prod.codUsu = usr.codUsu INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY prod.dataDeEntrada DESC;");
-
-                MySqlCommand comm = new MySqlCommand();
-                comm.Connection = conexao;
-
-                comm.CommandText = query.ToString();
-
-                MySqlDataAdapter DA = new MySqlDataAdapter(comm);
-                DA.Fill(tabela);
-
-                dgvProdutos.DataSource = tabela;
-
-                dgvProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-                DataBaseConnection.CloseConnection();
-            }
-        }
+       
 
         private bool VerificaFormatacaoDosCampos()
         {
@@ -190,8 +165,8 @@ namespace GPSFA_WinForms
             if (enviarDoacoes(nomeItem, quantidade, peso, tipoUnidade, codBar, dataRecebimento, dataValidade, dataLimiteDeSaida, codUsu) == 1)
             {
                 MessageBox.Show("Doação cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvProdutos.Columns.Clear();
-                CarregarListaProdutos();
+                //dgvProdutos.Columns.Clear();
+                //CarregarListaProdutos();
             }
             else
             {
@@ -199,14 +174,14 @@ namespace GPSFA_WinForms
                 limparCamposDeCadastro();
             }
 
-            dgvProdutos.Columns.Clear();
-            CarregarListaProdutos();
+            //dgvProdutos.Columns.Clear();
+            //CarregarListaProdutos();
         }
 
         private void btnAtualizarDados_Click(object sender, EventArgs e)
         {
             //dgvRegistro.Rows.Clear();
-            CarregarListaProdutos();
+            //CarregarListaProdutos();
             limparCamposDeCadastro();
             //carregaProdutosNaLista();
         }
@@ -224,14 +199,19 @@ namespace GPSFA_WinForms
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            frmMenuPrincipal abrir = new frmMenuPrincipal();
-            abrir.Show();
-            this.Close();
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal abrir = new frmMenuPrincipal();
+            abrir.Show();
+            this.Close();
         }
     }
 }

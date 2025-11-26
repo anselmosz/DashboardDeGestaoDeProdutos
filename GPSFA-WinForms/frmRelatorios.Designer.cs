@@ -111,23 +111,21 @@
             // 
             // btnLimparFiltros
             // 
-            this.btnLimparFiltros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(1435, 81);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(1556, 81);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Size = new System.Drawing.Size(142, 41);
             this.btnLimparFiltros.TabIndex = 9;
-            this.btnLimparFiltros.Text = "Limpar filtros";
+            this.btnLimparFiltros.Text = "&Limpar filtros";
             this.btnLimparFiltros.UseVisualStyleBackColor = true;
             this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // btnAplicarFiltros
             // 
-            this.btnAplicarFiltros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(1287, 81);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(1408, 81);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
             this.btnAplicarFiltros.Size = new System.Drawing.Size(142, 41);
             this.btnAplicarFiltros.TabIndex = 8;
-            this.btnAplicarFiltros.Text = "Aplicar Filtros";
+            this.btnAplicarFiltros.Text = "&Aplicar Filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = true;
             this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
@@ -169,12 +167,11 @@
             // 
             // btnExportarRelatorio
             // 
-            this.btnExportarRelatorio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportarRelatorio.Location = new System.Drawing.Point(1287, 31);
+            this.btnExportarRelatorio.Location = new System.Drawing.Point(1408, 31);
             this.btnExportarRelatorio.Name = "btnExportarRelatorio";
             this.btnExportarRelatorio.Size = new System.Drawing.Size(290, 41);
             this.btnExportarRelatorio.TabIndex = 0;
-            this.btnExportarRelatorio.Text = "Exportar relatório em XLS";
+            this.btnExportarRelatorio.Text = "&Exportar relatório em XLS";
             this.btnExportarRelatorio.UseVisualStyleBackColor = true;
             this.btnExportarRelatorio.Click += new System.EventHandler(this.btnExportarRelatorio_Click);
             // 
@@ -202,8 +199,6 @@
             // 
             // gpbFiltrosDoRelatorio
             // 
-            this.gpbFiltrosDoRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnSair);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnLimparFiltros);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.chkbListaUsuarios);
@@ -230,7 +225,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(126, 41);
             this.btnSair.TabIndex = 78;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "&Voltar";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 

@@ -177,7 +177,7 @@
             this.tbpgDashboadMensal.Location = new System.Drawing.Point(4, 29);
             this.tbpgDashboadMensal.Name = "tbpgDashboadMensal";
             this.tbpgDashboadMensal.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpgDashboadMensal.Size = new System.Drawing.Size(1013, 591);
+            this.tbpgDashboadMensal.Size = new System.Drawing.Size(1853, 821);
             this.tbpgDashboadMensal.TabIndex = 1;
             this.tbpgDashboadMensal.Text = "Alimentos mensais";
             this.tbpgDashboadMensal.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartDoacaoMensal.Series.Add(series2);
-            this.chartDoacaoMensal.Size = new System.Drawing.Size(741, 577);
+            this.chartDoacaoMensal.Size = new System.Drawing.Size(1839, 807);
             this.chartDoacaoMensal.TabIndex = 1;
             this.chartDoacaoMensal.Text = "Mensal";
             // 
