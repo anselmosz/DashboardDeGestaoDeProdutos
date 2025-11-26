@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorios));
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleRelatórios = new System.Windows.Forms.Label();
             this.chkbListaUsuarios = new System.Windows.Forms.CheckBox();
@@ -43,6 +44,7 @@
             this.btnExportarRelatorio = new System.Windows.Forms.Button();
             this.dgvRelatorioDeProdutos = new System.Windows.Forms.DataGridView();
             this.gpbFiltrosDoRelatorio = new System.Windows.Forms.GroupBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pnlFiltrosDeBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).BeginInit();
             this.gpbFiltrosDoRelatorio.SuspendLayout();
@@ -57,7 +59,7 @@
             this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
             this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1044, 39);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1884, 39);
             this.pnlFiltrosDeBusca.TabIndex = 4;
             // 
             // lblTitleRelatórios
@@ -110,7 +112,7 @@
             // btnLimparFiltros
             // 
             this.btnLimparFiltros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnLimparFiltros.Location = new System.Drawing.Point(862, 81);
+            this.btnLimparFiltros.Location = new System.Drawing.Point(1435, 81);
             this.btnLimparFiltros.Name = "btnLimparFiltros";
             this.btnLimparFiltros.Size = new System.Drawing.Size(142, 41);
             this.btnLimparFiltros.TabIndex = 9;
@@ -121,7 +123,7 @@
             // btnAplicarFiltros
             // 
             this.btnAplicarFiltros.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAplicarFiltros.Location = new System.Drawing.Point(714, 81);
+            this.btnAplicarFiltros.Location = new System.Drawing.Point(1287, 81);
             this.btnAplicarFiltros.Name = "btnAplicarFiltros";
             this.btnAplicarFiltros.Size = new System.Drawing.Size(142, 41);
             this.btnAplicarFiltros.TabIndex = 8;
@@ -168,7 +170,7 @@
             // btnExportarRelatorio
             // 
             this.btnExportarRelatorio.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnExportarRelatorio.Location = new System.Drawing.Point(714, 31);
+            this.btnExportarRelatorio.Location = new System.Drawing.Point(1287, 31);
             this.btnExportarRelatorio.Name = "btnExportarRelatorio";
             this.btnExportarRelatorio.Size = new System.Drawing.Size(290, 41);
             this.btnExportarRelatorio.TabIndex = 0;
@@ -195,13 +197,14 @@
             this.dgvRelatorioDeProdutos.Name = "dgvRelatorioDeProdutos";
             this.dgvRelatorioDeProdutos.ReadOnly = true;
             this.dgvRelatorioDeProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvRelatorioDeProdutos.Size = new System.Drawing.Size(1020, 476);
+            this.dgvRelatorioDeProdutos.Size = new System.Drawing.Size(1860, 706);
             this.dgvRelatorioDeProdutos.TabIndex = 16;
             // 
             // gpbFiltrosDoRelatorio
             // 
             this.gpbFiltrosDoRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gpbFiltrosDoRelatorio.Controls.Add(this.btnSair);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnLimparFiltros);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.chkbListaUsuarios);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnExportarRelatorio);
@@ -215,25 +218,38 @@
             this.gpbFiltrosDoRelatorio.Location = new System.Drawing.Point(12, 45);
             this.gpbFiltrosDoRelatorio.Name = "gpbFiltrosDoRelatorio";
             this.gpbFiltrosDoRelatorio.Padding = new System.Windows.Forms.Padding(0);
-            this.gpbFiltrosDoRelatorio.Size = new System.Drawing.Size(1020, 142);
+            this.gpbFiltrosDoRelatorio.Size = new System.Drawing.Size(1860, 142);
             this.gpbFiltrosDoRelatorio.TabIndex = 16;
             this.gpbFiltrosDoRelatorio.TabStop = false;
             this.gpbFiltrosDoRelatorio.Text = "Filtros";
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(1711, 31);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(126, 41);
+            this.btnSair.TabIndex = 78;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmRelatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(1044, 681);
+            this.ClientSize = new System.Drawing.Size(1884, 911);
             this.Controls.Add(this.dgvRelatorioDeProdutos);
             this.Controls.Add(this.gpbFiltrosDoRelatorio);
             this.Controls.Add(this.pnlFiltrosDeBusca);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmRelatorios";
-            this.Text = "frmRelatorios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Grupo Socorrista São Francisco de Assis - Relatórios";
             this.Load += new System.EventHandler(this.frmRelatorios_Load);
             this.pnlFiltrosDeBusca.ResumeLayout(false);
             this.pnlFiltrosDeBusca.PerformLayout();
@@ -260,5 +276,6 @@
         private System.Windows.Forms.CheckBox chkbListaUsuarios;
         private System.Windows.Forms.DataGridView dgvRelatorioDeProdutos;
         private System.Windows.Forms.GroupBox gpbFiltrosDoRelatorio;
+        private System.Windows.Forms.Button btnSair;
     }
 }

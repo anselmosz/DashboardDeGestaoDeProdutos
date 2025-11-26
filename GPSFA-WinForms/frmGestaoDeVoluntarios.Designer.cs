@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestaoDeVoluntarios));
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleGestaoDeVoluntarios = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvListaDeVoluntarios = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSair = new System.Windows.Forms.Button();
             this.pnlFiltrosDeBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDeVoluntarios)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@
             this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
             this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1044, 39);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1884, 39);
             this.pnlFiltrosDeBusca.TabIndex = 5;
             // 
             // lblTitleGestaoDeVoluntarios
@@ -92,7 +94,7 @@
             this.dgvListaDeVoluntarios.Name = "dgvListaDeVoluntarios";
             this.dgvListaDeVoluntarios.ReadOnly = true;
             this.dgvListaDeVoluntarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvListaDeVoluntarios.Size = new System.Drawing.Size(1020, 569);
+            this.dgvListaDeVoluntarios.Size = new System.Drawing.Size(1860, 799);
             this.dgvListaDeVoluntarios.TabIndex = 6;
             this.dgvListaDeVoluntarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaDeVoluntarios_CellContentClick);
             // 
@@ -102,20 +104,35 @@
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(1746, 45);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(126, 49);
+            this.btnSair.TabIndex = 78;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmGestaoDeVoluntarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(1044, 681);
+            this.ClientSize = new System.Drawing.Size(1884, 911);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvListaDeVoluntarios);
             this.Controls.Add(this.pnlFiltrosDeBusca);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmGestaoDeVoluntarios";
-            this.Text = "frmVoluntarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Grupo Socorrista Francisco de Assis - Gestão de Voluntáros";
             this.Load += new System.EventHandler(this.frmVoluntarios_Load);
             this.pnlFiltrosDeBusca.ResumeLayout(false);
             this.pnlFiltrosDeBusca.PerformLayout();
@@ -131,5 +148,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvListaDeVoluntarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.tbctrlDashboard = new System.Windows.Forms.TabControl();
             this.tbpgDashboardAlimentos = new System.Windows.Forms.TabPage();
             this.lblTotalEmQuilosDataReceiver = new System.Windows.Forms.Label();
@@ -45,19 +46,6 @@
             this.chartProdutos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tbpgDashboadMensal = new System.Windows.Forms.TabPage();
             this.chartDoacaoMensal = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlDadosProdutos = new System.Windows.Forms.Panel();
             this.lblTitleDashboard = new System.Windows.Forms.Label();
             this.tbctrlDashboard.SuspendLayout();
@@ -65,7 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartProdutos)).BeginInit();
             this.tbpgDashboadMensal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoacaoMensal)).BeginInit();
-            this.tabPage3.SuspendLayout();
             this.pnlDadosProdutos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,11 +63,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbctrlDashboard.Controls.Add(this.tbpgDashboardAlimentos);
             this.tbctrlDashboard.Controls.Add(this.tbpgDashboadMensal);
-            this.tbctrlDashboard.Controls.Add(this.tabPage3);
             this.tbctrlDashboard.Location = new System.Drawing.Point(12, 45);
             this.tbctrlDashboard.Name = "tbctrlDashboard";
             this.tbctrlDashboard.SelectedIndex = 0;
-            this.tbctrlDashboard.Size = new System.Drawing.Size(1021, 624);
+            this.tbctrlDashboard.Size = new System.Drawing.Size(1861, 854);
             this.tbctrlDashboard.TabIndex = 0;
             // 
             // tbpgDashboardAlimentos
@@ -95,7 +81,7 @@
             this.tbpgDashboardAlimentos.Location = new System.Drawing.Point(4, 29);
             this.tbpgDashboardAlimentos.Name = "tbpgDashboardAlimentos";
             this.tbpgDashboardAlimentos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpgDashboardAlimentos.Size = new System.Drawing.Size(1013, 591);
+            this.tbpgDashboardAlimentos.Size = new System.Drawing.Size(1853, 821);
             this.tbpgDashboardAlimentos.TabIndex = 0;
             this.tbpgDashboardAlimentos.Text = "Alimentos mais recebidos";
             this.tbpgDashboardAlimentos.UseVisualStyleBackColor = true;
@@ -104,7 +90,7 @@
             // 
             this.lblTotalEmQuilosDataReceiver.AutoSize = true;
             this.lblTotalEmQuilosDataReceiver.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTotalEmQuilosDataReceiver.Location = new System.Drawing.Point(908, 79);
+            this.lblTotalEmQuilosDataReceiver.Location = new System.Drawing.Point(1698, 93);
             this.lblTotalEmQuilosDataReceiver.Name = "lblTotalEmQuilosDataReceiver";
             this.lblTotalEmQuilosDataReceiver.Size = new System.Drawing.Size(39, 20);
             this.lblTotalEmQuilosDataReceiver.TabIndex = 9;
@@ -114,7 +100,7 @@
             // 
             this.lblMesAtualDataReceiver.AutoSize = true;
             this.lblMesAtualDataReceiver.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMesAtualDataReceiver.Location = new System.Drawing.Point(856, 12);
+            this.lblMesAtualDataReceiver.Location = new System.Drawing.Point(1646, 26);
             this.lblMesAtualDataReceiver.Name = "lblMesAtualDataReceiver";
             this.lblMesAtualDataReceiver.Size = new System.Drawing.Size(39, 20);
             this.lblMesAtualDataReceiver.TabIndex = 11;
@@ -124,7 +110,7 @@
             // 
             this.lbTotalDeItensDataReceiver.AutoSize = true;
             this.lbTotalDeItensDataReceiver.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbTotalDeItensDataReceiver.Location = new System.Drawing.Point(888, 46);
+            this.lbTotalDeItensDataReceiver.Location = new System.Drawing.Point(1678, 60);
             this.lbTotalDeItensDataReceiver.Name = "lbTotalDeItensDataReceiver";
             this.lbTotalDeItensDataReceiver.Size = new System.Drawing.Size(18, 20);
             this.lbTotalDeItensDataReceiver.TabIndex = 8;
@@ -135,7 +121,7 @@
             this.lblTotalEmQuilos.AutoSize = true;
             this.lblTotalEmQuilos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalEmQuilos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTotalEmQuilos.Location = new System.Drawing.Point(755, 76);
+            this.lblTotalEmQuilos.Location = new System.Drawing.Point(1545, 90);
             this.lblTotalEmQuilos.Name = "lblTotalEmQuilos";
             this.lblTotalEmQuilos.Size = new System.Drawing.Size(147, 24);
             this.lblTotalEmQuilos.TabIndex = 7;
@@ -146,7 +132,7 @@
             this.lblTotalDeItens.AutoSize = true;
             this.lblTotalDeItens.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDeItens.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTotalDeItens.Location = new System.Drawing.Point(755, 42);
+            this.lblTotalDeItens.Location = new System.Drawing.Point(1545, 56);
             this.lblTotalDeItens.Name = "lblTotalDeItens";
             this.lblTotalDeItens.Size = new System.Drawing.Size(127, 24);
             this.lblTotalDeItens.TabIndex = 6;
@@ -157,7 +143,7 @@
             this.lblMesAtual.AutoSize = true;
             this.lblMesAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMesAtual.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblMesAtual.Location = new System.Drawing.Point(755, 9);
+            this.lblMesAtual.Location = new System.Drawing.Point(1545, 23);
             this.lblMesAtual.Name = "lblMesAtual";
             this.lblMesAtual.Size = new System.Drawing.Size(95, 24);
             this.lblMesAtual.TabIndex = 10;
@@ -169,19 +155,19 @@
             this.chartProdutos.BorderlineColor = System.Drawing.Color.Teal;
             this.chartProdutos.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartProdutos.BorderlineWidth = 0;
-            chartArea5.Name = "ChartArea1";
-            this.chartProdutos.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartProdutos.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chartProdutos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartProdutos.Legends.Add(legend1);
             this.chartProdutos.Location = new System.Drawing.Point(7, 7);
             this.chartProdutos.Margin = new System.Windows.Forms.Padding(4);
             this.chartProdutos.Name = "chartProdutos";
             this.chartProdutos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartProdutos.Series.Add(series5);
-            this.chartProdutos.Size = new System.Drawing.Size(741, 577);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartProdutos.Series.Add(series1);
+            this.chartProdutos.Size = new System.Drawing.Size(1515, 807);
             this.chartProdutos.TabIndex = 0;
             this.chartProdutos.Text = "Produtos";
             // 
@@ -202,145 +188,21 @@
             this.chartDoacaoMensal.BorderlineColor = System.Drawing.Color.Teal;
             this.chartDoacaoMensal.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartDoacaoMensal.BorderlineWidth = 0;
-            chartArea6.Name = "ChartArea1";
-            this.chartDoacaoMensal.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartDoacaoMensal.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartDoacaoMensal.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDoacaoMensal.Legends.Add(legend2);
             this.chartDoacaoMensal.Location = new System.Drawing.Point(7, 7);
             this.chartDoacaoMensal.Margin = new System.Windows.Forms.Padding(4);
             this.chartDoacaoMensal.Name = "chartDoacaoMensal";
             this.chartDoacaoMensal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartDoacaoMensal.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDoacaoMensal.Series.Add(series2);
             this.chartDoacaoMensal.Size = new System.Drawing.Size(741, 577);
             this.chartDoacaoMensal.TabIndex = 1;
             this.chartDoacaoMensal.Text = "Mensal";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.comboBox1);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.dateTimePicker2);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1013, 591);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 286);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 28);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 258);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Unidade de medida";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(169, 167);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Validade";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(174, 195);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(123, 26);
-            this.dateTimePicker2.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cadastro";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 26);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(13, 286);
-            this.textBox3.MaxLength = 100;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 26);
-            this.textBox3.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 258);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Peso";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(15, 121);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 26);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Código de barras";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 45);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 26);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome do produto";
             // 
             // pnlDadosProdutos
             // 
@@ -351,7 +213,7 @@
             this.pnlDadosProdutos.Location = new System.Drawing.Point(0, 0);
             this.pnlDadosProdutos.Name = "pnlDadosProdutos";
             this.pnlDadosProdutos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.pnlDadosProdutos.Size = new System.Drawing.Size(1044, 39);
+            this.pnlDadosProdutos.Size = new System.Drawing.Size(1884, 39);
             this.pnlDadosProdutos.TabIndex = 1;
             // 
             // lblTitleDashboard
@@ -370,15 +232,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(1044, 681);
+            this.ClientSize = new System.Drawing.Size(1884, 911);
             this.Controls.Add(this.tbctrlDashboard);
             this.Controls.Add(this.pnlDadosProdutos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
+            this.Text = "Grupo Socorrista São Francisco de Assis - Dashboard";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tbctrlDashboard.ResumeLayout(false);
             this.tbpgDashboardAlimentos.ResumeLayout(false);
@@ -386,8 +250,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartProdutos)).EndInit();
             this.tbpgDashboadMensal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartDoacaoMensal)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.pnlDadosProdutos.ResumeLayout(false);
             this.pnlDadosProdutos.PerformLayout();
             this.ResumeLayout(false);
@@ -403,19 +265,6 @@
         private System.Windows.Forms.Panel pnlDadosProdutos;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProdutos;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDoacaoMensal;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitleDashboard;
         private System.Windows.Forms.Label lblTotalEmQuilosDataReceiver;
         private System.Windows.Forms.Label lblMesAtualDataReceiver;

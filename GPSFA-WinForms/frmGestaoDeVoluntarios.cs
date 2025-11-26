@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,16 @@ namespace GPSFA_WinForms
 {
     public partial class frmGestaoDeVoluntarios : Form
     {
+
+        const int MF_BYCOMMAND = 0X400;
+        [DllImport("user32")]
+        static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        [DllImport("user32")]
+        static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+        [DllImport("user32")]
+        static extern int GetMenuItemCount(IntPtr hWnd);
+
+
         public frmGestaoDeVoluntarios()
         {
             InitializeComponent();
@@ -56,7 +67,7 @@ namespace GPSFA_WinForms
             {
                 StringBuilder query = new StringBuilder();
 
-                query.Append("SELECT vol.codVol as 'codigo', vol.nome AS 'Nome do voluntario', usr.email AS 'Email', vol.telCel AS 'Telefone' FROM tbusuarios AS usr INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY vol.nome ASC;");
+                query.Append("SELECT vol.codVol as 'codigo', vol.nome AS 'Nome do voluntario', vol.telCel AS 'Telefone' FROM tbusuarios AS usr INNER JOIN tbvoluntarios AS vol ON usr.codVol = vol.codVol ORDER BY vol.nome ASC;");
 
                 MySqlCommand comm = new MySqlCommand();
                 comm.Connection = conexao;
@@ -95,6 +106,13 @@ namespace GPSFA_WinForms
             {
                 MessageBox.Show("Clique no botão 'Editar' para mudar os dados do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            frmMenuPrincipal abrir = new frmMenuPrincipal();
+            abrir.Show();
+            this.Close();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,14 @@ namespace GPSFA_WinForms
 {
     public partial class frmMenuPrincipal : Form
     {
+        const int MF_BYCOMMAND = 0X400;
+        [DllImport("user32")]
+        static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        [DllImport("user32")]
+        static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+        [DllImport("user32")]
+        static extern int GetMenuItemCount(IntPtr hWnd);
+
         private Form frmAtivo;
         bool sidebarExpand;
         public frmMenuPrincipal()
@@ -42,72 +51,69 @@ namespace GPSFA_WinForms
 
         private void ActiveButton(Button frmAtivo)
         {
-            foreach (Control ctrl in pnlSidebar.Controls)
-            {
-                ctrl.ForeColor = Color.White;
-                ctrl.BackColor = Color.FromArgb(48, 112, 99);
-            }
-            frmAtivo.BackColor = Color.FromArgb(112, 194, 177);
+            //foreach (Control ctrl in pnlSidebar.Controls)
+            //{
+            //    ctrl.ForeColor = Color.White;
+            //    ctrl.BackColor = Color.FromArgb(48, 112, 99);
+            //}
 
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnHome);
-            ActiveFormClose();
+            //    ActiveButton(btnHome);
+            //    ActiveFormClose();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnDashboard);
-            FormShow(new frmDashboard());
+            //    ActiveButton(btnDashboard);
+            //    FormShow(new frmDashboard());
+
+            frmDashboard abrir = new frmDashboard();
+            abrir.Show();
+            this.Hide();
         }
 
         private void btnVoluntarios_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnVoluntarios);
-            FormShow(new frmGestaoDeVoluntarios());
+            //ActiveButton(btnVoluntarios);
+            //FormShow(new frmGestaoDeVoluntarios());
+            
+            frmGestaoDeVoluntarios abrir = new frmGestaoDeVoluntarios();
+
+            abrir.Show();
+            this.Hide();
         }
 
 
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnRelatorios);
-            FormShow(new frmRelatorios());
+            //ActiveButton(btnRelatorios);
+            //FormShow(new frmRelatorios());
+
+            frmRelatorios abrir = new frmRelatorios();
+
+            abrir.Show();
+            this.Hide();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnEstoque);
-            FormShow(new frmEstoque());
+            //ActiveButton(btnAlimentos);
+            //FormShow(new frmEstoque());
+
+            frmEstoque abrir = new frmEstoque();
+
+            abrir.Show();
+            this.Hide();
+
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            tmrSidebarAnimation.Start();
-        }
-
-       
-        private void tmrSidebarAnimation_Tick(object sender, EventArgs e)
-        {
-            if (sidebarExpand)
-            {
-                // se a sidebar estiver expandida, ela minimiza
-                pnlSidebar.Width -= 10;
-                if (pnlSidebar.Width == pnlSidebar.MinimumSize.Width)
-                {
-                    sidebarExpand = false;
-                    tmrSidebarAnimation.Stop();
-                }
-            }
-            else
-            {
-                pnlSidebar.Width += 10;
-                if (pnlSidebar.Width == pnlSidebar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    tmrSidebarAnimation.Stop();
-                }
-            }
+            frmCadastrarAlimentos abrir = new frmCadastrarAlimentos();
+            abrir.Show();
+            this.Hide();
         }
     }
 }
