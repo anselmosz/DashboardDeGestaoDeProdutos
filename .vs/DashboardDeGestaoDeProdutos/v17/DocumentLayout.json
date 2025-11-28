@@ -3,44 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\edna.hsry\\documents\\visual studio 2022\\dashboarddegestaodeprodutos\\gpsfa-winforms\\frmlistaprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmlistaprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmeditarestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgerenciardadosdovoluntario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgerenciardadosdovoluntario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgestaodevoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmorigemdoacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmorigemdoacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgerenciarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgerenciarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmunidademedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmunidademedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\edna.hsry\\documents\\visual studio 2022\\dashboarddegestaodeprodutos\\gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,118 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmEditarEstoque.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEditarEstoque.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEditarEstoque.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmEditarEstoque.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:49:36.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmGestaoDeVoluntarios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGestaoDeVoluntarios.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmGestaoDeVoluntarios.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:49:12.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmRelatorios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmRelatorios.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmRelatorios.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmRelatorios.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:48:53.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmGerenciarDadosDoVoluntario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGerenciarDadosDoVoluntario.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGerenciarDadosDoVoluntario.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGerenciarDadosDoVoluntario.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmGerenciarDadosDoVoluntario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:48:35.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmEstoque.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmEstoque.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmEstoque.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmEstoque.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:48:31.875Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmListaProdutos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmListaProdutos.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmListaProdutos.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmListaProdutos.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmListaProdutos.cs [Design]",
+              "Title": "DataBaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "RelativeDocumentMoniker": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "RelativeToolTip": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:11:31.122Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmMenuPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmMenuPrincipal.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmMenuPrincipal.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:48:46.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmOrigemDoacao.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmOrigemDoacao.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmOrigemDoacao.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmOrigemDoacao.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmOrigemDoacao.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:50:52.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmUnidadeMedida.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmUnidadeMedida.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmUnidadeMedida.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmUnidadeMedida.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmUnidadeMedida.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:31:11.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmGerenciarProdutos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGerenciarProdutos.cs",
-              "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGerenciarProdutos.cs",
-              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGerenciarProdutos.cs [Design]",
-              "RelativeToolTip": "GPSFA-WinForms\\frmGerenciarProdutos.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:01:22.5Z"
+              "WhenOpened": "2025-11-28T14:20:07.135Z",
+              "EditorCaption": ""
             }
           ]
         }

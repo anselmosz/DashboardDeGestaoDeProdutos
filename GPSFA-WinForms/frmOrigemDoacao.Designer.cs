@@ -53,7 +53,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(503, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(119, 40);
-            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -66,7 +66,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(128, 12);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 40);
-            this.btnCadastrar.TabIndex = 12;
+            this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -80,7 +80,7 @@
             this.txtQuantidade.MaxLength = 10;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(137, 39);
-            this.txtQuantidade.TabIndex = 3;
+            this.txtQuantidade.TabIndex = 2;
             // 
             // lblQuantidade
             // 
@@ -100,7 +100,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(753, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 40);
-            this.btnVoltar.TabIndex = 17;
+            this.btnVoltar.TabIndex = 9;
             this.btnVoltar.Text = "&Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,7 +113,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(378, 12);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(119, 40);
-            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.TabIndex = 6;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -126,7 +126,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(628, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(119, 40);
-            this.btnPesquisar.TabIndex = 16;
+            this.btnPesquisar.TabIndex = 8;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -154,7 +154,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(253, 12);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(119, 40);
-            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.TabIndex = 5;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,7 +167,7 @@
             this.btnNovo.Location = new System.Drawing.Point(3, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(119, 40);
-            this.btnNovo.TabIndex = 11;
+            this.btnNovo.TabIndex = 3;
             this.btnNovo.Text = "&Novo";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -206,7 +206,7 @@
             this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(599, 39);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             // 
             // frmOrigemDoacao
             // 

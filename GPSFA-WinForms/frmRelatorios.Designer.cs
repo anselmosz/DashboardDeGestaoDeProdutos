@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRelatorios));
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleRelatórios = new System.Windows.Forms.Label();
-            this.chkbListaUsuarios = new System.Windows.Forms.CheckBox();
-            this.chkbDataEntrada = new System.Windows.Forms.CheckBox();
-            this.cbbListaDeUsuarios = new System.Windows.Forms.ComboBox();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
             this.lblE = new System.Windows.Forms.Label();
@@ -42,12 +38,17 @@
             this.dtpDataFinalPeriodo = new System.Windows.Forms.DateTimePicker();
             this.dtpDataInicialPeriodo = new System.Windows.Forms.DateTimePicker();
             this.btnExportarRelatorio = new System.Windows.Forms.Button();
-            this.dgvRelatorioDeProdutos = new System.Windows.Forms.DataGridView();
             this.gpbFiltrosDoRelatorio = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.dgvProdutos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFiltrosDeBusca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).BeginInit();
             this.gpbFiltrosDoRelatorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFiltrosDeBusca
@@ -59,55 +60,19 @@
             this.pnlFiltrosDeBusca.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltrosDeBusca.Name = "pnlFiltrosDeBusca";
             this.pnlFiltrosDeBusca.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1884, 39);
+            this.pnlFiltrosDeBusca.Size = new System.Drawing.Size(1198, 41);
             this.pnlFiltrosDeBusca.TabIndex = 4;
             // 
             // lblTitleRelatórios
             // 
             this.lblTitleRelatórios.AutoSize = true;
-            this.lblTitleRelatórios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleRelatórios.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleRelatórios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitleRelatórios.Location = new System.Drawing.Point(12, 9);
             this.lblTitleRelatórios.Name = "lblTitleRelatórios";
-            this.lblTitleRelatórios.Size = new System.Drawing.Size(91, 20);
+            this.lblTitleRelatórios.Size = new System.Drawing.Size(93, 22);
             this.lblTitleRelatórios.TabIndex = 11;
             this.lblTitleRelatórios.Text = "Relatórios";
-            // 
-            // chkbListaUsuarios
-            // 
-            this.chkbListaUsuarios.AutoSize = true;
-            this.chkbListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbListaUsuarios.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.chkbListaUsuarios.Location = new System.Drawing.Point(215, 31);
-            this.chkbListaUsuarios.Name = "chkbListaUsuarios";
-            this.chkbListaUsuarios.Size = new System.Drawing.Size(177, 24);
-            this.chkbListaUsuarios.TabIndex = 15;
-            this.chkbListaUsuarios.Text = "Selecionar usuário";
-            this.chkbListaUsuarios.UseVisualStyleBackColor = true;
-            this.chkbListaUsuarios.CheckedChanged += new System.EventHandler(this.chkbListaUsuarios_CheckedChanged);
-            // 
-            // chkbDataEntrada
-            // 
-            this.chkbDataEntrada.AutoSize = true;
-            this.chkbDataEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkbDataEntrada.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.chkbDataEntrada.Location = new System.Drawing.Point(18, 31);
-            this.chkbDataEntrada.Name = "chkbDataEntrada";
-            this.chkbDataEntrada.Size = new System.Drawing.Size(181, 24);
-            this.chkbDataEntrada.TabIndex = 14;
-            this.chkbDataEntrada.Text = "Período de entrada";
-            this.chkbDataEntrada.UseVisualStyleBackColor = true;
-            this.chkbDataEntrada.CheckedChanged += new System.EventHandler(this.chkbDataEntrada_CheckedChanged);
-            // 
-            // cbbListaDeUsuarios
-            // 
-            this.cbbListaDeUsuarios.FormattingEnabled = true;
-            this.cbbListaDeUsuarios.Items.AddRange(new object[] {
-            "Todos"});
-            this.cbbListaDeUsuarios.Location = new System.Drawing.Point(218, 64);
-            this.cbbListaDeUsuarios.Name = "cbbListaDeUsuarios";
-            this.cbbListaDeUsuarios.Size = new System.Drawing.Size(222, 28);
-            this.cbbListaDeUsuarios.TabIndex = 12;
             // 
             // btnLimparFiltros
             // 
@@ -132,37 +97,41 @@
             // lblE
             // 
             this.lblE.AutoSize = true;
+            this.lblE.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblE.Location = new System.Drawing.Point(35, 99);
+            this.lblE.Location = new System.Drawing.Point(237, 35);
             this.lblE.Name = "lblE";
-            this.lblE.Size = new System.Drawing.Size(35, 20);
+            this.lblE.Size = new System.Drawing.Size(38, 21);
             this.lblE.TabIndex = 5;
             this.lblE.Text = "Fim";
             // 
             // lblDataInicial
             // 
             this.lblDataInicial.AutoSize = true;
+            this.lblDataInicial.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataInicial.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDataInicial.Location = new System.Drawing.Point(24, 67);
+            this.lblDataInicial.Location = new System.Drawing.Point(15, 35);
             this.lblDataInicial.Name = "lblDataInicial";
-            this.lblDataInicial.Size = new System.Drawing.Size(46, 20);
+            this.lblDataInicial.Size = new System.Drawing.Size(51, 21);
             this.lblDataInicial.TabIndex = 4;
             this.lblDataInicial.Text = "Inicio";
             // 
             // dtpDataFinalPeriodo
             // 
+            this.dtpDataFinalPeriodo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataFinalPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(76, 96);
+            this.dtpDataFinalPeriodo.Location = new System.Drawing.Point(278, 35);
             this.dtpDataFinalPeriodo.Name = "dtpDataFinalPeriodo";
-            this.dtpDataFinalPeriodo.Size = new System.Drawing.Size(100, 26);
+            this.dtpDataFinalPeriodo.Size = new System.Drawing.Size(136, 29);
             this.dtpDataFinalPeriodo.TabIndex = 2;
             // 
             // dtpDataInicialPeriodo
             // 
+            this.dtpDataInicialPeriodo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataInicialPeriodo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(76, 64);
+            this.dtpDataInicialPeriodo.Location = new System.Drawing.Point(67, 35);
             this.dtpDataInicialPeriodo.Name = "dtpDataInicialPeriodo";
-            this.dtpDataInicialPeriodo.Size = new System.Drawing.Size(100, 26);
+            this.dtpDataInicialPeriodo.Size = new System.Drawing.Size(136, 29);
             this.dtpDataInicialPeriodo.TabIndex = 1;
             // 
             // btnExportarRelatorio
@@ -175,48 +144,38 @@
             this.btnExportarRelatorio.UseVisualStyleBackColor = true;
             this.btnExportarRelatorio.Click += new System.EventHandler(this.btnExportarRelatorio_Click);
             // 
-            // dgvRelatorioDeProdutos
-            // 
-            this.dgvRelatorioDeProdutos.AllowUserToAddRows = false;
-            this.dgvRelatorioDeProdutos.AllowUserToDeleteRows = false;
-            this.dgvRelatorioDeProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvRelatorioDeProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRelatorioDeProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRelatorioDeProdutos.Location = new System.Drawing.Point(12, 193);
-            this.dgvRelatorioDeProdutos.Name = "dgvRelatorioDeProdutos";
-            this.dgvRelatorioDeProdutos.ReadOnly = true;
-            this.dgvRelatorioDeProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvRelatorioDeProdutos.Size = new System.Drawing.Size(1860, 706);
-            this.dgvRelatorioDeProdutos.TabIndex = 16;
-            // 
             // gpbFiltrosDoRelatorio
             // 
+            this.gpbFiltrosDoRelatorio.Controls.Add(this.btnPesquisar);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnSair);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnLimparFiltros);
-            this.gpbFiltrosDoRelatorio.Controls.Add(this.chkbListaUsuarios);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnExportarRelatorio);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.btnAplicarFiltros);
-            this.gpbFiltrosDoRelatorio.Controls.Add(this.chkbDataEntrada);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.dtpDataFinalPeriodo);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.lblE);
-            this.gpbFiltrosDoRelatorio.Controls.Add(this.cbbListaDeUsuarios);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.lblDataInicial);
             this.gpbFiltrosDoRelatorio.Controls.Add(this.dtpDataInicialPeriodo);
-            this.gpbFiltrosDoRelatorio.Location = new System.Drawing.Point(12, 45);
+            this.gpbFiltrosDoRelatorio.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbFiltrosDoRelatorio.Location = new System.Drawing.Point(8, 45);
             this.gpbFiltrosDoRelatorio.Name = "gpbFiltrosDoRelatorio";
             this.gpbFiltrosDoRelatorio.Padding = new System.Windows.Forms.Padding(0);
-            this.gpbFiltrosDoRelatorio.Size = new System.Drawing.Size(1860, 142);
+            this.gpbFiltrosDoRelatorio.Size = new System.Drawing.Size(1186, 75);
             this.gpbFiltrosDoRelatorio.TabIndex = 16;
             this.gpbFiltrosDoRelatorio.TabStop = false;
             this.gpbFiltrosDoRelatorio.Text = "Filtros";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.Location = new System.Drawing.Point(1045, 24);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(119, 40);
+            this.btnPesquisar.TabIndex = 80;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // btnSair
             // 
@@ -229,12 +188,62 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.AllowUserToAddRows = false;
+            this.dgvProdutos.AllowUserToDeleteRows = false;
+            this.dgvProdutos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvProdutos.Location = new System.Drawing.Point(12, 126);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.ReadOnly = true;
+            this.dgvProdutos.RowHeadersWidth = 51;
+            this.dgvProdutos.Size = new System.Drawing.Size(1174, 524);
+            this.dgvProdutos.TabIndex = 17;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nome do Produto";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 300;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Quantidade";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Unidade";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Data de Entrada";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
             // frmRelatorios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(1884, 911);
-            this.Controls.Add(this.dgvRelatorioDeProdutos);
+            this.ClientSize = new System.Drawing.Size(1198, 662);
+            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.gpbFiltrosDoRelatorio);
             this.Controls.Add(this.pnlFiltrosDeBusca);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,9 +257,9 @@
             this.Load += new System.EventHandler(this.frmRelatorios_Load);
             this.pnlFiltrosDeBusca.ResumeLayout(false);
             this.pnlFiltrosDeBusca.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioDeProdutos)).EndInit();
             this.gpbFiltrosDoRelatorio.ResumeLayout(false);
             this.gpbFiltrosDoRelatorio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,11 +275,13 @@
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Button btnLimparFiltros;
         private System.Windows.Forms.Label lblTitleRelatórios;
-        private System.Windows.Forms.ComboBox cbbListaDeUsuarios;
-        private System.Windows.Forms.CheckBox chkbDataEntrada;
-        private System.Windows.Forms.CheckBox chkbListaUsuarios;
-        private System.Windows.Forms.DataGridView dgvRelatorioDeProdutos;
         private System.Windows.Forms.GroupBox gpbFiltrosDoRelatorio;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.DataGridView dgvProdutos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

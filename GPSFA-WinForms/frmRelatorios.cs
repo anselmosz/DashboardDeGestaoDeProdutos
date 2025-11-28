@@ -40,31 +40,31 @@ namespace GPSFA_WinForms
             ConfigDGVRelatorios();
             dtpDataInicialPeriodo.Enabled = false;
             dtpDataFinalPeriodo.Enabled = false;
-            cbbListaDeUsuarios.SelectedIndex = 0;
-            cbbListaDeUsuarios.Enabled = false;
+            //cbbListaDeUsuarios.SelectedIndex = 0;
+            //cbbListaDeUsuarios.Enabled = false;
         }
 
         private void ConfigDGVRelatorios()
         { // Ajustar para ocupar toda a largura
-            dgvRelatorioDeProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dgvRelatorioDeProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // Alternar cores das linhas
-            dgvRelatorioDeProdutos.RowsDefaultCellStyle.BackColor = Color.LightGray;
+            //dgvRelatorioDeProdutos.RowsDefaultCellStyle.BackColor = Color.LightGray;
             // Aumentar fonte
-            dgvRelatorioDeProdutos.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
-            dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-            // Ajustar altura das linhas
-            dgvRelatorioDeProdutos.RowTemplate.Height = 40;
-            // Habilitar quebra de texto
-            dgvRelatorioDeProdutos.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            // Ajustar seleção de célula
-            dgvRelatorioDeProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRelatorioDeProdutos.MultiSelect = false;
+            //dgvRelatorioDeProdutos.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
+            //dgvRelatorioDeProdutos.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            //// Ajustar altura das linhas
+            //dgvRelatorioDeProdutos.RowTemplate.Height = 40;
+            //// Habilitar quebra de texto
+            //dgvRelatorioDeProdutos.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //// Ajustar seleção de célula
+            //dgvRelatorioDeProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dgvRelatorioDeProdutos.MultiSelect = false;
         }
 
         // Carrega no datagrid view os últimos produtos adicionados no banco
         private void CarregarDadosNaListaDeProdutos()
         {
-            dgvRelatorioDeProdutos.Columns.Clear();
+            //dgvRelatorioDeProdutos.Columns.Clear();
 
             DataTable tabela = new DataTable();
 
@@ -82,10 +82,10 @@ namespace GPSFA_WinForms
                 MySqlDataAdapter DA = new MySqlDataAdapter(comm);
                 DA.Fill(tabela);
 
-                dgvRelatorioDeProdutos.DataSource = tabela;
+                //dgvRelatorioDeProdutos.DataSource = tabela;
 
-                dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-                DataBaseConnection.CloseConnection();
+                //dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                //DataBaseConnection.CloseConnection();
             }
         }
 
@@ -142,35 +142,35 @@ namespace GPSFA_WinForms
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            dgvRelatorioDeProdutos.Columns.Clear();
+            //dgvRelatorioDeProdutos.Columns.Clear();
 
             try
             {
-                if (cbbListaDeUsuarios.SelectedItem == null)
-                {
-                    MessageBox.Show($"Selecione uma opção válida da lista para usar o filtro", "Erro do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    limparFiltros();
-                    CarregarDadosNaListaDeProdutos();
-                }
-                else
-                {
-                    FiltroDeBuscaBD filtroDeData = new FiltroDeBuscaBD
-                    {
-                        FiltrarPorPeriodo = chkbDataEntrada.Checked,
-                        DataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd"),
-                        DataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd"),
-                    };
+                //if (cbbListaDeUsuarios.SelectedItem == null)
+                //{
+                //    MessageBox.Show($"Selecione uma opção válida da lista para usar o filtro", "Erro do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    limparFiltros();
+                //    CarregarDadosNaListaDeProdutos();
+                //}
+                //else
+                //{
+                //    FiltroDeBuscaBD filtroDeData = new FiltroDeBuscaBD
+                //    {
+                //        //FiltrarPorPeriodo = chkbDataEntrada.Checked,
+                //        DataInicial = dtpDataInicialPeriodo.Value.ToString("yyyy-MM-dd"),
+                //        DataFinal = dtpDataFinalPeriodo.Value.ToString("yyyy-MM-dd"),
+                //    };
                     
-                    FiltroDeBuscaBD filtroDeVoluntario = new FiltroDeBuscaBD
-                    {
-                        FiltrarPorUsuario = chkbListaUsuarios.Checked,
-                        NomeUsuario = cbbListaDeUsuarios.SelectedItem.ToString(),
-                    };
+                //    FiltroDeBuscaBD filtroDeVoluntario = new FiltroDeBuscaBD
+                //    {
+                //        //FiltrarPorUsuario = chkbListaUsuarios.Checked,
+                //        //NomeUsuario = cbbListaDeUsuarios.SelectedItem.ToString(),
+                //    };
 
-                    DataTable resultado = BuscarProdutosPorFiltro(filtroDeData, filtroDeVoluntario);
-                    dgvRelatorioDeProdutos.DataSource = resultado;
-                    dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-                }
+                //    DataTable resultado = BuscarProdutosPorFiltro(filtroDeData, filtroDeVoluntario);
+                //    //dgvRelatorioDeProdutos.DataSource = resultado;
+                //    //dgvRelatorioDeProdutos.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                //}
             }
             catch (Exception error) {
                 MessageBox.Show($"Erro: {error}", "Erro do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -183,9 +183,9 @@ namespace GPSFA_WinForms
         {
             dtpDataInicialPeriodo.Value = DateTime.Now;
             dtpDataFinalPeriodo.Value = DateTime.Now;
-            cbbListaDeUsuarios.SelectedIndex = 0;
-            chkbDataEntrada.Checked = false;
-            chkbListaUsuarios.Checked = false;
+            //cbbListaDeUsuarios.SelectedIndex = 0;
+            //chkbDataEntrada.Checked = false;
+            //chkbListaUsuarios.Checked = false;
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace GPSFA_WinForms
 
             while (DR.Read())
             {
-                cbbListaDeUsuarios.Items.Add(DR.GetString(0));
+                //cbbListaDeUsuarios.Items.Add(DR.GetString(0));
             }
 
             DataBaseConnection.CloseConnection();
@@ -214,34 +214,34 @@ namespace GPSFA_WinForms
 
         private void chkbDataEntrada_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkbDataEntrada.Checked)
-            {
-                dtpDataInicialPeriodo.Enabled = true;
-                dtpDataFinalPeriodo.Enabled = true;
-            }
-            else
-            {
-                dtpDataInicialPeriodo.Enabled = false;
-                dtpDataFinalPeriodo.Enabled = false;
-                dtpDataInicialPeriodo.Value = DateTime.Now;
-                dtpDataFinalPeriodo.Value = DateTime.Now;
+            ////if (chkbDataEntrada.Checked)
+            //{
+            //    dtpDataInicialPeriodo.Enabled = true;
+            //    dtpDataFinalPeriodo.Enabled = true;
+            //}
+            //else
+            //{
+            //    dtpDataInicialPeriodo.Enabled = false;
+            //    dtpDataFinalPeriodo.Enabled = false;
+            //    dtpDataInicialPeriodo.Value = DateTime.Now;
+            //    dtpDataFinalPeriodo.Value = DateTime.Now;
 
-            }
+            //}
         }
 
         private void chkbListaUsuarios_CheckedChanged (object sender, EventArgs e)
         {
-            if (chkbListaUsuarios.Checked)
-            {
-                cbbListaDeUsuarios.Enabled = true;
-                cbbListaDeUsuarios.Items.Remove("Todos");
-            }
-            else
-            {
-                cbbListaDeUsuarios.Enabled = false;
-                cbbListaDeUsuarios.Items.Insert(0, "Todos");
-                cbbListaDeUsuarios.SelectedIndex = 0;
-            }
+            //if (chkbListaUsuarios.Checked)
+            //{
+            //    cbbListaDeUsuarios.Enabled = true;
+            //    cbbListaDeUsuarios.Items.Remove("Todos");
+            //}
+            //else
+            //{
+            //    cbbListaDeUsuarios.Enabled = false;
+            //    cbbListaDeUsuarios.Items.Insert(0, "Todos");
+            //    cbbListaDeUsuarios.SelectedIndex = 0;
+            //}
         }
 
         private void btnExportarRelatorio_Click(object sender, EventArgs e)

@@ -57,7 +57,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(505, 16);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(119, 40);
-            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -70,7 +70,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(129, 14);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 40);
-            this.btnCadastrar.TabIndex = 12;
+            this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "&Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -83,7 +83,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(753, 15);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 40);
-            this.btnVoltar.TabIndex = 17;
+            this.btnVoltar.TabIndex = 10;
             this.btnVoltar.Text = "&Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -96,7 +96,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(380, 16);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(119, 40);
-            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "&Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -109,7 +109,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(628, 14);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(119, 40);
-            this.btnPesquisar.TabIndex = 16;
+            this.btnPesquisar.TabIndex = 9;
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,7 +137,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(255, 14);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(119, 40);
-            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "&Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -150,7 +150,7 @@
             this.btnNovo.Location = new System.Drawing.Point(3, 14);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(119, 40);
-            this.btnNovo.TabIndex = 11;
+            this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "&Novo";
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -191,7 +191,7 @@
             this.btnMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedida.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMedida.Image = ((System.Drawing.Image)(resources.GetObject("btnMedida.Image")));
-            this.btnMedida.Location = new System.Drawing.Point(290, 176);
+            this.btnMedida.Location = new System.Drawing.Point(298, 173);
             this.btnMedida.Name = "btnMedida";
             this.btnMedida.Size = new System.Drawing.Size(48, 36);
             this.btnMedida.TabIndex = 63;
@@ -218,7 +218,7 @@
             this.cbbUnidadeMedida.Location = new System.Drawing.Point(56, 173);
             this.cbbUnidadeMedida.Name = "cbbUnidadeMedida";
             this.cbbUnidadeMedida.Size = new System.Drawing.Size(236, 39);
-            this.cbbUnidadeMedida.TabIndex = 61;
+            this.cbbUnidadeMedida.TabIndex = 2;
             // 
             // label2
             // 
@@ -238,7 +238,7 @@
             this.textBox3.MaxLength = 10;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(134, 39);
-            this.textBox3.TabIndex = 8;
+            this.textBox3.TabIndex = 3;
             // 
             // label1
             // 
@@ -259,7 +259,7 @@
             this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(599, 39);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             // 
             // frmListaProdutos
             // 

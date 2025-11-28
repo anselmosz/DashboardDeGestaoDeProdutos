@@ -238,7 +238,7 @@
   <data name="btnPesquisar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAA7RJREFUWEe9Vu9LU2EU3gftz6jPvoK7Y+nuXM1i60s1S+dPxFRCLGpbCNmXmYks
+        wQAADsEBuJFr7QAAA7RJREFUWEe9Vu9LU2EU3gftz6jPvoK7Y+nuXM1i60s1S+dPxFRCLGpbCNmXmYks
         +tQdlWRIFjFFxVSSwkGUYQRKKZFChBKhUBFFSEFJdOJ5551376beO5cHDlzuPec55z3vOc89JtMmkmOx
         72Fm2wUmyeNMkpeYZF+NKZ7lKL7BRvTbtjBm3Z1rlvushe4/9f42CnUN0+2xV9Q/scAVz3iHb7CBLXxE
         nLSESQXV5vyiFV/wKt2LzlGr0kvlDefI4fJQ3t79XAtdHv6uVYlwG19QIfgwyV4t4hkSlmdrdriK/3YO
@@ -285,7 +285,7 @@
   <data name="btnNovo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAA7NJREFUWEfFle9PE3ccx7sne+A/sGXPfbKnJNTV6rWlK7VQfkzqgAfbk81Hi0/Y
+        wQAADsEBuJFr7QAAA7NJREFUWEfFle9PE3ccx7sne+A/sGXPfbKnJNTV6rWlK7VQfkzqgAfbk81Hi0/Y
         nsy4DIxWozFbRAUlxszoQmKm08TFIYpsONgobO31WmjvWq7X61FKf9wpAgU+y/ewX3a9hvawZO/klTT3
         7uf7eSXNfatbXl7eK0nSiCiK02/K0Z+pEzqtkSTppCiKUA0675BQd8PTXbxj2+RyOXcul4NqgASsNzxA
         DExULpHJZNzZbBaqQUHANDAB+/vGKpOoroAPCxj7xkDf+6y8BBLIZDJQDc4O+aDu2nMgrowCcekJmC4O
@@ -307,7 +307,7 @@
   <data name="btnMedida.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAN5JREFUWEftjksKwjAQQONZvEc+C+3MFdy69iyiuBA8Qqe9lOAVXAhWXIxIYtpo
+        vgAADr4B6kKxwAAAAN5JREFUWEftjksKwjAQQONZvEc+C+3MFdy69iyiuBA8Qqe9lOAVXAhWXIxIYtpo
         kxRsH8wmw+Q9ISbGgqwRFcFBNGJm75IjS0RTwdVU2GiCU9aIdzlPtohP8mwRbXIeRXC076IQIjeEN0O4
         sm97M3I5/YNcE6xNDXP73YcsF/HkqoKNJrhrKs4hEUnkfNgVkVTeFZFF7ouIKn+iCHbOB56I6HLGBEXA
         JYmcCYlonT5y5ueIGHLm64iYciY4IoWc0VTsHWEuOeONyCFnnIiccuYVMYSc0YRbScth5BMpeQAU7HWf
