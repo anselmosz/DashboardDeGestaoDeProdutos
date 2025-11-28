@@ -34,14 +34,14 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlCrud = new System.Windows.Forms.Panel();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.lbl = new System.Windows.Forms.Label();
-            this.gpbCamposDoProduto = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            this.gpbCamposDoProduto.SuspendLayout();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.gpbCamposMedidas = new System.Windows.Forms.GroupBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.pnlCrud.SuspendLayout();
+            this.gpbCamposMedidas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExcluir
@@ -56,6 +56,7 @@
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCadastrar
             // 
@@ -69,6 +70,7 @@
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnVoltar
             // 
@@ -82,6 +84,7 @@
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnLimpar
             // 
@@ -95,6 +98,7 @@
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -109,20 +113,20 @@
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pnlCrud
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnVoltar);
-            this.panel1.Controls.Add(this.btnLimpar);
-            this.panel1.Controls.Add(this.btnPesquisar);
-            this.panel1.Controls.Add(this.btnAlterar);
-            this.panel1.Controls.Add(this.btnExcluir);
-            this.panel1.Controls.Add(this.btnCadastrar);
-            this.panel1.Controls.Add(this.btnNovo);
-            this.panel1.Location = new System.Drawing.Point(12, 180);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(886, 59);
-            this.panel1.TabIndex = 13;
+            this.pnlCrud.BackColor = System.Drawing.Color.White;
+            this.pnlCrud.Controls.Add(this.btnVoltar);
+            this.pnlCrud.Controls.Add(this.btnLimpar);
+            this.pnlCrud.Controls.Add(this.btnPesquisar);
+            this.pnlCrud.Controls.Add(this.btnAlterar);
+            this.pnlCrud.Controls.Add(this.btnExcluir);
+            this.pnlCrud.Controls.Add(this.btnCadastrar);
+            this.pnlCrud.Controls.Add(this.btnNovo);
+            this.pnlCrud.Location = new System.Drawing.Point(12, 180);
+            this.pnlCrud.Name = "pnlCrud";
+            this.pnlCrud.Size = new System.Drawing.Size(886, 59);
+            this.pnlCrud.TabIndex = 13;
             // 
             // btnAlterar
             // 
@@ -149,54 +153,55 @@
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // lbl
+            // lblDescricao
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Black;
-            this.lbl.Location = new System.Drawing.Point(53, 30);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(130, 29);
-            this.lbl.TabIndex = 3;
-            this.lbl.Text = "Descrição";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.Black;
+            this.lblDescricao.Location = new System.Drawing.Point(53, 30);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(130, 29);
+            this.lblDescricao.TabIndex = 3;
+            this.lblDescricao.Text = "Descrição";
             // 
-            // gpbCamposDoProduto
+            // gpbCamposMedidas
             // 
-            this.gpbCamposDoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.gpbCamposDoProduto.Controls.Add(this.textBox1);
-            this.gpbCamposDoProduto.Controls.Add(this.lbl);
-            this.gpbCamposDoProduto.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbCamposDoProduto.Location = new System.Drawing.Point(12, 1);
-            this.gpbCamposDoProduto.Name = "gpbCamposDoProduto";
-            this.gpbCamposDoProduto.Size = new System.Drawing.Size(886, 177);
-            this.gpbCamposDoProduto.TabIndex = 12;
-            this.gpbCamposDoProduto.TabStop = false;
+            this.gpbCamposMedidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
+            this.gpbCamposMedidas.Controls.Add(this.txtDescricao);
+            this.gpbCamposMedidas.Controls.Add(this.lblDescricao);
+            this.gpbCamposMedidas.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbCamposMedidas.Location = new System.Drawing.Point(12, 1);
+            this.gpbCamposMedidas.Name = "gpbCamposMedidas";
+            this.gpbCamposMedidas.Size = new System.Drawing.Size(886, 177);
+            this.gpbCamposMedidas.TabIndex = 12;
+            this.gpbCamposMedidas.TabStop = false;
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(58, 72);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(599, 39);
-            this.textBox1.TabIndex = 3;
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(58, 72);
+            this.txtDescricao.MaxLength = 20;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(599, 39);
+            this.txtDescricao.TabIndex = 3;
             // 
             // frmUnidadeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 247);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gpbCamposDoProduto);
+            this.ClientSize = new System.Drawing.Size(911, 247);
+            this.Controls.Add(this.pnlCrud);
+            this.Controls.Add(this.gpbCamposMedidas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUnidadeMedida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Unidade de Medida";
-            this.panel1.ResumeLayout(false);
-            this.gpbCamposDoProduto.ResumeLayout(false);
-            this.gpbCamposDoProduto.PerformLayout();
+            this.Text = "Gerenciar Unidade de Medida";
+            this.pnlCrud.ResumeLayout(false);
+            this.gpbCamposMedidas.ResumeLayout(false);
+            this.gpbCamposMedidas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,11 +213,11 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlCrud;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.GroupBox gpbCamposDoProduto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.GroupBox gpbCamposMedidas;
+        private System.Windows.Forms.TextBox txtDescricao;
     }
 }

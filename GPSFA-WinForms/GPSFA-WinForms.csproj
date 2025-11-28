@@ -167,6 +167,12 @@
   <ItemGroup>
     <Compile Include="data.dbfransisco\DataBaseConnection.cs" />
     <Compile Include="classes\FiltroDeBuscaBD.cs" />
+    <Compile Include="frmCadastrarVoluntarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarVoluntarios.Designer.cs">
+      <DependentUpon>frmCadastrarVoluntarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGerenciarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadastrarVoluntarios.resx">
+      <DependentUpon>frmCadastrarVoluntarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGerenciarProdutos.resx">
       <DependentUpon>frmGerenciarProdutos.cs</DependentUpon>
     </EmbeddedResource>

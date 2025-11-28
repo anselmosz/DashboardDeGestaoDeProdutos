@@ -236,7 +236,8 @@ namespace GPSFA_WinForms
         private void btnMedida_Click(object sender, EventArgs e)
         {
             frmUnidadeMedida abrir = new frmUnidadeMedida();
-            abrir.ShowDialog();
+            abrir.Show();
+            this.Hide();
         }
     }
 }
