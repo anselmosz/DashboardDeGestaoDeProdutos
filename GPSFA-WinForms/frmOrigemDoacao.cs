@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GPSFA_WinForms
 {
-    public partial class frmTeste : Form
+    public partial class frmOrigemDoacao : Form
     {
-        public frmTeste()
+        public frmOrigemDoacao()
         {
             InitializeComponent();
         }

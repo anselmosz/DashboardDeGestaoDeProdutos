@@ -197,6 +197,12 @@
     <Compile Include="frmGerenciarDadosDoVoluntario.Designer.cs">
       <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaProdutos.Designer.cs">
+      <DependentUpon>frmListaProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,12 @@
     </Compile>
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrigemDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrigemDoacao.Designer.cs">
+      <DependentUpon>frmOrigemDoacao.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRelatorios.cs">
       <SubType>Form</SubType>
@@ -227,11 +239,11 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTeste.cs">
+    <Compile Include="frmUnidadeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTeste.Designer.cs">
-      <DependentUpon>frmTeste.cs</DependentUpon>
+    <Compile Include="frmUnidadeMedida.Designer.cs">
+      <DependentUpon>frmUnidadeMedida.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -250,11 +262,17 @@
     <EmbeddedResource Include="frmGerenciarDadosDoVoluntario.resx">
       <DependentUpon>frmGerenciarDadosDoVoluntario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaProdutos.resx">
+      <DependentUpon>frmListaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrigemDoacao.resx">
+      <DependentUpon>frmOrigemDoacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRelatorios.resx">
       <DependentUpon>frmRelatorios.cs</DependentUpon>
@@ -265,8 +283,8 @@
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTeste.resx">
-      <DependentUpon>frmTeste.cs</DependentUpon>
+    <EmbeddedResource Include="frmUnidadeMedida.resx">
+      <DependentUpon>frmUnidadeMedida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

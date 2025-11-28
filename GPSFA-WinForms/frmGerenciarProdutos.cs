@@ -38,7 +38,7 @@ namespace GPSFA_WinForms
             limparCamposDeCadastro();
             //CarregarListaProdutos();
             //cbbTipoDoacao.SelectedIndex = 0;
-            cbbUnidadeMedida.SelectedIndex = 0;
+            //cbbUnidadeMedida.SelectedIndex = 0;
         }
 
         private int enviarDoacoes(string nomeProduto, int quantidade, int peso, string unidadeMedida, string codBar, DateTime dataArrecadacao, DateTime dataDeValidade, DateTime dataLimiteDeSaida, int codUsu)
@@ -142,7 +142,7 @@ namespace GPSFA_WinForms
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtNomeDoItem.Text.Equals("") || txtQuantidade.Text.Equals(""))
+            if (cbbDescricao.Text.Equals("") || txtQuantidade.Text.Equals(""))
             {
                 MessageBox.Show("Um ou mais campos não foram preenchidos corretamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -152,7 +152,7 @@ namespace GPSFA_WinForms
             {
                 return;
             }
-            string nomeItem = txtNomeDoItem.Text;
+            string nomeItem = cbbDescricao.Text;
             int quantidade = Convert.ToInt32(txtQuantidade.Text);
             int peso = Convert.ToInt32(txtPeso.Text);
             string tipoUnidade = SimplificarUnidade(cbbUnidadeMedida.Text);
@@ -188,12 +188,12 @@ namespace GPSFA_WinForms
 
         public void limparCamposDeCadastro()
         {
-            txtNomeDoItem.Clear();
+            
             txtQuantidade.Clear();
             dtpDataValidade.Value = DateTime.Now;
             DateTime dataRecebimento = Convert.ToDateTime(dtpDataEntrada.Text);
             dtpDataValidade.Value = DateTime.Now;
-            cbbUnidadeMedida.SelectedIndex = 0;
+            //cbbUnidadeMedida.SelectedIndex = 0;
             txtPeso.Clear();
         }
 
@@ -212,6 +212,31 @@ namespace GPSFA_WinForms
             frmMenuPrincipal abrir = new frmMenuPrincipal();
             abrir.Show();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoacao_Click(object sender, EventArgs e)
+        {
+            frmOrigemDoacao abrir = new frmOrigemDoacao();
+            abrir.ShowDialog();
+
+        }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            frmListaProdutos abrir = new frmListaProdutos();
+            abrir.ShowDialog();
+
+        }
+
+        private void btnMedida_Click(object sender, EventArgs e)
+        {
+            frmUnidadeMedida abrir = new frmUnidadeMedida();
+            abrir.ShowDialog();
         }
     }
 }
