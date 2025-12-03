@@ -383,3 +383,4 @@ C:\Users\giovanne.shenrique\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms
 C:\Users\giovanne.shenrique\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-Wi.9FD634F4.Up2Date
 C:\Users\giovanne.shenrique\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe
 C:\Users\giovanne.shenrique\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.pdb
+C:\Users\giovanne.shenrique\Documents\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmPesquisarUnidadeDeMedida.resources

@@ -63,6 +63,7 @@
             // 
             // btnNovo
             // 
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.Location = new System.Drawing.Point(3, 12);
@@ -242,6 +243,7 @@
             // 
             // btnDoacao
             // 
+            this.btnDoacao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoacao.FlatAppearance.BorderSize = 0;
             this.btnDoacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoacao.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,6 +279,7 @@
             // 
             // btnMedida
             // 
+            this.btnMedida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMedida.FlatAppearance.BorderSize = 0;
             this.btnMedida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedida.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,6 +295,7 @@
             // 
             // btnLista
             // 
+            this.btnLista.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLista.FlatAppearance.BorderSize = 0;
             this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLista.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -332,6 +336,7 @@
             // 
             // btnVoltar
             // 
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
             this.btnVoltar.Location = new System.Drawing.Point(1045, 12);
@@ -346,6 +351,7 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
             this.btnLimpar.Location = new System.Drawing.Point(519, 12);
@@ -359,6 +365,7 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(863, 12);
@@ -372,6 +379,7 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
             this.btnAlterar.Location = new System.Drawing.Point(347, 12);
@@ -385,6 +393,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.Location = new System.Drawing.Point(691, 12);
@@ -398,6 +407,7 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.Location = new System.Drawing.Point(175, 12);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,35 @@ namespace GPSFA_WinForms
             desativarBotoes();
             desativaCampos();
         }
+
+        public frmUnidadeMedida(string descricao)
+        {
+            InitializeComponent();
+            //buscarUnidadesMedida();           
+            txtDescricao.Text = descricao;
+            //carregaUnidadesPorDescricao(txtDescricao.Text);
+        }
+
+        //public void carregaUnidadesPorDescricao(string descricao)
+        //{
+
+        //    MySqlCommand comm = new MySqlCommand();
+        //    comm.CommandText = "SELECT codBarras, prod.descricao, quantidade, lote, dataEntr, horaEntr, validade, fotoProd, unidade FROM tbProdutos AS prod INNER JOIN tbUnidades AS uni ON prod.codUnid = uni.codUnid WHERE prod.descricao = @prod.descricao;";
+        //    comm.CommandType = CommandType.Text;
+        //    comm.Parameters.Clear();
+        //    comm.Parameters.Add("@prod.descricao", MySqlDbType.VarChar, 100).Value = descricao;
+
+
+        //    comm.Connection = DataBaseConnection.OpenConnection();
+
+        //    MySqlDataReader DR;
+        //    DR = comm.ExecuteReader();
+        //    DR.Read();            
+        //    txtDescricao.Text = DR.GetString(1);           
+
+        //   DataBaseConnection.CloseConnection();
+
+        //}
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -188,6 +218,13 @@ namespace GPSFA_WinForms
             //        MessageBoxIcon.Error,
             //        MessageBoxDefaultButton.Button1);
             //    }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisarUnidadeDeMedida abrir = new frmPesquisarUnidadeDeMedida();
+            abrir.Show();
+            this.Hide();
         }
     }
     }
