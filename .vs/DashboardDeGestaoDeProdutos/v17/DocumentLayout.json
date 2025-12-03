@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\giovanne.shenrique\\Documents\\DashboardDeGestaoDeProdutos\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\giovanne.shenrique\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmgerenciarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmgerenciarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -25,6 +26,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|C:\\Users\\giovanne.shenrique\\Documents\\DashboardDeGestaoDeProdutos\\gpsfa-winforms\\frmpesquisarunidadedemedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\frmpesquisarunidadedemedida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|c:\\users\\edna.hsry\\documents\\visual studio 2022\\dashboarddegestaodeprodutos\\gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6D9E377-FC15-4329-AE23-D227CE5F4C3F}|GPSFA-WinForms\\GPSFA-WinForms.csproj|solutionrelative:gpsfa-winforms\\data.dbfransisco\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 5046d3ff359316a0105051612b191eb127493bf4
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +44,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "frmGerenciarProdutos.cs [Design]",
               "DocumentMoniker": "C:\\Users\\giovanne.shenrique\\Documents\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\frmGerenciarProdutos.cs",
               "RelativeDocumentMoniker": "GPSFA-WinForms\\frmGerenciarProdutos.cs",
@@ -109,6 +115,16 @@
               "ViewState": "AgIAACIAAAAAAAAAAAAIwCEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-28T12:30:25.282Z",
+=======
+              "Title": "DataBaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "RelativeDocumentMoniker": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "ToolTip": "C:\\Users\\edna.hsry\\Documents\\Visual Studio 2022\\DashboardDeGestaoDeProdutos\\GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "RelativeToolTip": "GPSFA-WinForms\\data.dbfransisco\\DataBaseConnection.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T14:20:07.135Z",
+>>>>>>> 5046d3ff359316a0105051612b191eb127493bf4
               "EditorCaption": ""
             }
           ]
