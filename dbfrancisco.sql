@@ -78,7 +78,7 @@ PRIMARY KEY(codOri)
 CREATE TABLE tbUnidades(
 
 codUni INT NOT NULL AUTO_INCREMENT,  
-descricao VARCHAR(20) NOT NULL,
+descricao VARCHAR(20) NOT NULL UNIQUE,
 PRIMARY KEY(codUni)
 );
 
