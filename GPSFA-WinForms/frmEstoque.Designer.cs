@@ -32,7 +32,6 @@
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleEstoque = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCarregaTodosProdutos = new System.Windows.Forms.Button();
             this.txtNomeOrCod = new System.Windows.Forms.TextBox();
@@ -48,10 +47,6 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLerQRCode = new System.Windows.Forms.Button();
-            this.btnDarBaixa = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +62,6 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,29 +93,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.panel2.Controls.Add(this.lblQRCODE);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblCodOrNome);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvEstoque);
             this.panel2.Controls.Add(this.lblSubTitulo);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(465, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1575, 1409);
             this.panel2.TabIndex = 20;
-            // 
-            // lblQRCODE
-            // 
-            this.lblQRCODE.AutoSize = true;
-            this.lblQRCODE.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblQRCODE.Location = new System.Drawing.Point(28, 286);
-            this.lblQRCODE.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblQRCODE.Name = "lblQRCODE";
-            this.lblQRCODE.Size = new System.Drawing.Size(210, 21);
-            this.lblQRCODE.TabIndex = 14;
-            this.lblQRCODE.Text = "Leitor de código de barras";
             // 
             // panel4
             // 
@@ -215,11 +196,11 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(35, 430);
+            this.dgvEstoque.Location = new System.Drawing.Point(35, 286);
             this.dgvEstoque.Margin = new System.Windows.Forms.Padding(5);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1267, 588);
+            this.dgvEstoque.Size = new System.Drawing.Size(1267, 732);
             this.dgvEstoque.TabIndex = 5;
             // 
             // codigo
@@ -275,62 +256,6 @@
             this.lblSubTitulo.TabIndex = 4;
             this.lblSubTitulo.Text = "Consulta e gerenciamento de produtos em estoque";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.panel3.Controls.Add(this.btnLerQRCode);
-            this.panel3.Controls.Add(this.btnDarBaixa);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(37, 328);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1265, 92);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnLerQRCode
-            // 
-            this.btnLerQRCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
-            this.btnLerQRCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLerQRCode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLerQRCode.FlatAppearance.BorderSize = 0;
-            this.btnLerQRCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLerQRCode.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btnLerQRCode.ForeColor = System.Drawing.Color.White;
-            this.btnLerQRCode.Location = new System.Drawing.Point(897, 27);
-            this.btnLerQRCode.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLerQRCode.Name = "btnLerQRCode";
-            this.btnLerQRCode.Size = new System.Drawing.Size(167, 42);
-            this.btnLerQRCode.TabIndex = 12;
-            this.btnLerQRCode.Text = "   Ler Código";
-            this.btnLerQRCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLerQRCode.UseVisualStyleBackColor = false;
-            // 
-            // btnDarBaixa
-            // 
-            this.btnDarBaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
-            this.btnDarBaixa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDarBaixa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDarBaixa.FlatAppearance.BorderSize = 0;
-            this.btnDarBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDarBaixa.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btnDarBaixa.ForeColor = System.Drawing.Color.White;
-            this.btnDarBaixa.Location = new System.Drawing.Point(1097, 27);
-            this.btnDarBaixa.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDarBaixa.Name = "btnDarBaixa";
-            this.btnDarBaixa.Size = new System.Drawing.Size(140, 42);
-            this.btnDarBaixa.TabIndex = 11;
-            this.btnDarBaixa.Text = "Dar baixa";
-            this.btnDarBaixa.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(28, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(839, 40);
-            this.textBox1.TabIndex = 11;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
@@ -367,6 +292,7 @@
             this.btnLimparFiltros.TabIndex = 15;
             this.btnLimparFiltros.Text = "Limpar Filtros";
             this.btnLimparFiltros.UseVisualStyleBackColor = false;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // dtpDataValidade
             // 
@@ -405,6 +331,7 @@
             this.btnAplicarFiltros.TabIndex = 11;
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
+            this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
             // lblValidadeAte
             // 
@@ -450,14 +377,6 @@
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Items.AddRange(new object[] {
-            "Selecione...",
-            "Quilogramas (kg)",
-            "Gramas (g)",
-            "Litros (l)",
-            "Mililitros (ml)",
-            "Unidades",
-            "Caixas"});
             this.cbxCategoria.Location = new System.Drawing.Point(29, 253);
             this.cbxCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cbxCategoria.Name = "cbxCategoria";
@@ -514,8 +433,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -527,7 +444,6 @@
         private System.Windows.Forms.Panel pnlFiltrosDeBusca;
         private System.Windows.Forms.Label lblTitleEstoque;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblQRCODE;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCarregaTodosProdutos;
         private System.Windows.Forms.TextBox txtNomeOrCod;
@@ -543,10 +459,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteSaida;
         private System.Windows.Forms.Label lblSubTitulo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnLerQRCode;
-        private System.Windows.Forms.Button btnDarBaixa;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLimparFiltros;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
