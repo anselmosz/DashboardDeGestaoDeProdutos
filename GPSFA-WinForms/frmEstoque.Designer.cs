@@ -48,9 +48,13 @@
             this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAplicarModoExibicao = new System.Windows.Forms.Button();
+            this.cbxModoExibicao = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblModoExibicao = new System.Windows.Forms.Label();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFiltos = new System.Windows.Forms.Label();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
             this.lblValidadeAte = new System.Windows.Forms.Label();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -132,11 +136,12 @@
             this.btnCarregaTodosProdutos.TabIndex = 14;
             this.btnCarregaTodosProdutos.Text = "Todos";
             this.btnCarregaTodosProdutos.UseVisualStyleBackColor = false;
+            this.btnCarregaTodosProdutos.Click += new System.EventHandler(this.btnCarregaTodosProdutos_Click);
             // 
             // txtNomeOrCod
             // 
             this.txtNomeOrCod.BackColor = System.Drawing.Color.White;
-            this.txtNomeOrCod.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.txtNomeOrCod.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeOrCod.Location = new System.Drawing.Point(28, 27);
             this.txtNomeOrCod.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomeOrCod.Multiline = true;
@@ -160,6 +165,7 @@
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // lblCodOrNome
             // 
@@ -179,10 +185,10 @@
             this.label1.Location = new System.Drawing.Point(28, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(756, 20);
+            this.label1.Size = new System.Drawing.Size(1278, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "_________________________________________________________________________________" +
-    "__";
+    "____________________________________________________________";
             // 
             // dgvEstoque
             // 
@@ -202,6 +208,7 @@
             this.dgvEstoque.ReadOnly = true;
             this.dgvEstoque.Size = new System.Drawing.Size(1267, 732);
             this.dgvEstoque.TabIndex = 5;
+            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
             // 
             // codigo
             // 
@@ -259,9 +266,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.btnAplicarModoExibicao);
+            this.panel1.Controls.Add(this.cbxModoExibicao);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblModoExibicao);
             this.panel1.Controls.Add(this.btnLimparFiltros);
             this.panel1.Controls.Add(this.dtpDataValidade);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblFiltos);
             this.panel1.Controls.Add(this.btnAplicarFiltros);
             this.panel1.Controls.Add(this.lblValidadeAte);
             this.panel1.Controls.Add(this.cbxStatus);
@@ -275,6 +286,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 860);
             this.panel1.TabIndex = 19;
+            // 
+            // btnAplicarModoExibicao
+            // 
+            this.btnAplicarModoExibicao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
+            this.btnAplicarModoExibicao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAplicarModoExibicao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAplicarModoExibicao.FlatAppearance.BorderSize = 0;
+            this.btnAplicarModoExibicao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAplicarModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.btnAplicarModoExibicao.ForeColor = System.Drawing.Color.White;
+            this.btnAplicarModoExibicao.Location = new System.Drawing.Point(24, 616);
+            this.btnAplicarModoExibicao.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAplicarModoExibicao.Name = "btnAplicarModoExibicao";
+            this.btnAplicarModoExibicao.Size = new System.Drawing.Size(344, 32);
+            this.btnAplicarModoExibicao.TabIndex = 19;
+            this.btnAplicarModoExibicao.Text = "Aplicar modo exibição";
+            this.btnAplicarModoExibicao.UseVisualStyleBackColor = false;
+            this.btnAplicarModoExibicao.Click += new System.EventHandler(this.btnAplicarModoExibicao_Click);
+            // 
+            // cbxModoExibicao
+            // 
+            this.cbxModoExibicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxModoExibicao.FormattingEnabled = true;
+            this.cbxModoExibicao.Items.AddRange(new object[] {
+            "Selecione...",
+            "Modo agrupado",
+            "Modo detalhado"});
+            this.cbxModoExibicao.Location = new System.Drawing.Point(24, 566);
+            this.cbxModoExibicao.Margin = new System.Windows.Forms.Padding(5);
+            this.cbxModoExibicao.Name = "cbxModoExibicao";
+            this.cbxModoExibicao.Size = new System.Drawing.Size(344, 29);
+            this.cbxModoExibicao.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 517);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(342, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "_____________________________________";
+            // 
+            // lblModoExibicao
+            // 
+            this.lblModoExibicao.AutoSize = true;
+            this.lblModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.lblModoExibicao.ForeColor = System.Drawing.Color.White;
+            this.lblModoExibicao.Location = new System.Drawing.Point(25, 485);
+            this.lblModoExibicao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblModoExibicao.Name = "lblModoExibicao";
+            this.lblModoExibicao.Size = new System.Drawing.Size(178, 25);
+            this.lblModoExibicao.TabIndex = 16;
+            this.lblModoExibicao.Text = "Modo de exibição";
             // 
             // btnLimparFiltros
             // 
@@ -304,16 +371,16 @@
             this.dtpDataValidade.Size = new System.Drawing.Size(344, 29);
             this.dtpDataValidade.TabIndex = 14;
             // 
-            // label4
+            // lblFiltos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 68);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(225, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "________________________";
+            this.lblFiltos.AutoSize = true;
+            this.lblFiltos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltos.Location = new System.Drawing.Point(17, 68);
+            this.lblFiltos.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFiltos.Name = "lblFiltos";
+            this.lblFiltos.Size = new System.Drawing.Size(360, 20);
+            this.lblFiltos.TabIndex = 13;
+            this.lblFiltos.Text = "_______________________________________";
             // 
             // btnAplicarFiltros
             // 
@@ -350,10 +417,6 @@
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Items.AddRange(new object[] {
-            "Selecione...",
-            "Valido",
-            "Vencido"});
             this.cbxStatus.Location = new System.Drawing.Point(30, 160);
             this.cbxStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cbxStatus.Name = "cbxStatus";
@@ -462,7 +525,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLimparFiltros;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblFiltos;
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Label lblValidadeAte;
         private System.Windows.Forms.ComboBox cbxStatus;
@@ -470,5 +533,9 @@
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnAplicarModoExibicao;
+        private System.Windows.Forms.ComboBox cbxModoExibicao;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblModoExibicao;
     }
 }

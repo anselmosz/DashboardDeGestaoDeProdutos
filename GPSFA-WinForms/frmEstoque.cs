@@ -28,41 +28,52 @@ namespace Projeto_Socorrista
 
         private void ConfigurarDataGridView(bool modoAgrupado)
         {
-          // Configuração geral (mantém o visual igual)
-          dgvEstoque.Columns.Clear(); 
-          dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-          dgvEstoque.RowsDefaultCellStyle.BackColor = Color.LightGray; 
-          dgvEstoque.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular); 
-          dgvEstoque.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
-          dgvEstoque.RowTemplate.Height = 40;
-          dgvEstoque.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-          dgvEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
-          dgvEstoque.MultiSelect = false; 
-          // Define as colunas conforme o modo
-          if (modoAgrupado) { 
-                // 🧩 Modo AGRUPADO//
-                dgvEstoque.Columns.Add("Lote", "Lote");
-                dgvEstoque.Columns.Add("ProdutoAgrupado", "Produto"); 
+            dgvEstoque.SuspendLayout();
+            dgvEstoque.Columns.Clear();
+            dgvEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEstoque.AllowUserToAddRows = false;
+            dgvEstoque.ReadOnly = true;
+            dgvEstoque.RowHeadersVisible = false;
+            dgvEstoque.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvEstoque.MultiSelect = false;
+            dgvEstoque.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvEstoque.RowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
+            dgvEstoque.RowsDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
+            dgvEstoque.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Bold);
+            dgvEstoque.RowTemplate.Height = 38;
+            dgvEstoque.ClearSelection();
+
+            if (modoAgrupado)
+            {
+                dgvEstoque.Columns.Add("ProdutoAgrupado", "Produto");
                 dgvEstoque.Columns.Add("QuantidadeTotal", "Quantidade Total");
-                dgvEstoque.Columns.Add("Unidade", "Unidade"); 
+                dgvEstoque.Columns.Add("Unidade", "Unidade");
                 dgvEstoque.Columns.Add("Peso", "Peso");
                 dgvEstoque.Columns.Add("StatusValidade", "Status");
-                dgvEstoque.Columns.Add("ValidadeMinima", "Validade Mínima"); 
-            } else {
-                // Modo DETALHADO//
+                dgvEstoque.Columns.Add("ValidadeMinima", "Validade Mínima");
+            }
+            else
+            {
                 dgvEstoque.Columns.Add("CodProd", "Código");
-                dgvEstoque.Columns.Add("Nome", "Nome"); 
-                dgvEstoque.Columns.Add("Peso", "Peso"); 
-                dgvEstoque.Columns.Add("Unidade", "Unidade"); 
-                dgvEstoque.Columns.Add("StatusValidade", "Status"); 
-                dgvEstoque.Columns.Add("DataDeEntrada", "Entrada"); 
-                dgvEstoque.Columns.Add("DataDeValidade", "Validade"); 
-                // Adiciona o botão "Editar"//
-                DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
-                btnEditar.Name = "Editar"; btnEditar.HeaderText = "Editar"; 
-                btnEditar.Text = "Editar"; btnEditar.UseColumnTextForButtonValue = true;
-                dgvEstoque.Columns.Add(btnEditar); 
-            } 
+                dgvEstoque.Columns.Add("Nome", "Nome");
+                dgvEstoque.Columns.Add("Peso", "Peso");
+                dgvEstoque.Columns.Add("Unidade", "Unidade");
+                dgvEstoque.Columns.Add("StatusValidade", "Status");
+                dgvEstoque.Columns.Add("DataDeEntrada", "Entrada");
+                dgvEstoque.Columns.Add("DataDeValidade", "Validade");
+
+                // botão editar
+                DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn
+                {
+                    Name = "Editar",
+                    HeaderText = "Editar",
+                    Text = "Editar",
+                    UseColumnTextForButtonValue = true
+                };
+                dgvEstoque.Columns.Add(btnEditar);
+            }
+
+            dgvEstoque.ResumeLayout();
         }
 
         private void CarregarDadosAgrupado(string busca = "", DateTime? validade = null, string unidade = "", string status = "")
@@ -71,232 +82,256 @@ namespace Projeto_Socorrista
 
             MySqlCommand comm = new MySqlCommand();
 
-                comm.CommandText = @"
-           SELECT 
-                descricao,
-                unidade,
-                peso,
-                SUM(quantidade) AS quantidade_total,
-                MIN(dataDeValidade) AS validade_minima,
-                CASE
-                    WHEN MIN(dataDeValidade) < CURDATE() THEN 'Vencido'
-                    WHEN DATEDIFF(MIN(dataDeValidade), CURDATE()) <= 60 THEN 'Próximo do vencimento'
-                    ELSE 'Válido'
-                END AS status_validade
-            FROM tbprodutos
-            WHERE
-                (@busca = '' OR descricao LIKE @buscaPattern)
-                AND (@unidade = '' OR unidade = @unidade)
-                AND (@validade IS NULL OR DATE(dataDeValidade) = @validade)
-                AND (
-                    @status = '' 
-                    OR (@status = 'Vencido' AND dataDeValidade < CURDATE())
-                    OR (@status = 'Próximo do vencimento' AND DATEDIFF(dataDeValidade, CURDATE()) <= 60 AND dataDeValidade >= CURDATE())
-                    OR (@status = 'Válido' AND DATEDIFF(dataDeValidade, CURDATE()) > 60)
-                )
-            GROUP BY
-                descricao, unidade, peso
-            ORDER BY descricao;
-            ";
+            comm.CommandText = @"
+        SELECT
+            l.descricao AS descricao,
+            SUM(p.quantidade) AS quantidade_total,
+            u.descricao AS unidade,
+            l.peso AS peso,
+            MIN(p.dataDeValidade) AS validade_minima,
+            CASE
+                WHEN MIN(p.dataDeValidade) < CURDATE() THEN 'Vencido'
+                WHEN DATEDIFF(MIN(p.dataDeValidade), CURDATE()) <= 60 THEN 'Próximo do vencimento'
+                ELSE 'Válido'
+            END AS status_validade
+        FROM tbprodutos p
+        INNER JOIN tblista l ON l.codList = p.codList
+        INNER JOIN tbunidade u ON u.codUni = l.codUni
+        WHERE
+            (@busca = '' OR l.descricao LIKE @buscaPattern OR p.codProd LIKE @buscaPattern)
+            AND (@unidade = '' OR u.descricao = @unidade)
+            AND (@validade IS NULL OR DATE(p.dataDeValidade) = @validade)
+        GROUP BY l.codList, l.descricao, u.descricao, l.peso
+        HAVING
+            (@status = '')
+            OR (@status = 'Vencido' AND validade_minima < CURDATE())
+            OR (@status = 'Próximo do vencimento' AND DATEDIFF(validade_minima, CURDATE()) <= 60 AND validade_minima >= CURDATE())
+            OR (@status = 'Válido' AND DATEDIFF(validade_minima, CURDATE()) > 60)
+        ORDER BY l.descricao;
+        ";
+
             comm.CommandType = CommandType.Text;
 
-            // parâmetros
-            comm.Parameters.Clear();
-            comm.Parameters.Add("@busca", MySqlDbType.VarChar, 50).Value = busca;
-            comm.Parameters.Add("@buscaPattern", MySqlDbType.VarChar, 100).Value = "%" + busca + "%";
-            comm.Parameters.Add("@validade", MySqlDbType.Date).Value = validade.HasValue ? validade.Value.Date : (object)DBNull.Value;
-            comm.Parameters.Add("@unidade", MySqlDbType.VarChar, 50).Value = unidade == "Selecione..." ? "" : unidade;
-            comm.Parameters.Add("@status", MySqlDbType.VarChar, 50).Value = status == "Selecione..." ? "" : status;
+            comm.Parameters.AddWithValue("@busca", busca ?? "");
+            comm.Parameters.AddWithValue("@buscaPattern", "%" + (busca ?? "") + "%");
+            comm.Parameters.AddWithValue("@validade", validade.HasValue ? validade.Value.Date : (object)DBNull.Value);
+            comm.Parameters.AddWithValue("@unidade", unidade == "Selecione..." ? "" : unidade ?? "");
+            comm.Parameters.AddWithValue("@status", status == "Selecione..." ? "" : status ?? "");
 
             comm.Connection = DataBaseConnection.OpenConnection();
 
             MySqlDataReader DR = comm.ExecuteReader();
+
             while (DR.Read())
             {
-                string validadeMinima = DR["validade_minima"] == DBNull.Value ?
-                    "" :
-                    Convert.ToDateTime(DR["validade_minima"]).ToString("dd/MM/yyyy");
+                string validadeMinima = DR["validade_minima"] == DBNull.Value
+                    ? ""
+                    : Convert.ToDateTime(DR["validade_minima"]).ToString("dd/MM/yyyy");
 
                 dgvEstoque.Rows.Add(
-                    "LOTE",                                   // primeira coluna
                     DR["descricao"].ToString(),
-                    DR["unidade"].ToString(),
                     DR["quantidade_total"].ToString(),
+                    DR["unidade"].ToString(),
                     DR["peso"].ToString(),
                     DR["status_validade"].ToString(),
-                    validadeMinima                            // data mínima de validade do lote
+                    validadeMinima
                 );
             }
 
             DR.Close();
             DataBaseConnection.CloseConnection();
         }
+
 
         private void CarregarDadosDetalhados(string busca = "", DateTime? validade = null, string unidade = "", string status = "")
         {
             dgvEstoque.Rows.Clear();
 
-            MySqlCommand comm = new MySqlCommand();
-
-            comm.CommandText = @"
-        SELECT
-            p.codProd,
-            l.descricao AS nomeProduto,
-            l.peso,
-            u.descricao AS descricao,
-            p.dataDeEntrada,
-            p.dataDeValidade,
-            CASE
-                WHEN p.dataDeValidade < NOW() THEN 'Vencido'
-                WHEN p.dataDeValidade < DATE_ADD(NOW(), INTERVAL 2 MONTH) THEN 'Próximo do vencimento'
-                ELSE 'Válido'
-            END AS status_validade
-         
-        FROM tbprodutos p
-        INNER JOIN tblista l ON l.codList = p.codList
-        INNER JOIN tbunidade u ON u.codUni = l.codUni
-         
-        WHERE
-            (@busca = '' OR l.descricao LIKE @buscaPattern)
-            AND (@unidade = '' OR u.descricao = @unidade)
-            AND (@validade IS NULL OR DATE(p.dataDeValidade) = @validade)
-
-            AND (
-                    @status = '' 
-                OR (@status = 'Válido' AND p.dataDeValidade >= DATE_ADD(NOW(), INTERVAL 2 MONTH))
-                OR (@status = 'Próximo do vencimento' AND p.dataDeValidade < DATE_ADD(NOW(), INTERVAL 2 MONTH) AND p.dataDeValidade >= NOW())
-                OR (@status = 'Vencido' AND p.dataDeValidade < NOW())
-            )
-
-        ORDER BY l.descricao, p.dataDeValidade ASC;";
-
-            comm.CommandType = CommandType.Text;
-
-            // parâmetros
-            comm.Parameters.Clear();
-            comm.Parameters.Add("@busca", MySqlDbType.VarChar, 50).Value = busca;
-            comm.Parameters.Add("@buscaPattern", MySqlDbType.VarChar, 100).Value = "%" + busca + "%";
-            comm.Parameters.Add("@validade", MySqlDbType.Date).Value = validade.HasValue ? validade.Value.Date : (object)DBNull.Value;
-            comm.Parameters.Add("@unidade", MySqlDbType.VarChar, 50).Value = unidade == "Selecione..." ? "" : unidade;
-            comm.Parameters.Add("@status", MySqlDbType.VarChar, 50).Value = status == "Selecione..." ? "" : status;
-
-            comm.Connection = DataBaseConnection.OpenConnection();
-
-            MySqlDataReader DR = comm.ExecuteReader();
-            while (DR.Read())
+            using (MySqlCommand comm = new MySqlCommand())
             {
-                string entrada = Convert.ToDateTime(DR["dataDeEntrada"]).ToString("dd/MM/yyyy");
-                string validadeStr = Convert.ToDateTime(DR["dataDeValidade"]).ToString("dd/MM/yyyy");
-
-                dgvEstoque.Rows.Add(
-                    DR["codProd"].ToString(),         // CodProd
-                    DR["nomeProduto"].ToString(),     // Nome
-                    DR["peso"].ToString(),            // Peso
-                    DR["unidade"].ToString(),         // Unidade
-                    DR["status_validade"].ToString(), // Status
-                    entrada,                          // Entrada
-                    validadeStr                       // Validade
-                                                      // Botão Editar já existe como coluna fixa
-                );
-            }
-
-            DR.Close();
-            DataBaseConnection.CloseConnection();
-        }
-
-        private void CarregarUnidades()
-        {
-            try
-            {
-                cbxCategoria.Items.Clear();
-
-                MySqlCommand comm = new MySqlCommand();
-                // NOTE: column name is "descricao" in tbUnidade (not "unidade")
-                comm.CommandText = @"SELECT descricao FROM tbunidade ORDER BY descricao ASC";
+                comm.CommandText = @"
+                    SELECT
+                        p.codProd,
+                        l.descricao AS nomeProduto,
+                        l.peso,
+                        u.descricao AS unidade,
+                        p.dataDeEntrada,
+                        p.dataDeValidade,
+                        CASE
+                            WHEN p.dataDeValidade < CURDATE() THEN 'Vencido'
+                            WHEN DATEDIFF(p.dataDeValidade, CURDATE()) <= 60 THEN 'Próximo do vencimento'
+                            ELSE 'Válido'
+                        END AS status_validade
+                    FROM tbprodutos p
+                    INNER JOIN tblista l ON l.codList = p.codList
+                    INNER JOIN tbunidade u ON u.codUni = l.codUni
+                    WHERE
+                        (@busca = '' OR l.descricao LIKE @buscaPattern OR p.codProd LIKE @buscaPattern)
+                        AND (@unidade = '' OR u.descricao = @unidade)
+                        AND (@validade IS NULL OR DATE(p.dataDeValidade) = @validade)
+                        AND (
+                            @status = ''
+                            OR (@status = 'Válido' AND DATEDIFF(p.dataDeValidade, CURDATE()) > 60)
+                            OR (@status = 'Próximo do vencimento' AND DATEDIFF(p.dataDeValidade, CURDATE()) BETWEEN 0 AND 60)
+                            OR (@status = 'Vencido' AND p.dataDeValidade < CURDATE())
+                        )
+                    ORDER BY l.descricao, p.dataDeValidade ASC;
+                    ";
                 comm.CommandType = CommandType.Text;
+
+                comm.Parameters.AddWithValue("@busca", busca ?? "");
+                comm.Parameters.AddWithValue("@buscaPattern", "%" + (busca ?? "") + "%");
+                comm.Parameters.AddWithValue("@validade", validade.HasValue ? validade.Value.Date : (object)DBNull.Value);
+                comm.Parameters.AddWithValue("@unidade", unidade == "Selecione..." ? "" : unidade ?? "");
+                comm.Parameters.AddWithValue("@status", status == "Selecione..." ? "" : status ?? "");
+
                 comm.Connection = DataBaseConnection.OpenConnection();
 
-                MySqlDataReader dr = comm.ExecuteReader();
-
-                while (dr.Read())
+                using (MySqlDataReader DR = comm.ExecuteReader())
                 {
-                    cbxCategoria.Items.Add(dr["descricao"].ToString());
+                    while (DR.Read())
+                    {
+                        string entrada = DR["dataDeEntrada"] == DBNull.Value ? "" : Convert.ToDateTime(DR["dataDeEntrada"]).ToString("dd/MM/yyyy");
+                        string validadeStr = DR["dataDeValidade"] == DBNull.Value ? "" : Convert.ToDateTime(DR["dataDeValidade"]).ToString("dd/MM/yyyy");
+
+                        dgvEstoque.Rows.Add(
+                            DR["codProd"].ToString(),
+                            DR["nomeProduto"].ToString(),
+                            DR["peso"].ToString(),
+                            DR["unidade"].ToString(),
+                            DR["status_validade"].ToString(),
+                            entrada,
+                            validadeStr
+                        );
+                    }
                 }
 
-                dr.Close();
                 DataBaseConnection.CloseConnection();
+            }
+        }
+        private void CarregarUnidades()
+        {
+            cbxCategoria.Items.Clear();
+            try
+            {
+                using (MySqlCommand comm = new MySqlCommand())
+                {
+                    comm.CommandText = @"SELECT descricao FROM tbunidade ORDER BY descricao ASC";
+                    comm.CommandType = CommandType.Text;
+                    comm.Connection = DataBaseConnection.OpenConnection();
 
-                // Optional: add first item to indicate "no selection"
+                    using (MySqlDataReader dr = comm.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            cbxCategoria.Items.Add(dr["descricao"].ToString());
+                        }
+                    }
+
+                    DataBaseConnection.CloseConnection();
+                }
+
+                // garante item de "nenhuma seleção"
                 cbxCategoria.Items.Insert(0, "Selecione...");
                 cbxCategoria.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
+                DataBaseConnection.CloseConnection();
                 MessageBox.Show("Erro ao carregar unidades: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void carregaDados()
         {
             dgvEstoque.Rows.Clear();
             ConfigurarDataGridView(modoAgrupado);
+
             if (modoAgrupado)
             {
-                CarregarDadosAgrupado();
+                CarregarDadosAgrupado(busca, dataValidade, unidadeEscolhida, status_validade);
             }
             else
             {
-                CarregarDadosDetalhados();
+                CarregarDadosDetalhados(busca, dataValidade, unidadeEscolhida, status_validade);
             }
         }
 
         private void frmEstoque_Load(object sender, EventArgs e)
         {
-            // Configura o DataGridView baseado no modo atual (agrupado ou detalhado)
+            // inicializa visual e dados
             ConfigurarDataGridView(modoAgrupado);
-
-            // Carrega as unidades do banco para o combo
             CarregarUnidades();
 
-            // Define valores iniciais dos combos
-     
+            // garantir itens do status (exemplo)
+            if (cbxStatus.Items.Count == 0)
+            {
+                cbxStatus.Items.Add("Selecione...");
+                cbxStatus.Items.Add("Válido");
+                cbxStatus.Items.Add("Próximo do vencimento");
+                cbxStatus.Items.Add("Vencido");
+            }
+
             cbxStatus.SelectedIndex = 0;
 
-            // Data não marcada no início
+            // modo exibicao combo (sincronize itens com seu uso)
+            if (cbxModoExibicao.Items.Count == 0)
+            {
+                cbxModoExibicao.Items.Add("Agrupado");
+                cbxModoExibicao.Items.Add("Exibidor");
+            }
+            cbxModoExibicao.SelectedIndex = modoAgrupado ? 0 : 1;
+
+            // data inicial sem checked
             dtpDataValidade.Value = DateTime.Today;
             dtpDataValidade.Checked = false;
 
-            // Carrega os dados pela primeira vez
+            // carrega primeira vez
             carregaDados();
         }
-
         private void AplicarFiltros()
         {
-            // --- 1. Validação dos filtros ---
             bool categoriaSelecionada = cbxCategoria.SelectedIndex > 0;
             bool statusSelecionado = cbxStatus.SelectedIndex > 0;
             bool validadeSelecionada = dtpDataValidade.Checked;
+            bool nomeOuCodDigitado = !string.IsNullOrWhiteSpace(txtNomeOrCod.Text);
 
-            if (!categoriaSelecionada && !statusSelecionado && !validadeSelecionada && string.IsNullOrWhiteSpace(txtNomeOrCod.Text))
+            if (!categoriaSelecionada && !statusSelecionado && !validadeSelecionada && !nomeOuCodDigitado)
             {
                 MessageBox.Show("Nenhum filtro foi selecionado.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Nome ou código
-            busca = txtNomeOrCod.Text.Trim();
+            busca = nomeOuCodDigitado ? txtNomeOrCod.Text.Trim() : "";
             unidadeEscolhida = categoriaSelecionada ? cbxCategoria.Text : "";
             status_validade = statusSelecionado ? cbxStatus.Text : "";
             dataValidade = validadeSelecionada ? dtpDataValidade.Value.Date : (DateTime?)null;
+
             carregaDados();
         }
 
         private void dgvEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dgvEstoque.Columns["Editar"].Index && e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+
+            // se não existe coluna Editar ou estamos no modo agrupado, ignore
+            if (!dgvEstoque.Columns.Contains("Editar") || modoAgrupado)
             {
-                // Obter o código do produto da linha selecionada
-                string rowData = dgvEstoque.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
-                frmEditarEstoque f = new frmEditarEstoque(rowData);
+                MessageBox.Show("Mude para o modo detalhado para editar um item.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (dgvEstoque.Columns["Editar"].Index == e.ColumnIndex)
+            {
+                var cell = dgvEstoque.Rows[e.RowIndex].Cells["CodProd"];
+                if (cell == null || cell.Value == null)
+                {
+                    MessageBox.Show("Código do produto não encontrado nesta linha.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string codigo = cell.Value.ToString();
+                frmEditarEstoque f = new frmEditarEstoque(codigo);
                 f.DadosAtualizados += () =>
                 {
                     AtualizarStatusValidade();
@@ -305,56 +340,100 @@ namespace Projeto_Socorrista
 
                 f.Show();
             }
-            else
-            {
-                MessageBox.Show("Clique no botão 'Editar' para mudar os dados do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
         }
 
         private void btnLimparFiltros_Click(object sender, EventArgs e)
         {
-            if (cbxCategoria.SelectedIndex == 0 && cbxStatus.SelectedIndex == 0 && dtpDataValidade.Value == DateTime.Today) {
-                MessageBox.Show("Não há filtros para limpar", "ATENÇÂO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            bool isClean = (cbxCategoria.SelectedIndex == 0 || cbxCategoria.SelectedIndex == -1)
+                           && (cbxStatus.SelectedIndex == 0 || cbxStatus.SelectedIndex == -1)
+                           && !dtpDataValidade.Checked
+                           && string.IsNullOrWhiteSpace(txtNomeOrCod.Text);
+
+            if (isClean)
+            {
+                MessageBox.Show("Não há filtros para limpar", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            carregaDados();
+
+            // limpar
             cbxCategoria.SelectedIndex = 0;
             cbxStatus.SelectedIndex = 0;
             dtpDataValidade.Value = DateTime.Today;
-        }
+            dtpDataValidade.Checked = false;
+            txtNomeOrCod.Clear();
 
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
+            // reset globals
+            busca = "";
+            unidadeEscolhida = "";
+            status_validade = "";
+            dataValidade = null;
 
+            carregaDados();
         }
 
         private void AtualizarStatusValidade()
         {
-            MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = @"SELECT nome, quantidade, peso, unidade, codBar, dataDeEntrada, dataDeValidade, dataLimiteDeSaida, " +
-                "CASE WHEN dataDeValidade < CURDATE() THEN 'Valído' ELSE 'Vencido' END AS status_validade FROM tbProdutos ORDER BY codProd;";
-            comm.CommandType = CommandType.Text;
-            comm.Connection = DataBaseConnection.OpenConnection();
-            comm.ExecuteNonQuery();
-            DataBaseConnection.CloseConnection();
+            try
+            {
+                using (MySqlCommand comm = new MySqlCommand())
+                {
+                    comm.CommandText = @"
+                        UPDATE tbprodutos
+                        SET status_validade =
+                            CASE
+                                WHEN dataDeValidade < CURDATE() THEN 'Vencido'
+                                WHEN DATEDIFF(dataDeValidade, CURDATE()) BETWEEN 0 AND 60 THEN 'Próximo do vencimento'
+                                ELSE 'Válido'
+                            END
+                        WHERE dataDeValidade IS NOT NULL;
+                        ";
+                    comm.CommandType = CommandType.Text;
+                    comm.Connection = DataBaseConnection.OpenConnection();
+                    comm.ExecuteNonQuery();
+                    DataBaseConnection.CloseConnection();
+                }
+            }
+            catch (MySqlException mex)
+            {
+                DataBaseConnection.CloseConnection();
+                // pode ser que a coluna status_validade não exista; trate se necessário
+                Console.WriteLine("AtualizarStatusValidade failed: " + mex.Message);
+            }
         }
-
         private void btnCarregaTodosProdutos_Click(object sender, EventArgs e)
         {
-            if (!txtNomeOrCod.Text.Equals(""))
-            {
-                txtNomeOrCod.Clear();
-                AplicarFiltros();
-            }
-            else { 
-                AplicarFiltros();
-            }
+            txtNomeOrCod.Clear();
+            busca = "";
+            carregaDados();
         }
 
         private void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
             AplicarFiltros();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNomeOrCod.Text))
+            {
+                MessageBox.Show("Digite o nome ou código do produto para pesquisar.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            AplicarFiltros();
+        }
+
+        private void btnAplicarModoExibicao_Click(object sender, EventArgs e)
+        {
+            modoAgrupado = !modoAgrupado;
+
+            // Combo mostra o modo atual
+            cbxModoExibicao.Text = modoAgrupado ? "Agrupado" : "Exibidor";
+
+            // Botão mostra para onde vai (inverter)
+            btnAplicarModoExibicao.Text = modoAgrupado ? "Modo Exibidor" : "Modo Agrupado";
+
+            carregaDados();
+        }
+
     }
 }
