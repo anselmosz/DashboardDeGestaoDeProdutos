@@ -148,6 +148,8 @@
             this.txtNomeOrCod.Name = "txtNomeOrCod";
             this.txtNomeOrCod.Size = new System.Drawing.Size(839, 40);
             this.txtNomeOrCod.TabIndex = 13;
+            this.txtNomeOrCod.TextChanged += new System.EventHandler(this.txtNomeOrCod_TextChanged);
+            this.txtNomeOrCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNomeOrCod_KeyDown);
             // 
             // btnPesquisar
             // 
@@ -202,13 +204,14 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(35, 286);
+            this.dgvEstoque.Location = new System.Drawing.Point(37, 271);
             this.dgvEstoque.Margin = new System.Windows.Forms.Padding(5);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1267, 732);
+            this.dgvEstoque.Size = new System.Drawing.Size(1267, 563);
             this.dgvEstoque.TabIndex = 5;
             this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
+            this.dgvEstoque.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvEstoque_Paint);
             // 
             // codigo
             // 
@@ -365,10 +368,10 @@
             // 
             this.dtpDataValidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataValidade.Location = new System.Drawing.Point(29, 340);
+            this.dtpDataValidade.Location = new System.Drawing.Point(24, 340);
             this.dtpDataValidade.Margin = new System.Windows.Forms.Padding(5);
             this.dtpDataValidade.Name = "dtpDataValidade";
-            this.dtpDataValidade.Size = new System.Drawing.Size(344, 29);
+            this.dtpDataValidade.Size = new System.Drawing.Size(349, 29);
             this.dtpDataValidade.TabIndex = 14;
             // 
             // lblFiltos
@@ -417,10 +420,10 @@
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Location = new System.Drawing.Point(30, 160);
+            this.cbxStatus.Location = new System.Drawing.Point(24, 160);
             this.cbxStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(344, 29);
+            this.cbxStatus.Size = new System.Drawing.Size(350, 29);
             this.cbxStatus.TabIndex = 9;
             // 
             // lblFiltros
@@ -440,10 +443,10 @@
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(29, 253);
+            this.cbxCategoria.Location = new System.Drawing.Point(24, 253);
             this.cbxCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(344, 29);
+            this.cbxCategoria.Size = new System.Drawing.Size(349, 29);
             this.cbxCategoria.TabIndex = 2;
             // 
             // lblCategoria

@@ -294,15 +294,13 @@ namespace Projeto_Socorrista
             bool categoriaSelecionada = cbxCategoria.SelectedIndex > 0;
             bool statusSelecionado = cbxStatus.SelectedIndex > 0;
             bool validadeSelecionada = dtpDataValidade.Checked;
-            bool nomeOuCodDigitado = !string.IsNullOrWhiteSpace(txtNomeOrCod.Text);
 
-            if (!categoriaSelecionada && !statusSelecionado && !validadeSelecionada && !nomeOuCodDigitado)
+            if (!categoriaSelecionada && !statusSelecionado && !validadeSelecionada)
             {
                 MessageBox.Show("Nenhum filtro foi selecionado.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            busca = nomeOuCodDigitado ? txtNomeOrCod.Text.Trim() : "";
             unidadeEscolhida = categoriaSelecionada ? cbxCategoria.Text : "";
             status_validade = statusSelecionado ? cbxStatus.Text : "";
             dataValidade = validadeSelecionada ? dtpDataValidade.Value.Date : (DateTime?)null;
@@ -427,13 +425,44 @@ namespace Projeto_Socorrista
             modoAgrupado = !modoAgrupado;
 
             // Combo mostra o modo atual
-            cbxModoExibicao.Text = modoAgrupado ? "Agrupado" : "Exibidor";
+            cbxModoExibicao.SelectedIndex = modoAgrupado ? cbxModoExibicao.SelectedIndex = 1 : cbxModoExibicao.SelectedIndex = 2;
 
             // Botão mostra para onde vai (inverter)
-            btnAplicarModoExibicao.Text = modoAgrupado ? "Modo Exibidor" : "Modo Agrupado";
+            btnAplicarModoExibicao.Text = modoAgrupado ? "Modo Detalhado" : "Modo Agrupado";
 
             carregaDados();
         }
 
+        private void txtNomeOrCod_TextChanged(object sender, EventArgs e)
+        {
+            busca = txtNomeOrCod.Text.Trim();
+            carregaDados();
+        }
+
+        private void txtNomeOrCod_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) {
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void dgvEstoque_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgvEstoque.Rows.Count == 0)
+            {
+                string mensagem = "Nenhum produto encontrado.";
+                using (Font fonte = new Font("Segoe UI", 14, FontStyle.Bold))
+                {
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        mensagem,
+                        fonte,
+                        dgvEstoque.ClientRectangle,
+                        Color.Gray,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                    );
+                }
+            }
+        }
     }
 }

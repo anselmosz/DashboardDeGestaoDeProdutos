@@ -70,7 +70,6 @@ C:\Users\Anselmo\Documents\tdsanselmo\DashboardDeGestaoDeProdutos\GPSFA-WinForms
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.csproj.AssemblyReference.cache
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe.config
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmDashboard.resources
-C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEditarEstoque.resources
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.frmEstoque.resources
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmMenuPrincipal.resources
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmRelatorios.resources
@@ -481,3 +480,4 @@ C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA_WinForms.frmUnidadeMedida.resources
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.exe.manifest
 C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\GPSFA-WinForms.application
+C:\Users\Caua.gpereira2\Source\Repos\DashboardDeGestaoDeProdutos\GPSFA-WinForms\obj\Debug\Projeto_Socorrista.UnidadeItem.resources
