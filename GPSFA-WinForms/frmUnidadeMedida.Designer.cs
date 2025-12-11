@@ -147,6 +147,7 @@
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnNovo
             // 
@@ -188,35 +189,27 @@
             // 
             // txtDescricao
             // 
-<<<<<<< HEAD
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescricao.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(53, 72);
+            this.txtDescricao.Location = new System.Drawing.Point(58, 62);
             this.txtDescricao.MaxLength = 20;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(564, 39);
             this.txtDescricao.TabIndex = 3;
-=======
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(58, 72);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(599, 39);
-            this.textBox1.TabIndex = 1;
->>>>>>> 5046d3ff359316a0105051612b191eb127493bf4
             // 
             // frmUnidadeMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 247);
+            this.ClientSize = new System.Drawing.Size(911, 252);
             this.Controls.Add(this.pnlCrud);
             this.Controls.Add(this.gpbCamposMedidas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmUnidadeMedida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerenciar Unidade de Medida";
+            this.Load += new System.EventHandler(this.frmUnidadeMedida_Load);
             this.pnlCrud.ResumeLayout(false);
             this.gpbCamposMedidas.ResumeLayout(false);
             this.gpbCamposMedidas.PerformLayout();

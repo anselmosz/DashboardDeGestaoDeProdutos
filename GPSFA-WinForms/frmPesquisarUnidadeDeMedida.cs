@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GPSFA_WinForms
 {
@@ -24,42 +25,24 @@ namespace GPSFA_WinForms
 
         public frmPesquisarUnidadeDeMedida()
         {
-            InitializeComponent();
-            desativarBotoes();
-        }
-        private void desativarBotoes()
+            InitializeComponent();   
+            btnPesquisarUnidade.Enabled = false;
+            ltbPesquisarUnidades.Enabled = false;
+        }        
+
+        public frmPesquisarUnidadeDeMedida(string descricao)
         {
-            btnNovo.Enabled = false;
-            btnCadastrar.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnLimpar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnPesquisar.Enabled = false;
-        }
+            InitializeComponent();          
 
-        private int excluirUnidade(string descricao)
-        {
-            MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "DELETE FROM tbUnidade WHERE descricao = @descricao limit 1;";
-            comm.CommandType = CommandType.Text;
+            txtDescricao.Text = descricao;          
 
-            comm.Parameters.Clear();
-
-            comm.Parameters.Add("@descricao", MySqlDbType.VarChar,20).Value = descricao;
-
-            comm.Connection = DataBaseConnection.OpenConnection();
-
-            int resp = comm.ExecuteNonQuery();
-
-            DataBaseConnection.CloseConnection();
-
-            return resp;
-        }
-
-        public void buscaUnidadesPorDescricao(string descricao)
+            buscaUnidades(descricao);
+        }                
+   
+        public void buscaUnidades(string descricao)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = $"SELECT descricao FROM tbUnidade WHERE descricao LIKE '%{descricao}%';";
+            comm.CommandText = $"SELECT descricao FROM tbUnidades WHERE descricao LIKE '%{descricao}%';";
 
             comm.CommandType = CommandType.Text;
 
@@ -71,8 +54,8 @@ namespace GPSFA_WinForms
             ltbPesquisarUnidades.Items.Clear();
 
             while (DR.Read())
-            {
-                ltbPesquisarUnidades.Items.Add(DR.GetString(0));
+            {                
+                ltbPesquisarUnidades.Items.Add(DR.GetString(0));                
             }
 
             DataBaseConnection.CloseConnection();
@@ -98,7 +81,7 @@ namespace GPSFA_WinForms
             }
             else
             {                
-                    buscaUnidadesPorDescricao(txtDescricao.Text);
+                    buscaUnidades(txtDescricao.Text);
                     ltbPesquisarUnidades.Enabled = true;                    
             }
         }
@@ -108,38 +91,34 @@ namespace GPSFA_WinForms
             IntPtr hMenu = GetSystemMenu(this.Handle, false);
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Deseja excluir?", "Mensagem do Sistema",
-               MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (result.Equals(DialogResult.Yes))
-            {
-                int resp = excluirUnidade(ltbPesquisarUnidades.SelectedItem.ToString());
-
-                if (resp.Equals(1))
-                {
-                    MessageBox.Show("Excluido com Sucesso", "Mensagem do Sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao excluir", "Mensagem do Sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                }
-            }
-            else
-            {
-                btnPesquisarUnidade.Enabled = true;
-            }
-        }
+        }    
 
         private void ltbPesquisarUnidades_SelectedIndexChanged(object sender, EventArgs e)
+        {          
+            string descricao = ltbPesquisarUnidades.SelectedItem.ToString();          
+           
+            frmUnidadeMedida abrir = new frmUnidadeMedida(descricao);
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
         {
-            btnExcluir.Enabled = true;
+            frmUnidadeMedida abrir = new frmUnidadeMedida();
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtDescricao.Clear();
+            txtDescricao.Focus();
+            btnPesquisarUnidade.Enabled = false;
+        }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            btnPesquisarUnidade.Enabled = true;
         }
     }
 }

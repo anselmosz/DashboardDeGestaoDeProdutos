@@ -26,6 +26,7 @@ namespace GPSFA_WinForms
         public frmGerenciarProdutos()
         {
             InitializeComponent();
+            carregarUnidadesCbb();
         }
 
         private void frmCadastrarAlimentos_Load(object sender, EventArgs e)
@@ -44,8 +45,7 @@ namespace GPSFA_WinForms
         private int enviarDoacoes(string nomeProduto, int quantidade, int peso, string unidadeMedida, string codBar, DateTime dataArrecadacao, DateTime dataDeValidade, DateTime dataLimiteDeSaida, int codUsu)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = @"INSERT INTO tbProdutos(
-                                nome,
+            comm.CommandText = @"INSERT INTO tbProdutos( nome,
                                 quantidade,
                                 peso,
                                 unidade,
@@ -89,7 +89,26 @@ namespace GPSFA_WinForms
 
             return resp;
         }
-       
+
+        private void carregarUnidadesCbb()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "SELECT * FROM tbUnidades ORDER BY descricao ASC;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Connection = DataBaseConnection.OpenConnection();
+
+            MySqlDataReader DR = comm.ExecuteReader();
+
+            while (DR.Read())
+            {
+                cbbUnidadeMedida.Items.Add(DR.GetString(1));
+            }
+
+            DataBaseConnection.CloseConnection();
+        }
+
+        
 
         private bool VerificaFormatacaoDosCampos()
         {
@@ -239,5 +258,6 @@ namespace GPSFA_WinForms
             abrir.Show();
             this.Hide();
         }
+        
     }
 }
