@@ -32,7 +32,6 @@
             this.pnlFiltrosDeBusca = new System.Windows.Forms.Panel();
             this.lblTitleEstoque = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblQRCODE = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCarregaTodosProdutos = new System.Windows.Forms.Button();
             this.txtNomeOrCod = new System.Windows.Forms.TextBox();
@@ -48,14 +47,14 @@
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataLimiteSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSubTitulo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLerQRCode = new System.Windows.Forms.Button();
-            this.btnDarBaixa = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAplicarModoExibicao = new System.Windows.Forms.Button();
+            this.cbxModoExibicao = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblModoExibicao = new System.Windows.Forms.Label();
             this.btnLimparFiltros = new System.Windows.Forms.Button();
             this.dtpDataValidade = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblFiltos = new System.Windows.Forms.Label();
             this.btnAplicarFiltros = new System.Windows.Forms.Button();
             this.lblValidadeAte = new System.Windows.Forms.Label();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
@@ -67,7 +66,6 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,29 +97,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(237)))), ((int)(((byte)(228)))));
-            this.panel2.Controls.Add(this.lblQRCODE);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblCodOrNome);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvEstoque);
             this.panel2.Controls.Add(this.lblSubTitulo);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(465, 63);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1575, 1409);
             this.panel2.TabIndex = 20;
-            // 
-            // lblQRCODE
-            // 
-            this.lblQRCODE.AutoSize = true;
-            this.lblQRCODE.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.lblQRCODE.Location = new System.Drawing.Point(28, 286);
-            this.lblQRCODE.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblQRCODE.Name = "lblQRCODE";
-            this.lblQRCODE.Size = new System.Drawing.Size(210, 21);
-            this.lblQRCODE.TabIndex = 14;
-            this.lblQRCODE.Text = "Leitor de código de barras";
             // 
             // panel4
             // 
@@ -151,17 +136,20 @@
             this.btnCarregaTodosProdutos.TabIndex = 14;
             this.btnCarregaTodosProdutos.Text = "Todos";
             this.btnCarregaTodosProdutos.UseVisualStyleBackColor = false;
+            this.btnCarregaTodosProdutos.Click += new System.EventHandler(this.btnCarregaTodosProdutos_Click);
             // 
             // txtNomeOrCod
             // 
             this.txtNomeOrCod.BackColor = System.Drawing.Color.White;
-            this.txtNomeOrCod.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.txtNomeOrCod.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeOrCod.Location = new System.Drawing.Point(28, 27);
             this.txtNomeOrCod.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomeOrCod.Multiline = true;
             this.txtNomeOrCod.Name = "txtNomeOrCod";
             this.txtNomeOrCod.Size = new System.Drawing.Size(839, 40);
             this.txtNomeOrCod.TabIndex = 13;
+            this.txtNomeOrCod.TextChanged += new System.EventHandler(this.txtNomeOrCod_TextChanged);
+            this.txtNomeOrCod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNomeOrCod_KeyDown);
             // 
             // btnPesquisar
             // 
@@ -179,6 +167,7 @@
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // lblCodOrNome
             // 
@@ -198,10 +187,10 @@
             this.label1.Location = new System.Drawing.Point(28, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(756, 20);
+            this.label1.Size = new System.Drawing.Size(1278, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "_________________________________________________________________________________" +
-    "__";
+    "____________________________________________________________";
             // 
             // dgvEstoque
             // 
@@ -215,12 +204,14 @@
             this.peso,
             this.status,
             this.dataLimiteSaida});
-            this.dgvEstoque.Location = new System.Drawing.Point(35, 430);
+            this.dgvEstoque.Location = new System.Drawing.Point(37, 271);
             this.dgvEstoque.Margin = new System.Windows.Forms.Padding(5);
             this.dgvEstoque.Name = "dgvEstoque";
             this.dgvEstoque.ReadOnly = true;
-            this.dgvEstoque.Size = new System.Drawing.Size(1267, 588);
+            this.dgvEstoque.Size = new System.Drawing.Size(1267, 563);
             this.dgvEstoque.TabIndex = 5;
+            this.dgvEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoque_CellContentClick);
+            this.dgvEstoque.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvEstoque_Paint);
             // 
             // codigo
             // 
@@ -275,68 +266,16 @@
             this.lblSubTitulo.TabIndex = 4;
             this.lblSubTitulo.Text = "Consulta e gerenciamento de produtos em estoque";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(210)))));
-            this.panel3.Controls.Add(this.btnLerQRCode);
-            this.panel3.Controls.Add(this.btnDarBaixa);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(37, 328);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1265, 92);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnLerQRCode
-            // 
-            this.btnLerQRCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
-            this.btnLerQRCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLerQRCode.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLerQRCode.FlatAppearance.BorderSize = 0;
-            this.btnLerQRCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLerQRCode.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btnLerQRCode.ForeColor = System.Drawing.Color.White;
-            this.btnLerQRCode.Location = new System.Drawing.Point(897, 27);
-            this.btnLerQRCode.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLerQRCode.Name = "btnLerQRCode";
-            this.btnLerQRCode.Size = new System.Drawing.Size(167, 42);
-            this.btnLerQRCode.TabIndex = 12;
-            this.btnLerQRCode.Text = "   Ler Código";
-            this.btnLerQRCode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLerQRCode.UseVisualStyleBackColor = false;
-            // 
-            // btnDarBaixa
-            // 
-            this.btnDarBaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
-            this.btnDarBaixa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDarBaixa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDarBaixa.FlatAppearance.BorderSize = 0;
-            this.btnDarBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDarBaixa.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
-            this.btnDarBaixa.ForeColor = System.Drawing.Color.White;
-            this.btnDarBaixa.Location = new System.Drawing.Point(1097, 27);
-            this.btnDarBaixa.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDarBaixa.Name = "btnDarBaixa";
-            this.btnDarBaixa.Size = new System.Drawing.Size(140, 42);
-            this.btnDarBaixa.TabIndex = 11;
-            this.btnDarBaixa.Text = "Dar baixa";
-            this.btnDarBaixa.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(28, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(839, 40);
-            this.textBox1.TabIndex = 11;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
+            this.panel1.Controls.Add(this.btnAplicarModoExibicao);
+            this.panel1.Controls.Add(this.cbxModoExibicao);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblModoExibicao);
             this.panel1.Controls.Add(this.btnLimparFiltros);
             this.panel1.Controls.Add(this.dtpDataValidade);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblFiltos);
             this.panel1.Controls.Add(this.btnAplicarFiltros);
             this.panel1.Controls.Add(this.lblValidadeAte);
             this.panel1.Controls.Add(this.cbxStatus);
@@ -350,6 +289,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 860);
             this.panel1.TabIndex = 19;
+            // 
+            // btnAplicarModoExibicao
+            // 
+            this.btnAplicarModoExibicao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(75)))), ((int)(((byte)(13)))));
+            this.btnAplicarModoExibicao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAplicarModoExibicao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAplicarModoExibicao.FlatAppearance.BorderSize = 0;
+            this.btnAplicarModoExibicao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAplicarModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F);
+            this.btnAplicarModoExibicao.ForeColor = System.Drawing.Color.White;
+            this.btnAplicarModoExibicao.Location = new System.Drawing.Point(24, 616);
+            this.btnAplicarModoExibicao.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAplicarModoExibicao.Name = "btnAplicarModoExibicao";
+            this.btnAplicarModoExibicao.Size = new System.Drawing.Size(344, 32);
+            this.btnAplicarModoExibicao.TabIndex = 19;
+            this.btnAplicarModoExibicao.Text = "Aplicar modo exibição";
+            this.btnAplicarModoExibicao.UseVisualStyleBackColor = false;
+            this.btnAplicarModoExibicao.Click += new System.EventHandler(this.btnAplicarModoExibicao_Click);
+            // 
+            // cbxModoExibicao
+            // 
+            this.cbxModoExibicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxModoExibicao.FormattingEnabled = true;
+            this.cbxModoExibicao.Items.AddRange(new object[] {
+            "Selecione...",
+            "Modo agrupado",
+            "Modo detalhado"});
+            this.cbxModoExibicao.Location = new System.Drawing.Point(24, 566);
+            this.cbxModoExibicao.Margin = new System.Windows.Forms.Padding(5);
+            this.cbxModoExibicao.Name = "cbxModoExibicao";
+            this.cbxModoExibicao.Size = new System.Drawing.Size(344, 29);
+            this.cbxModoExibicao.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(25, 517);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(342, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "_____________________________________";
+            // 
+            // lblModoExibicao
+            // 
+            this.lblModoExibicao.AutoSize = true;
+            this.lblModoExibicao.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.lblModoExibicao.ForeColor = System.Drawing.Color.White;
+            this.lblModoExibicao.Location = new System.Drawing.Point(25, 485);
+            this.lblModoExibicao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblModoExibicao.Name = "lblModoExibicao";
+            this.lblModoExibicao.Size = new System.Drawing.Size(178, 25);
+            this.lblModoExibicao.TabIndex = 16;
+            this.lblModoExibicao.Text = "Modo de exibição";
             // 
             // btnLimparFiltros
             // 
@@ -367,27 +362,28 @@
             this.btnLimparFiltros.TabIndex = 15;
             this.btnLimparFiltros.Text = "Limpar Filtros";
             this.btnLimparFiltros.UseVisualStyleBackColor = false;
+            this.btnLimparFiltros.Click += new System.EventHandler(this.btnLimparFiltros_Click);
             // 
             // dtpDataValidade
             // 
             this.dtpDataValidade.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataValidade.Location = new System.Drawing.Point(29, 340);
+            this.dtpDataValidade.Location = new System.Drawing.Point(24, 340);
             this.dtpDataValidade.Margin = new System.Windows.Forms.Padding(5);
             this.dtpDataValidade.Name = "dtpDataValidade";
-            this.dtpDataValidade.Size = new System.Drawing.Size(344, 29);
+            this.dtpDataValidade.Size = new System.Drawing.Size(349, 29);
             this.dtpDataValidade.TabIndex = 14;
             // 
-            // label4
+            // lblFiltos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 68);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(225, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "________________________";
+            this.lblFiltos.AutoSize = true;
+            this.lblFiltos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltos.Location = new System.Drawing.Point(17, 68);
+            this.lblFiltos.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFiltos.Name = "lblFiltos";
+            this.lblFiltos.Size = new System.Drawing.Size(360, 20);
+            this.lblFiltos.TabIndex = 13;
+            this.lblFiltos.Text = "_______________________________________";
             // 
             // btnAplicarFiltros
             // 
@@ -405,6 +401,7 @@
             this.btnAplicarFiltros.TabIndex = 11;
             this.btnAplicarFiltros.Text = "Aplicar filtros";
             this.btnAplicarFiltros.UseVisualStyleBackColor = false;
+            this.btnAplicarFiltros.Click += new System.EventHandler(this.btnAplicarFiltros_Click);
             // 
             // lblValidadeAte
             // 
@@ -423,14 +420,10 @@
             this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxStatus.FormattingEnabled = true;
-            this.cbxStatus.Items.AddRange(new object[] {
-            "Selecione...",
-            "Valido",
-            "Vencido"});
-            this.cbxStatus.Location = new System.Drawing.Point(30, 160);
+            this.cbxStatus.Location = new System.Drawing.Point(24, 160);
             this.cbxStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cbxStatus.Name = "cbxStatus";
-            this.cbxStatus.Size = new System.Drawing.Size(344, 29);
+            this.cbxStatus.Size = new System.Drawing.Size(350, 29);
             this.cbxStatus.TabIndex = 9;
             // 
             // lblFiltros
@@ -450,18 +443,10 @@
             this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Items.AddRange(new object[] {
-            "Selecione...",
-            "Quilogramas (kg)",
-            "Gramas (g)",
-            "Litros (l)",
-            "Mililitros (ml)",
-            "Unidades",
-            "Caixas"});
-            this.cbxCategoria.Location = new System.Drawing.Point(29, 253);
+            this.cbxCategoria.Location = new System.Drawing.Point(24, 253);
             this.cbxCategoria.Margin = new System.Windows.Forms.Padding(5);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(344, 29);
+            this.cbxCategoria.Size = new System.Drawing.Size(349, 29);
             this.cbxCategoria.TabIndex = 2;
             // 
             // lblCategoria
@@ -514,8 +499,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -527,7 +510,6 @@
         private System.Windows.Forms.Panel pnlFiltrosDeBusca;
         private System.Windows.Forms.Label lblTitleEstoque;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblQRCODE;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCarregaTodosProdutos;
         private System.Windows.Forms.TextBox txtNomeOrCod;
@@ -543,14 +525,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteSaida;
         private System.Windows.Forms.Label lblSubTitulo;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnLerQRCode;
-        private System.Windows.Forms.Button btnDarBaixa;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLimparFiltros;
         private System.Windows.Forms.DateTimePicker dtpDataValidade;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblFiltos;
         private System.Windows.Forms.Button btnAplicarFiltros;
         private System.Windows.Forms.Label lblValidadeAte;
         private System.Windows.Forms.ComboBox cbxStatus;
@@ -558,5 +536,9 @@
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnAplicarModoExibicao;
+        private System.Windows.Forms.ComboBox cbxModoExibicao;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblModoExibicao;
     }
 }

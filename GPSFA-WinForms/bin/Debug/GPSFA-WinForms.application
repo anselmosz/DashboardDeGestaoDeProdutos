@@ -7,14 +7,18 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GPSFA-WinForms.exe.manifest" size="22220">
+    <dependentAssembly dependencyType="install" codebase="GPSFA-WinForms.exe.manifest" size="22247">
       <assemblyIdentity name="GPSFA-WinForms.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>uewI1Iu2pHIAJjNjNwtvMAXimVF/kwLjO/BonfaPvLM=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>5soYNtTuxIP/pmri08TpK6XDPuRZ4kjadc5OGW0qJ18=</dsig:DigestValue>
+>>>>>>> 8a4891c64d0dfecf2bcb618494e642262a0574db
       </hash>
     </dependentAssembly>
   </dependency>

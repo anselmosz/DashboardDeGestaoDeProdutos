@@ -10,7 +10,11 @@ namespace GPSFA_WinForms
 {
     internal class DataBaseConnection
     {   // Informações do banco de dados utilizado até o momento (DB de testes rodando localmente)
+<<<<<<< HEAD
         private static string DataBase = "Server=localhost;Port=3306;Database=dbfrancisco;Uid=root;Pwd=''";
+=======
+        private static string DataBase = "Server=localhost; Port=3306; DataBase=dbfrancisco; Uid=root; Pwd=''";
+>>>>>>> 8a4891c64d0dfecf2bcb618494e642262a0574db
 
         // Variável sem valor definido utilizando a biblioteca do MySql para recebimento de dados
         private static MySqlConnection conn = null;
