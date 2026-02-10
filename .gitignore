@@ -1,0 +1,24 @@
+# Visual Studio (arquivos locais)
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build (NUNCA versionar)
+bin/
+obj/
+
+# Testes
+TestResults/
+
+# Logs
+*.log
+
+# Cache / Temporários
+*.tmp
+*.temp
+
+# NuGet
+packages/
+*.nupkg
