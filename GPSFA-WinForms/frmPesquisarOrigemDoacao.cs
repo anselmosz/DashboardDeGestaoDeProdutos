@@ -141,15 +141,15 @@ namespace GPSFA_WinForms
             }
         }     
         
-            string nome;
         private void ltbPesquisarOrigem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-                nome = ltbPesquisarOrigem.SelectedItem.ToString();
+        {            
             
+                string nome = ltbPesquisarOrigem.SelectedItem.ToString();               
+
                 frmOrigemDoacao abrir = new frmOrigemDoacao(nome);
                 abrir.Show();
-                this.Hide();
+                this.Hide();          
+           
         }
             
     }

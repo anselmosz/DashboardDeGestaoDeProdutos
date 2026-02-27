@@ -42,6 +42,7 @@ namespace GPSFA_WinForms
             carregarOrigemCbb();
             carregarUnidadesCbb();
             carregarProdutosCbb();
+
             dtpDiaDistribuicao.Value = diaDeDistribuicao;
         }
 
@@ -53,7 +54,9 @@ namespace GPSFA_WinForms
             carregarOrigemCbb();
             carregarUnidadesCbb();
             carregarProdutosCbb();
-            cbbOrigemDoacao.Text = nomeOrigem;            
+
+            cbbOrigemDoacao.Text = nomeOrigem;
+            
             dtpDiaDistribuicao.Value = diaDeDistribuicao;
         }
 
@@ -85,15 +88,18 @@ namespace GPSFA_WinForms
         private void carregarOrigemCbb()
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "SELECT nome FROM TBOrigemDoacao ORDER BY nome ASC;";
+
+            comm.CommandText = "SELECT * FROM TBOrigemDoacao ORDER BY nome ASC;";
+
             comm.CommandType = CommandType.Text;
+
             comm.Connection = DataBaseConnection.OpenConnection();
 
             MySqlDataReader DR = comm.ExecuteReader();
 
             while (DR.Read())
             {
-                cbbOrigemDoacao.Items.Add(DR.GetString(0));
+                cbbOrigemDoacao.Items.Add(DR.GetString(1));
             }
 
             DataBaseConnection.CloseConnection();
@@ -104,7 +110,7 @@ namespace GPSFA_WinForms
         private void carregarUnidadesCbb()
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "SELECT descricao FROM tbUnidades ORDER BY descricao ASC;";
+            comm.CommandText = "SELECT * FROM tbUnidades ORDER BY descricao ASC;";
             comm.CommandType = CommandType.Text;
 
             comm.Connection = DataBaseConnection.OpenConnection();
@@ -113,7 +119,7 @@ namespace GPSFA_WinForms
 
             while (DR.Read())
             {
-                cbbUnidadeMedida.Items.Add(DR.GetString(0));
+                cbbUnidadeMedida.Items.Add(DR.GetString(1));
             }
 
             DataBaseConnection.CloseConnection();
@@ -150,9 +156,19 @@ namespace GPSFA_WinForms
         {
             int dataValidade = Convert.ToInt32(dtpDataValidade.Value.Day);
 
-            int calculoData = Convert.ToInt32(dtpDiaDistribuicao.Value.Day);        
-        }          
+            int calculoData = Convert.ToInt32(dtpDiaDistribuicao.Value.Day);
+
+            //if ()
+            //{
+
+            //}
+
+        }
+
+            
+
         
+
         //Método para verificar Formatação de Campos
 
         private bool VerificaFormatacaoDosCampos()
@@ -232,10 +248,14 @@ namespace GPSFA_WinForms
         //Botão ação cadastrar
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 =======
 >>>>>>> Stashed changes
+=======
+//<<<<<<< HEAD
+>>>>>>> parent of cb96210 (att origem doacao)
             if (dtpDataValidade.Value.Date < DateTime.Today)
             {
                 MessageBox.Show("Data de validade inválida.");
@@ -248,8 +268,12 @@ namespace GPSFA_WinForms
             }
 
             using (var conn = DataBaseConnection.OpenConnection())
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
+=======
+//=======
+>>>>>>> parent of cb96210 (att origem doacao)
            
             //int resp = cadastrarProdutos(cbbDescricao.Text, Convert.ToInt32(txtQuantidade.Text), Convert.ToInt32(txtPeso.Text), cbbUnidadeMedida.Text, txtCodBarras.Text, dtpDataEntrada.Value, dtpDataValidade.Value, dtpDataEntrada.Value, codUsuLogado, codOri, codList);
 =======
@@ -261,12 +285,17 @@ namespace GPSFA_WinForms
                 dtpDataValidade.Focus();                
                 return;
             }
+<<<<<<< HEAD
 
             else if (cadastrarProdutos(cbbDescricao.Text, Convert.ToInt32(txtQuantidade.Text), Convert.ToInt32(txtPeso.Text), cbbUnidadeMedida.Text, txtCodBarras.Text, dtpDataEntrada.Value, dtpDataValidade.Value, dtpDataEntrada.Value, codUsuLogado, codOri, codList).Equals(1))
 <<<<<<< Updated upstream
 
 =======
 >>>>>>> Stashed changes
+=======
+            else if (cadastrarProdutos(cbbDescricao.Text, Convert.ToInt32(txtQuantidade.Text), Convert.ToInt32(txtPeso.Text), cbbUnidadeMedida.Text, txtCodBarras.Text, dtpDataEntrada.Value, dtpDataValidade.Value, dtpDataEntrada.Value, codUsuLogado, codOri, codList).Equals(1))
+//>>>>>>> 8f8a8eddb33d53196da667df434a240a8808af77
+>>>>>>> parent of cb96210 (att origem doacao)
             {
                 // Verifica se já existe produto
                 string sqlVerifica = "SELECT codProd, estoqueAtual FROM tbProdutos WHERE codBar = @codBar";

@@ -76,45 +76,9 @@ namespace GPSFA_WinForms
             btnExcluir.Enabled = true;
         }
 
-        // Criando método de pesquisa com o parametro NOME vindo da janela anterior
+        // Criando método de pesquisa com o parametro NOME da vindo da janela anterior
 
         int respBuscar;
-
-        //Criando método de pesquisa com o parametro NOME para cadastro de OrigemDoacao
-        public int buscaDadosOrigemDoacao(string nome)
-        {
-            MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = $"SELECT nome, cpf, cnpj, cep, rua, numero, complemento, bairro, cidade, estado, telCel, referencia FROM tborigemdoacao WHERE nome LIKE '%{nome}%';";
-            comm.CommandType = CommandType.Text;
-            comm.Connection = DataBaseConnection.OpenConnection();
-            MySqlDataReader DR;
-            DR = comm.ExecuteReader();
-
-
-            if (DR.HasRows == false)
-            {               
-                respBuscar = 0;
-            }
-            else
-            {
-                MessageBox.Show("Esta Origem já existe!.",
-                    "Mensagem do sistema",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1);
-                limparCamposNovo();
-                txtNomeFornecedor.Focus();
-                mskCpf.Text = "";
-                mskCpf.Enabled = false;
-                mskCnpj.Text = "";
-                mskCnpj.Enabled = false;
-                rdbCpf.Checked = false;
-                rdbCnpj.Checked = false;
-                respBuscar = 1;
-            }
-
-            return respBuscar;
-        }          
 
         public int buscaOrigemDoacao(string nome)
         {
@@ -132,9 +96,8 @@ namespace GPSFA_WinForms
                     "Mensagem do sistema",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information,
-                        MessageBoxDefaultButton.Button1);
+                        MessageBoxDefaultButton.Button1);               
                 limparCamposNovo();
-                respBuscar = 0;
             }
             else
             {
@@ -160,30 +123,16 @@ namespace GPSFA_WinForms
                     {
                         mskCnpj.Enabled = false;                        
                     }
-                    try
-                    {
-                        mskCep.Text = DR.GetString(3);
-                        txtRua.Text = DR.GetString(4);
-                        txtNumero.Text = DR.GetString(5);
-                        txtComplemento.Text = DR.GetString(6);
-                        txtBairro.Text = DR.GetString(7);
-                        cbbCidade.Items.Add(DR.GetString(8));
-                        cbbEstado.Items.Add(DR.GetString(9));
-                        mskTelefone.Text = DR.GetString(10);
-                        txtReferencia.Text = DR.GetString(11);
-                    }
-                    catch (Exception)
-                    {
-                        mskCep.Text = "";
-                        txtRua.Text = "";
-                        txtNumero.Text = "";
-                        txtComplemento.Text = "";
-                        txtBairro.Text = "";
-                        cbbCidade.Items.Add("");
-                        cbbEstado.Items.Add("");
-                        mskTelefone.Text = "";
-                        txtReferencia.Text = "";
-                    }                    
+
+                    mskCep.Text = DR.GetString(3);
+                    txtRua.Text = DR.GetString(4);
+                    txtNumero.Text = DR.GetString(5);
+                    txtComplemento.Text = DR.GetString(6);
+                    txtBairro.Text = DR.GetString(7);
+                    cbbCidade.Items.Add(DR.GetString(8));
+                    cbbEstado.Items.Add(DR.GetString(9));
+                    mskTelefone.Text = DR.GetString(10);
+                    txtReferencia.Text = DR.GetString(11);
                 }
             }
             DataBaseConnection.CloseConnection();
@@ -361,7 +310,10 @@ namespace GPSFA_WinForms
             }
             catch (Exception)
             {
-               
+                MessageBox.Show("Este registro já existe!", "Mensagem do sistema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
             }
             return 0;
         }
@@ -434,7 +386,7 @@ namespace GPSFA_WinForms
                     MessageBoxDefaultButton.Button1);
                 txtNomeFornecedor.Focus();
             }
-            else if (rdbCpf.Checked && !buscaDadosOrigemDoacao(txtNomeFornecedor.Text).Equals(1))
+            else if (rdbCpf.Checked)
             {
                 string cnpj = null;
                 //Regex utilizado para remover espaços extras entre as palavras.
@@ -468,7 +420,7 @@ namespace GPSFA_WinForms
 
                 }
             }
-            else if (rdbCnpj.Checked && !buscaDadosOrigemDoacao(txtNomeFornecedor.Text).Equals(1))
+            else if (rdbCnpj.Checked)
             {
                 string cpf = null;
 
@@ -492,14 +444,17 @@ namespace GPSFA_WinForms
                     MessageBox.Show("Erro ao Cadastrar!", "Mensagem do sistema",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
-                    MessageBoxDefaultButton.Button1);                   
+                    MessageBoxDefaultButton.Button1);
+
+                    //limparCampos();
                     btnCadastrar.Enabled = false;
                     btnLimpar.Enabled = false;
                     btnNovo.Enabled = true;
                     desativarCampos();
+
                 }
             }
-            else if (!txtNomeFornecedor.Text.Equals("") && !buscaDadosOrigemDoacao(txtNomeFornecedor.Text).Equals(1))
+            else if (!txtNomeFornecedor.Text.Equals("") && !buscaOrigemDoacao(txtNomeFornecedor.Text).Equals(1))
             {
                 string cpf = null;
                 string cnpj = null;
